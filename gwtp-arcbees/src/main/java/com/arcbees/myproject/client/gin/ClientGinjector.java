@@ -9,8 +9,9 @@ import com.google.gwt.inject.client.Ginjector;
 import com.google.gwt.event.shared.EventBus;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.google.inject.Provider;
-import com.arcbees.myproject.client.core.MainPagePresenter;
-import com.arcbees.myproject.client.core.ResponsePresenter;
+import com.arcbees.myproject.client.common.AppPresenter;
+import com.arcbees.myproject.client.main.MainPagePresenter;
+import com.arcbees.myproject.client.main.ResponsePresenter;
 
 @GinModules({ DispatchAsyncModule.class, ClientModule.class })
 public interface ClientGinjector extends Ginjector {
@@ -22,4 +23,6 @@ public interface ClientGinjector extends Ginjector {
   Provider<MainPagePresenter> getMainPagePresenter();
 
   Provider<ResponsePresenter> getResponsePresenter();
+
+  Provider<AppPresenter> getAppPresenter();
 }

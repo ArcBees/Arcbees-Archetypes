@@ -1,7 +1,7 @@
 /**
  * Copyright 2011 ArcBees Inc.  All rights reserved.
  */
-package com.arcbees.myproject.client.core;
+package com.arcbees.myproject.client.main;
 
 import com.gwtplatform.mvp.client.ViewImpl;
 import com.google.gwt.event.dom.client.HasClickHandlers;
