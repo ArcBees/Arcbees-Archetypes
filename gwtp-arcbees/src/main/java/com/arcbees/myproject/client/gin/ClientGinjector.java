@@ -1,28 +1,22 @@
-/**
- * Copyright 2011 ArcBees Inc.  All rights reserved.
- */
 package com.arcbees.myproject.client.gin;
 
+import com.arcbees.myproject.client.application.ApplicationPresenter;
+import com.arcbees.myproject.client.application.home.HomePagePresenter;
 import com.google.gwt.inject.client.GinModules;
-import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 import com.google.gwt.inject.client.Ginjector;
-import com.google.gwt.event.shared.EventBus;
-import com.gwtplatform.mvp.client.proxy.PlaceManager;
 import com.google.inject.Provider;
-import com.arcbees.myproject.client.common.AppPresenter;
-import com.arcbees.myproject.client.main.MainPagePresenter;
-import com.arcbees.myproject.client.main.ResponsePresenter;
+import com.google.web.bindery.event.shared.EventBus;
+import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
+import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
-@GinModules({ DispatchAsyncModule.class, ClientModule.class })
+@GinModules({DispatchAsyncModule.class, ClientModule.class})
 public interface ClientGinjector extends Ginjector {
 
-  EventBus getEventBus();
+    EventBus getEventBus();
 
-  PlaceManager getPlaceManager();
+    PlaceManager getPlaceManager();
 
-  Provider<MainPagePresenter> getMainPagePresenter();
+    Provider<HomePagePresenter> getMainPagePresenter();
 
-  Provider<ResponsePresenter> getResponsePresenter();
-
-  Provider<AppPresenter> getAppPresenter();
+    Provider<ApplicationPresenter> getAppPresenter();
 }

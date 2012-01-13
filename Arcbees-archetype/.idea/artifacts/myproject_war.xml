@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="myproject:war">
+    <output-path>$PROJECT_DIR$/../gwtp-arcbees/target</output-path>
+    <root id="archive" name="myproject-0.1-SNAPSHOT.war">
+      <element id="artifact" artifact-name="myproject:war exploded" />
+    </root>
+  </artifact>
+</component>

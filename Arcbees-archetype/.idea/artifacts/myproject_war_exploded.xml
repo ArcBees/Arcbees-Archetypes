@@ -1,0 +1,27 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="myproject:war exploded">
+    <output-path>$PROJECT_DIR$/../gwtp-arcbees/target/myproject-0.1-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="myproject/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="myproject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.gwt:gwt-servlet:2.4.0" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-server-guice:0.7-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-server:0.7-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.gwtplatform:gwtp-dispatch-shared:0.7-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: com.google.inject:guice:3.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-servlet:3.0" />
+          <element id="library" level="project" name="Maven: com.google.inject.extensions:guice-assistedinject:3.0" />
+          <element id="library" level="project" name="Maven: com.googlecode.objectify:objectify:3.1" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
+        </element>
+      </element>
+      <element id="gwt-compiler-output" facet="myproject/gwt/GWT" />
+    </root>
+  </artifact>
+</component>
