@@ -1,3 +1,0 @@
-/**
- * Copyright 2011 ArcBees Inc.  All rights reserved.
- */
