@@ -1,1 +1,1 @@
-Gwtp-Arcbees can be used as a project archetype, see page [archetype] to know how to use it.
+You can fin our project archetype under archetype, see page [archetype] to know how to use it.
