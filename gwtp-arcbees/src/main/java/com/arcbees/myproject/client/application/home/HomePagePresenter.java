@@ -13,7 +13,6 @@ import com.gwtplatform.mvp.client.proxy.RevealContentEvent;
 
 public class HomePagePresenter extends
         Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> {
-
     public interface MyView extends View {
     }
 
@@ -24,12 +23,6 @@ public class HomePagePresenter extends
 
     @Inject
     public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
-        super(eventBus, view, proxy);
+        super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
     }
-
-    @Override
-    protected void revealInParent() {
-        RevealContentEvent.fire(this, ApplicationPresenter.TYPE_SetMainContent, this);
-    }
-
 }

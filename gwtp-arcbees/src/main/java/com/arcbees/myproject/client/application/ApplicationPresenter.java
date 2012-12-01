@@ -26,11 +26,6 @@ public class ApplicationPresenter extends
     @Inject
     public ApplicationPresenter(final EventBus eventBus, final MyView view,
                                 final MyProxy proxy) {
-        super(eventBus, view, proxy);
-    }
-
-    @Override
-    protected void revealInParent() {
-        RevealRootContentEvent.fire(this, this);
+        super(eventBus, view, proxy, RevealType.Root);
     }
 }

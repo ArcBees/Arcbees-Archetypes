@@ -15,21 +15,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <gae.version>1.6.5</gae.version>
-        <gwt.version>2.4.0</gwt.version>
-        <gwt-maven-plugin.version>2.4.0</gwt-maven-plugin.version>
+        <gae.version>1.7.3</gae.version>
+        <gwt.version>2.5.0</gwt.version>
+        <gwt-maven-plugin.version>2.5.0</gwt-maven-plugin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwtp.version>0.8-SNAPSHOT</gwtp.version>
         <guice.version>3.0</guice.version>
         <gin.version>1.5.0</gin.version>
-        <objectify.version>4.0a3</objectify.version>
-        <junit.version>4.10</junit.version>
+        <objectify.version>4.0b1</objectify.version>
+        <junit.version>4.11</junit.version>
         <jukito.version>1.1</jukito.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
-        <maven-gae-plugin.version>0.9.3</maven-gae-plugin.version>
+        <maven-gae-plugin.version>0.9.5</maven-gae-plugin.version>
         <servlet-api.version>2.5</servlet-api.version>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
@@ -113,50 +113,6 @@
                     <!-- Disable annotation processors during normal compilation -->
                     <proc>none</proc>
                 </configuration>
-            </plugin>
-
-            <!-- Run annotation processors on src/home/java sources -->
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>${maven-processor-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.gwtplatform</groupId>
-                        <artifactId>gwtp-processors</artifactId>
-                        <version>${gwtp.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <version>1.7</version>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>${project.build.directory}/generated-sources/apt</source>
-                                <source>${project.build.directory}/generated-sources/gwt</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
 
             <plugin>

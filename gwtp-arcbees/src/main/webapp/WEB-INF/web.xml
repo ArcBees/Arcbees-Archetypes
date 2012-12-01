@@ -5,18 +5,10 @@
 
 	<display-name>MyProject</display-name>
 
-	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>myproject.html</welcome-file>
 	</welcome-file-list>
 
-	<!--
-		This Guice listener hijacks all further filters and servlets. Extra
-		filters and servlets have to be configured in your
-		ServletModule#configureServlets() by calling
-		serve(String).with(Class<? extends HttpServlet>) and
-		filter(String).through(Class<? extends Filter)
-	-->
 	<listener>
 		<listener-class>com.arcbees.myproject.server.guice.GuiceServletConfig</listener-class>
 	</listener>
@@ -30,5 +22,4 @@
 		<filter-name>guiceFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
 </web-app>

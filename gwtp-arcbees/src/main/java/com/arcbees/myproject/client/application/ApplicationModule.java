@@ -10,6 +10,5 @@ public class ApplicationModule extends AbstractPresenterModule {
 
         bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
                 ApplicationPresenter.MyProxy.class);
-
     }
 }
