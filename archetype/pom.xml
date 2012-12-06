@@ -21,13 +21,12 @@
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwtp.version>0.8-SNAPSHOT</gwtp.version>
         <guice.version>3.0</guice.version>
-        <gin.version>1.5.0</gin.version>
+        <gin.version>2.0.0</gin.version>
         <objectify.version>4.0b1</objectify.version>
         <junit.version>4.11</junit.version>
         <jukito.version>1.1</jukito.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
-        <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-gae-plugin.version>0.9.5</maven-gae-plugin.version>
         <servlet-api.version>2.5</servlet-api.version>
