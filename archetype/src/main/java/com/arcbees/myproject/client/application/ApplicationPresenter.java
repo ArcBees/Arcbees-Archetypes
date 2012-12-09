@@ -26,8 +26,7 @@ import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.Proxy;
 import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
 
-public class ApplicationPresenter extends
-        Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
+public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
     public interface MyView extends View {
     }
 
@@ -39,8 +38,7 @@ public class ApplicationPresenter extends
     }
 
     @Inject
-    public ApplicationPresenter(final EventBus eventBus, final MyView view,
-                                final MyProxy proxy) {
+    public ApplicationPresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
         super(eventBus, view, proxy, RevealType.Root);
     }
 }

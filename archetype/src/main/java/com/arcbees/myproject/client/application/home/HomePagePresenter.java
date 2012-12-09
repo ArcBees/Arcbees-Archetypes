@@ -26,8 +26,7 @@ import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
-public class HomePagePresenter extends
-        Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> {
+public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> {
     public interface MyView extends View {
     }
 

@@ -24,7 +24,6 @@ import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
 public class ClientModule extends AbstractPresenterModule {
-
     @Override
     protected void configure() {
         install(new DefaultModule(PlaceManager.class));
