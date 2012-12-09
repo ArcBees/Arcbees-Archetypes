@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.arcbees</groupId>
@@ -37,70 +36,10 @@
         </gae.home>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>sonatype.snapshots</id>
-            <name>Sonatype snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>objectify-appengine</id>
-            <url>http://objectify-appengine.googlecode.com/svn/maven</url>
-        </repository>
-    </repositories>
-
     <build>
+        <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+        
         <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>gwt-maven-plugin</artifactId>
-                <version>${gwt-maven-plugin.version}</version>
-                <configuration>
-                    <appEngineVersion>${gae.version}</appEngineVersion>
-                    <appEngineHome>${gae.home}</appEngineHome>
-                    <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
-
-                    <hostedWebapp>${webappDirectory}</hostedWebapp>
-                    <runTarget>myproject.html</runTarget>
-
-                    <testTimeOut>180</testTimeOut>
-                    <extraJvmArgs>-Xmx1024m -XX:MaxPermSize=512m</extraJvmArgs>
-
-                    <compileReport>true</compileReport>
-
-                    <!-- UNCOMMENT THESE TO TURN ON INTERNATIONALIZATION
-                    <i18nConstantsBundles>
-                        <i18nConstantsBundle>${package}.client.MyConstants</i18nConstantsBundle>
-                    </i18nConstantsBundles>
-                    <i18nMessagesBundles>
-                        <i18nMessagesBundle>${package}.client.MyMessages</i18nMessagesBundle>
-                    </i18nMessagesBundles>
-                    -->
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>generate-sources</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <!-- UNCOMMENT THIS TO TURN ON INTERNATIONALIZATION
-                            <goal>i18n</goal>
-                            -->
-                            <goal>resources</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>prepare-package</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>compile</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -114,6 +53,7 @@
                 </configuration>
             </plugin>
 
+            <!-- JUnit Testing - Skip GwtTest cases -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -121,20 +61,74 @@
                 <configuration>
                     <includes>
                         <include>**/*Test.java</include>
-                        <include>**/*TestCase.java</include>
                     </includes>
                     <excludes>
                         <exclude>**/*GwtTest.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
+        
+            <!-- GWT -->
+            <!-- 'mvn gwt:run' - runs development mode -->
+            <!-- 'mvn gwt:debug' - runs debug mode -->
+            <!-- 'mvn gwt:compile' - compiles gwt -->
+            <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
+            <!-- 'mvn clean gwt:compile deploy -DskipTests' - deploys to GAE out running tests -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>${gwt.version}</version>
+                <configuration>
+                    <strict>true</strict>
+                    <testTimeOut>180</testTimeOut>
+                    <includes>**/*GwtTest.java</includes>
+                    <mode>htmlunit</mode>
+                    
+                    <extraJvmArgs>-Xss1024k -Xmx512M</extraJvmArgs>
+                    <logLevel>INFO</logLevel>
+                    <style>${gwt.style}</style>
+                    
+                    <copyWebapp>true</copyWebapp>
+                    <hostedWebapp>${webappDirectory}</hostedWebapp>
 
+                    <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
+                    <appEngineVersion>${gae.version}</appEngineVersion>
+                    <appEngineHome>${gae.home}</appEngineHome>
+                    <extraJvmArgs>-Dappengine.sdk.root=${gae.home}</extraJvmArgs>
+                    
+                    <runTarget>myproject.html</runTarget>
+                    <module>com.arcbees.myproject.MyProject</module>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.google.gwt</groupId>
+                        <artifactId>gwt-user</artifactId>
+                        <version>${gwt.version}</version>
+                    </dependency>
+                    <!-- <dependency>
+                        <groupId>com.google.gwt</groupId>
+                        <artifactId>gwt-dev</artifactId>
+                        <version>${gwt.version}</version>
+                    </dependency> -->
+                    <dependency>
+                        <groupId>com.google.gwt</groupId>
+                        <artifactId>gwt-codeserver</artifactId>
+                        <version>${gwt.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <!-- Google App Engine Deployment -->
             <plugin>
                 <groupId>net.kindleit</groupId>
                 <artifactId>maven-gae-plugin</artifactId>
                 <version>${maven-gae-plugin.version}</version>
                 <configuration>
                     <sdkDir>${gae.home}</sdkDir>
+                    
+                    <!-- Add credentials to ~/.m2/settings.xml <id>appengine-credentials</id> -->
+                    <serverId>appengine-credentials</serverId>
+                    <splitJars>true</splitJars>
                 </configuration>
                 <executions>
                     <execution>
@@ -153,8 +147,6 @@
                 </executions>
             </plugin>
         </plugins>
-
-        <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
     </build>
 
     <dependencies>
