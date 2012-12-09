@@ -22,12 +22,12 @@ import com.gwtplatform.mvp.client.proxy.PlaceManagerImpl;
 import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.TokenFormatter;
 
-public class ClientPlaceManager extends PlaceManagerImpl {
+public class PlaceManager extends PlaceManagerImpl {
 
     private final PlaceRequest defaultPlaceRequest;
 
     @Inject
-    public ClientPlaceManager(final EventBus eventBus,
+    public PlaceManager(final EventBus eventBus,
                               final TokenFormatter tokenFormatter,
                               @DefaultPlace final String defaultPlaceNameToken) {
         super(eventBus, tokenFormatter);
