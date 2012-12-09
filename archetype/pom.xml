@@ -53,7 +53,7 @@
                 </configuration>
             </plugin>
 
-            <!-- JUnit Testing - Skip GwtTest cases -->
+            <!-- JUnit Testing - skip *.GwtTest cases -->
             <!-- 'mvn test' - runs the Jukito tests -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
