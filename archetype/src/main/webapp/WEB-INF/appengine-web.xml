@@ -3,8 +3,10 @@
     <!-- Google App Engine application project name like myproject.appspot.com -->
 	<application>myproject</application>
 	<version>1</version>
+    
     <threadsafe>true</threadsafe>
 
+    <!-- Configure serving/caching of GWT files -->
 	<static-files>
 		<include path="**" />
 		<include path="**.nocache.*" expiration="0s" />
@@ -12,6 +14,7 @@
 		<exclude path="**.gwt.rpc" />
 	</static-files>
 
+    <!-- Configure java.util.logging -->
 	<system-properties>
 		<property name="java.util.logging.config.file" value="WEB-INF/logging.properties"/>
 	</system-properties>

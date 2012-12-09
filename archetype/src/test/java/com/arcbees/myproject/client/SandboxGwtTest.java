@@ -16,23 +16,15 @@
 
 package com.arcbees.myproject.client;
 
-import static org.junit.Assert.assertTrue;
+import com.google.gwt.junit.client.GWTTestCase;
 
-import org.jukito.JukitoModule;
-import org.jukito.JukitoRunner;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+public class SandboxGwtTest extends GWTTestCase {
+  @Override
+  public String getModuleName() {
+    return "com.arcbees.myproject.MyProject";
+  }
 
-@RunWith(JukitoRunner.class)
-public class SandobxJukitoTest {
-    public static class Module extends JukitoModule {
-        @Override
-        protected void configureTest() {
-        }
-    }
-
-    @Test
-    public void testSandbox() {
-      assertTrue(true);
-    }
+  public void testSandbox() {
+    assertTrue(true);
+  }
 }
