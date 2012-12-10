@@ -1,4 +1,6 @@
 #!/bin/sh
+# Generate a new archetype using this project as a template.
+# Once the archetype has been created run 'mvn archetype:generate -DarchetypeCatalog=local'
 # http://www.automatedbusinesslogic.com/articles/deploying-a-maven-archetype
 
 echo "Started"
@@ -24,6 +26,7 @@ mvn install
 cd $CURRENTDIR
 
 # TODO upload to sonatype
+# put the above in the catalog
 #mvn archetype:crawl -Dcatalog=$CURRENTDIR/archetype-catalog.xml
 
 echo "Finished"
