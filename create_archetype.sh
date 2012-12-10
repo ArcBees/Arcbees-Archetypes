@@ -1,6 +1,6 @@
 #!/bin/sh
 # Generate a new archetype using this project as a template.
-# Once the archetype has been created run 'mvn archetype:generate -DarchetypeCatalog=local'
+# Once the archetype has been created run 'mvn archetype:generate -DarchetypeCatalog=local' in a new directory
 # http://www.automatedbusinesslogic.com/articles/deploying-a-maven-archetype
 
 echo "Started"
