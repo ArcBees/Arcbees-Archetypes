@@ -28,4 +28,4 @@ cd $CURRENTDIR
 
 echo "Finished"
 
-echo "\n**Run this new project directory:**\nmvn archetype:generate -DarchetypeCatalog=local\n"
+echo "\n***Run this in a new project directory:***\nmvn archetype:generate -DarchetypeCatalog=local\n"
