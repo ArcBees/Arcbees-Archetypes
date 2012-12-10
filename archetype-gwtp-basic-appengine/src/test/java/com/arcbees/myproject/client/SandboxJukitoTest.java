@@ -14,18 +14,25 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.place;
+package com.arcbees.myproject.client;
 
-import com.google.inject.BindingAnnotation;
+import static org.junit.Assert.assertTrue;
 
-import java.lang.annotation.Retention;
-import java.lang.annotation.Target;
+import org.jukito.JukitoModule;
+import org.jukito.JukitoRunner;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import static java.lang.annotation.ElementType.*;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
+@RunWith(JukitoRunner.class)
+public class SandboxJukitoTest {
+    public static class Module extends JukitoModule {
+        @Override
+        protected void configureTest() {
+        }
+    }
 
-@BindingAnnotation
-@Target({FIELD, PARAMETER, METHOD})
-@Retention(RUNTIME)
-public @interface DefaultPlace {
+    @Test
+    public void testSandbox() {
+      assertTrue(true);
+    }
 }
