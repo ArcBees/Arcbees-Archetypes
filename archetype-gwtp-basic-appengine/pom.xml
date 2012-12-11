@@ -4,26 +4,29 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.arcbees</groupId>
-    <artifactId>myproject</artifactId>
+    <artifactId>gwtp-basic-appengine</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>MyProject</name>
+    <name>GWTP Basic AppEngine</name>
+    <description>Basic GWTP application using App Engine</description>
 
     <properties>
+        <gwt.version>2.5.0</gwt.version>
+        <gwtp.version>0.8-SNAPSHOT</gwtp.version>
+        <gin.version>2.0.0</gin.version>
+        <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
+
+        <gae.version>1.7.3</gae.version>
+        <guice.version>3.0</guice.version>
+        <objectify.version>4.0b1</objectify.version>
+        
+        <junit.version>4.11</junit.version>
+        <jukito.version>1.1</jukito.version>
+        
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <gae.version>1.7.3</gae.version>
-        <gwt.version>2.5.0</gwt.version>
         <gwt-maven-plugin.version>2.5.0</gwt-maven-plugin.version>
-        <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
-        <gwtp.version>0.8-SNAPSHOT</gwtp.version>
-        <guice.version>3.0</guice.version>
-        <gin.version>2.0.0</gin.version>
-        <objectify.version>4.0b1</objectify.version>
-        <junit.version>4.11</junit.version>
-        <jukito.version>1.1</jukito.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
@@ -150,6 +153,18 @@
         </plugins>
     </build>
 
+    <repositories>
+        <!-- Use GWTP snapshots for the latest and greatest -->
+        <repository>
+            <id>sonatype.snapshots</id>
+            <name>Sonatype snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
         <dependency>
@@ -223,6 +238,30 @@
             <version>${gin.version}</version>
             <scope>provided</scope>
         </dependency>
+        
+        <!-- Google App Engine dependencies -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>${gae.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-labs</artifactId>
+            <version>${gae.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-testing</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
+        </dependency>
 
         <!-- Persistence dependencies -->
         <dependency>
@@ -252,6 +291,5 @@
             <version>${jukito.version}</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 </project>
