@@ -7,8 +7,8 @@ To create a GWTP basic App Engine project change the groupId and artifactId.
 mvn archetype:generate -DarchetypeGroupId=com.arcbees \
 -DarchetypeArtifactId=gwtp-basic-appengine-archetype \
 -DarchetypeVersion=0.1-SNAPSHOT \
--DgroupId=com.mycompany-rename \
--DartifactId=new-project-rename \
+-DgroupId=com.projectname \
+-DartifactId=new-project-name \
 -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/
 ```
 
