@@ -17,9 +17,9 @@
 package com.arcbees.myproject.client.gin;
 
 import com.arcbees.myproject.client.application.ApplicationModule;
-import com.arcbees.myproject.client.place.PlaceManager;
 import com.arcbees.myproject.client.place.DefaultPlace;
 import com.arcbees.myproject.client.place.NameTokens;
+import com.arcbees.myproject.client.place.PlaceManager;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
