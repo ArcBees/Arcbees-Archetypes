@@ -7,8 +7,11 @@ echo "Started"
 
 CURRENTDIR=`pwd`
 
+# TODO add parameter to change type
+PROJECTDIR=$CURRENTDIR/archetype-gwtp-basic-appengine
+
 # move to the archetype
-cd ./archetype-gwtp-basic-appengine
+cd $PROJECTDIR
 
 # clean house
 mvn clean
@@ -25,10 +28,23 @@ mvn install
 
 cd $CURRENTDIR
 
-# TODO upload to sonatype
-# put the above in the catalog
+# produce a catalog
 #mvn archetype:crawl -Dcatalog=$CURRENTDIR/archetype-catalog.xml
+
+# add deployment to pom.xml for deployment to sonatype
+SONATYPE="<distributionManagement><repository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/service\/local\/staging\/deploy\/maven2<\/url><\/repository><snapshotRepository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/content\/repositories\/snapshots<\/url><\/snapshotRepository><\/distributionManagement><\/project>"
+
+echo $SONATYPE
+
+sed -ie "s@<\/project>@${SONATYPE}@g" $PROJECTDIR/target/generated-sources/archetype/pom.xml
+cd $PROJECTDIR/target/generated-sources/archetype
+mvn deploy
+
 
 echo "Finished"
 
 echo "\n***Run this in a new project directory:***\nmvn archetype:generate -DarchetypeCatalog=local\n"
+
+
+
+
