@@ -40,11 +40,6 @@ sed -ie "s@<\/project>@${SONATYPE}@g" $PROJECTDIR/target/generated-sources/arche
 cd $PROJECTDIR/target/generated-sources/archetype
 mvn deploy
 
-
 echo "Finished"
 
 echo "\n***Run this in a new project directory:***\nmvn archetype:generate -DarchetypeCatalog=local\n"
-
-
-
-
