@@ -42,7 +42,9 @@ echo $SONATYPE
 
 sed -ie "s@<\/project>@${SONATYPE}@g" $PROJECTDIR/target/generated-sources/archetype/pom.xml
 cd $PROJECTDIR/target/generated-sources/archetype
-mvn deploy
+
+# TODO add parameter to enable this
+#mvn deploy
 
 echo "Finished"
 
