@@ -20,3 +20,5 @@ mvn archetype:generate -DarchetypeGroupId=com.arcbees \
 ##Reference
 * [Archetype Guide](http://maven.apache.org/guides/mini/guide-creating-archetypes.html)
 
+##Thanks to
+[![IntelliJ](https://lh6.googleusercontent.com/--QIIJfKrjSk/UJJ6X-UohII/AAAAAAAAAVM/cOW7EjnH778/s800/banner_IDEA.png)](http://www.jetbrains.com/idea/index.html)
