@@ -26,13 +26,15 @@ mvn archetype:create-from-project
 cd target/generated-sources/archetype/
 mvn install
 
-cd $CURRENTDIR
-
 # produce a catalog
 #mvn archetype:crawl -Dcatalog=$CURRENTDIR/archetype-catalog.xml
 
 # work around b/c com.arcbees inherits conflicts
-find . -name '*.java' -type f -exec sed -i '' 's/${groupId}.core.client/com.arcbees.core.client/g' {} \;
+cd target/generated-sources/archetype/
+find . -name '*.xml' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+find . -name '*.java' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+
+cd $CURRENTDIR
 
 # add deployment to pom.xml for deployment to sonatype
 SONATYPE="<distributionManagement><repository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/service\/local\/staging\/deploy\/maven2<\/url><\/repository><snapshotRepository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/content\/repositories\/snapshots<\/url><\/snapshotRepository><\/distributionManagement><\/project>"
@@ -40,6 +42,8 @@ echo $SONATYPE
 
 sed -ie "s@<\/project>@${SONATYPE}@g" $PROJECTDIR/target/generated-sources/archetype/pom.xml
 cd $PROJECTDIR/target/generated-sources/archetype
+
+# TODO add parameter to enable this
 #mvn deploy
 
 echo "Finished"
