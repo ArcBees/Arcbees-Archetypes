@@ -23,7 +23,6 @@ import com.gwtplatform.mvp.client.proxy.PlaceRequest;
 import com.gwtplatform.mvp.client.proxy.TokenFormatter;
 
 public class PlaceManager extends PlaceManagerImpl {
-
     private final PlaceRequest defaultPlaceRequest;
 
     @Inject
