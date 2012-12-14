@@ -9,4 +9,10 @@
       <version>0.1-SNAPSHOT</version>
       <description>Basic GWTP application using Google App Engine</description>
     </archetype>
+    <archetype>
+      <groupId>com.arcbees</groupId>
+      <artifactId>archetype-gwtp-basic-requestfactory-spring-archetype</artifactId>
+      <version>0.1-SNAPSHOT</version>
+      <description>Basic GWTP application using Requestfactory and Spring</description>
+    </archetype>
 </archetype-catalog>

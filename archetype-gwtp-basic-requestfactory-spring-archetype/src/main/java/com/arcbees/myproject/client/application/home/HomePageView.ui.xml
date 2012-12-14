@@ -1,0 +1,11 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+             xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+    <g:HTMLPanel>
+        <g:InlineLabel text="First name: "/>
+        <g:TextBox ui:field="firstName"/>
+        <g:InlineLabel text="Last name: "/>
+        <g:TextBox ui:field="lastName"/>
+
+        <g:Button ui:field="submit" text="Submit"/>
+    </g:HTMLPanel>
+</ui:UiBinder>
