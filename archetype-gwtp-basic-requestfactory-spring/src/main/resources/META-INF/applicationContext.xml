@@ -28,7 +28,7 @@
     </bean>
 
     <!-- Transaction advice configured using annotation -->
-    <tx:annotation-driven mode="proxy" transaction-manager="transactionManager"/>
+    <tx:annotation-driven transaction-manager="transactionManager" mode="aspectj"/>
 
     <!-- Scanning JPA repositories -->
     <jpa:repositories base-package="com.arcbees.myproject.server.repos" repository-impl-postfix="Impl"/>
