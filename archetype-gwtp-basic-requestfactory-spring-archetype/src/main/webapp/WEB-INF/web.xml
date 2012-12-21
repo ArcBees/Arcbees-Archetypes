@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <display-name>MyProject</display-name>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath*:META-INF/applicationContext.xml,
+            classpath*:META-INF/applicationContext-security.xml
+        </param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.ContextLoaderListener
+        </listener-class>
+    </listener>
+
+    <listener>
+        <listener-class>
+            org.springframework.web.context.request.RequestContextListener
+        </listener-class>
+    </listener>
+
+    <!-- GWT RequestFactory Servlet -->
+    <servlet>
+        <servlet-name>requestFactoryServlet</servlet-name>
+        <servlet-class>com.arcbees.myproject.server.util.SpringRequestServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>requestFactoryServlet</servlet-name>
+        <url-pattern>/gwtRequest</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>myproject.html</welcome-file>
+    </welcome-file-list>
+</web-app>
