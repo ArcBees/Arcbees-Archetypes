@@ -16,8 +16,9 @@
 
 package com.arcbees.myproject.client.application.home;
 
+import com.arcbees.myproject.client.request.proxy.MyEntityProxy;
 import com.gwtplatform.mvp.client.UiHandlers;
 
 public interface HomeUiHandlers extends UiHandlers {
-    void processUser(String firstName, String lastName);
+    void saveEntity(MyEntityProxy myEntity);
 }

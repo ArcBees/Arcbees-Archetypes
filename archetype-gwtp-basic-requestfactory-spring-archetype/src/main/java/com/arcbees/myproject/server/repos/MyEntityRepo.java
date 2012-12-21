@@ -16,5 +16,11 @@
 
 package com.arcbees.myproject.server.repos;
 
-public interface MyEntityRepo {
+import com.arcbees.myproject.server.business.MyEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+
+public interface MyEntityRepo extends JpaRepository<MyEntity, Long> {
+    List<MyEntity> findByFirstNameLikeOrLastNameLike(String firstName, String lastName);
 }

@@ -23,7 +23,13 @@ import com.google.web.bindery.requestfactory.shared.Request;
 import com.google.web.bindery.requestfactory.shared.RequestContext;
 import com.google.web.bindery.requestfactory.shared.Service;
 
+import java.util.List;
+
 @Service(value = MyServiceImpl.class, locator = SpringServiceLocator.class)
 public interface MyServiceRequest extends RequestContext {
-    Request<MyEntityProxy> loadMyEntity(String firstName, String lastName);
+    abstract Request<Void> create(MyEntityProxy entity);
+
+    abstract Request<Void> delete(MyEntityProxy entity);
+
+    abstract Request<List<MyEntityProxy>> loadAll(String searchToken);
 }

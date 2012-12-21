@@ -24,6 +24,10 @@ import java.util.Date;
 
 @ProxyFor(value = MyEntity.class)
 public interface MyEntityProxy extends ValueProxy {
+    Long getId();
+
+    void setId(Long id);
+
     String getFirstName();
 
     void setFirstName(String firstName);

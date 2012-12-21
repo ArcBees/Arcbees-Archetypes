@@ -17,15 +17,34 @@
 package com.arcbees.myproject.server.service.impl;
 
 import com.arcbees.myproject.server.business.MyEntity;
+import com.arcbees.myproject.server.repos.MyEntityRepo;
 import com.arcbees.myproject.server.service.MyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Date;
+import java.util.List;
 
-@Service
+@Service("myService")
+@Transactional
 public class MyServiceImpl implements MyService {
+    @Autowired
+    private MyEntityRepo myEntityRepo;
+
     @Override
-    public MyEntity loadMyEntity(String firstName, String lastName) {
-        return new MyEntity(firstName, lastName, new Date());
+    public void create(MyEntity entity) {
+        myEntityRepo.save(entity);
+    }
+
+    @Override
+    public void delete(MyEntity entity) {
+        myEntityRepo.delete(entity);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<MyEntity> loadAll(String searchToken) {
+        String token = searchToken + "%";
+        return myEntityRepo.findByFirstNameLikeOrLastNameLike(token, token);
     }
 }

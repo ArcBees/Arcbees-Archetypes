@@ -18,6 +18,12 @@ package com.arcbees.myproject.server.service;
 
 import com.arcbees.myproject.server.business.MyEntity;
 
+import java.util.List;
+
 public interface MyService {
-    MyEntity loadMyEntity(String firstName, String lastName);
+    void create(MyEntity entity);
+
+    void delete(MyEntity entity);
+
+    List<MyEntity> loadAll(String searchToken);
 }

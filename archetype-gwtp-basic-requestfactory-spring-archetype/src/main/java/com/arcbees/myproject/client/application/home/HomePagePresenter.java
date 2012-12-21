@@ -19,8 +19,8 @@ package com.arcbees.myproject.client.application.home;
 import com.arcbees.myproject.client.application.ApplicationPresenter;
 import com.arcbees.myproject.client.place.NameTokens;
 import com.arcbees.myproject.client.request.MyRequestFactory;
+import com.arcbees.myproject.client.request.MyServiceRequest;
 import com.arcbees.myproject.client.request.proxy.MyEntityProxy;
-import com.google.gwt.user.client.Window;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.requestfactory.shared.Receiver;
@@ -31,9 +31,14 @@ import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
+import java.util.List;
+
 public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy>
         implements HomeUiHandlers {
     public interface MyView extends View, HasUiHandlers<HomeUiHandlers> {
+        void editUser(MyEntityProxy myEntity);
+
+        void setData(List<MyEntityProxy> data);
     }
 
     @ProxyStandard
@@ -42,6 +47,9 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     }
 
     private final MyRequestFactory requestFactory;
+
+    private MyServiceRequest currentContext;
+    private String searchToken;
 
     @Inject
     public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
@@ -54,12 +62,34 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     }
 
     @Override
-    public void processUser(String firstName, String lastName) {
-        requestFactory.myService().loadMyEntity(firstName, lastName).fire(new Receiver<MyEntityProxy>() {
+    public void saveEntity(MyEntityProxy myEntity) {
+        currentContext.create(myEntity).fire(new Receiver<Void>() {
             @Override
-            public void onSuccess(MyEntityProxy myEntity) {
-                Window.alert("My full name is : " + myEntity.getFirstName() + " " + myEntity.getLastName()
-                        + " and I was creaded : " + myEntity.getCreated());
+            public void onSuccess(Void aVoid) {
+                loadEntities();
+                initializeContext();
+            }
+        });
+    }
+
+    @Override
+    protected void onReveal() {
+        searchToken = "";
+        initializeContext();
+        loadEntities();
+    }
+
+    private void initializeContext() {
+        currentContext = requestFactory.myService();
+        MyEntityProxy newEntity = currentContext.create(MyEntityProxy.class);
+        getView().editUser(newEntity);
+    }
+
+    private void loadEntities() {
+        requestFactory.myService().loadAll(searchToken).fire(new Receiver<List<MyEntityProxy>>() {
+            @Override
+            public void onSuccess(List<MyEntityProxy> data) {
+                getView().setData(data);
             }
         });
     }

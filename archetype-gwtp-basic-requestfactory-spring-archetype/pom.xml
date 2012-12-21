@@ -31,8 +31,7 @@
 
         <log4j.version>1.2.14</log4j.version>
         <guava.version>13.0.1</guava.version>
-        <common-dbcp.version>1.4</common-dbcp.version>
-        <mysql-connector.version>5.1.21</mysql-connector.version>
+        <hsqldb.version>2.0.0</hsqldb.version>
         <xalan.version>2.7.1</xalan.version>
         <json.version>20090211</json.version>
 
@@ -306,14 +305,9 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-            <groupId>commons-dbcp</groupId>
-            <artifactId>commons-dbcp</artifactId>
-            <version>${common-dbcp.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector.version}</version>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
         </dependency>
         <dependency>
             <groupId>org.json</groupId>
