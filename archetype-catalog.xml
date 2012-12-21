@@ -11,7 +11,7 @@
     </archetype>
     <archetype>
       <groupId>com.arcbees</groupId>
-      <artifactId>archetype-gwtp-basic-requestfactory-spring-archetype</artifactId>
+      <artifactId>archetype-gwtp-basic-requestfactory-spring</artifactId>
       <version>0.1-SNAPSHOT</version>
       <description>Basic GWTP application using Requestfactory and Spring</description>
     </archetype>
