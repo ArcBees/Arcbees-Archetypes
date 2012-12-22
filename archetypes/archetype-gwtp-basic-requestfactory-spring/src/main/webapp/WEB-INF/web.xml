@@ -28,7 +28,7 @@
     <!-- GWT RequestFactory Servlet -->
     <servlet>
         <servlet-name>requestFactoryServlet</servlet-name>
-        <servlet-class>com.arcbees.myproject.server.util.SpringRequestServlet</servlet-class>
+        <servlet-class>tld.domain.myproject.server.util.SpringRequestServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
