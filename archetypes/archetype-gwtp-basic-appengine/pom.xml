@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.arcbees</groupId>
-    <artifactId>gwtp-basic-appengine</artifactId>
+    <groupId>tld.domain</groupId>
+    <artifactId>gwtp-appengine</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>GWTP Basic AppEngine</name>
@@ -101,7 +101,7 @@
                     <extraJvmArgs>-Dappengine.sdk.root=${gae.home}</extraJvmArgs>
                     
                     <runTarget>myproject.html</runTarget>
-                    <module>com.arcbees.myproject.MyProject</module>
+                    <module>tld.domain.myproject.MyProject</module>
                 </configuration>
                 <dependencies>
                     <dependency>
