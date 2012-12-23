@@ -19,12 +19,12 @@ package tld.domain.tasks.client;
 import com.google.gwt.junit.client.GWTTestCase;
 
 public class SandboxGwtTest extends GWTTestCase {
-  @Override
-  public String getModuleName() {
-    return "tld.domain.tasks.MyProject";
-  }
+    @Override
+    public String getModuleName() {
+        return "tld.domain.tasks.MyProject";
+    }
 
-  public void testSandbox() {
-    assertTrue(true);
-  }
+    public void testSandbox() {
+        assertTrue(true);
+    }
 }
