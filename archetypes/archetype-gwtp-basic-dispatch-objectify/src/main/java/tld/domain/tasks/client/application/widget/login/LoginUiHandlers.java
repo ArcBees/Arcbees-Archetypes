@@ -1,4 +1,4 @@
-package tld.domain.tasks.client.application.login;
+package tld.domain.tasks.client.application.widget.login;
 
 import com.gwtplatform.mvp.client.UiHandlers;
 

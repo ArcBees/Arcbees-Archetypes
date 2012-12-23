@@ -16,6 +16,10 @@
 
 package tld.domain.tasks.client.gin;
 
+import javax.inject.Singleton;
+
+import tld.domain.tasks.client.BootStrapper;
+import tld.domain.tasks.client.BootStrapperImpl;
 import tld.domain.tasks.client.application.ApplicationModule;
 import tld.domain.tasks.client.place.DefaultPlace;
 import tld.domain.tasks.client.place.NameTokens;
@@ -33,5 +37,6 @@ public class ClientModule extends AbstractPresenterModule {
 
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
         bind(CurrentUserDto.class).asEagerSingleton();
+        bind(BootStrapper.class).to(BootStrapperImpl.class).in(Singleton.class);
     }
 }

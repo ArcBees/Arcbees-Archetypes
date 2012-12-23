@@ -2,10 +2,14 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
     <ui:style>
         .root {
-            
+            display: inline;
         }
     </ui:style>
     
     <g:HTMLPanel styleName="{style.root}">
+        Nick:   
+        <g:InlineHTML ui:field="nickname"/>
+        Link:
+        <g:Anchor ui:field="link" />
     </g:HTMLPanel>
 </ui:UiBinder>

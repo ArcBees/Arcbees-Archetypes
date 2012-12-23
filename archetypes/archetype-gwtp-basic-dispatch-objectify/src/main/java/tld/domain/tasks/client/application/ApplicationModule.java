@@ -17,6 +17,7 @@
 package tld.domain.tasks.client.application;
 
 import tld.domain.tasks.client.application.home.HomeModule;
+import tld.domain.tasks.client.application.widget.WidgetModule;
 
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
@@ -24,6 +25,7 @@ public class ApplicationModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         install(new HomeModule());
+        install(new WidgetModule());
 
         bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
                 ApplicationPresenter.MyProxy.class);

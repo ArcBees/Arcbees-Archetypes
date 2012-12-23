@@ -26,7 +26,7 @@ public class CurrentUserDto implements Dto {
     private String loginUrl;
     private String nickname;
 
-    private CurrentUserDto() {
+    public CurrentUserDto() {
         isAdmin = false;
         isLoggedIn = false;
         user = new User();
@@ -34,8 +34,7 @@ public class CurrentUserDto implements Dto {
         logoutUrl = "";
     }
 
-    public CurrentUserDto(Boolean isAdmin, Boolean isLoggedIn, User user) {
-        this.isAdmin = isAdmin;
+    public CurrentUserDto(Boolean isLoggedIn, User user) {
         this.isLoggedIn = isLoggedIn;
         this.user = user;
     }
@@ -83,5 +82,9 @@ public class CurrentUserDto implements Dto {
         logoutUrl = currentUser.logoutUrl;
         loginUrl = currentUser.loginUrl;
         nickname = currentUser.nickname;
+    }
+
+    public void setIsAdmin(Boolean isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

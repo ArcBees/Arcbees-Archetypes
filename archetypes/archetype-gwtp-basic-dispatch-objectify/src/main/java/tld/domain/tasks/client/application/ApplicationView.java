@@ -21,7 +21,7 @@ import javax.inject.Inject;
 import com.arcbees.core.client.mvp.ViewImpl;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.HTMLPanel;
+import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
@@ -29,7 +29,9 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     }
 
     @UiField
-    HTMLPanel main;
+    SimplePanel header;
+    @UiField
+    SimplePanel main;
 
     @Inject
     public ApplicationView(final Binder uiBinder) {
@@ -38,11 +40,10 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
     @Override
     public void setInSlot(Object slot, Widget content) {
-        if (content != null) {
-            if (slot == ApplicationPresenter.TYPE_SetMainContent) {
-                main.clear();
-                main.add(content);
-            }
+        if (slot == ApplicationPresenter.TYPE_HeaderPresenter) {
+            header.add(content);
+        } else if (slot == ApplicationPresenter.TYPE_SetMainContent) {
+            main.add(content);
         }
     }
 }

@@ -23,6 +23,9 @@ import com.gwtplatform.dispatch.shared.Result;
 public class FetchCurrentUserResult implements Result {
     private CurrentUserDto currentUser;
 
+    public FetchCurrentUserResult() {
+    }
+    
     public FetchCurrentUserResult(CurrentUserDto currentUser) {
         this.currentUser = currentUser;
     }
