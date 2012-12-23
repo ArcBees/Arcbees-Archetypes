@@ -4,13 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>tld.domain.archetype</groupId>
+        <groupId>com.arcbees.archetype</groupId>
         <artifactId>archetypes</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>gwtp-appengine-objectify</artifactId>
-    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>GWTP AppEngine Objectify</name>
     <description>GWTP AppEngine Objectify with dispatch and login</description>
@@ -65,7 +64,7 @@
             <!-- 'mvn gwt:debug' - runs debug mode -->
             <!-- 'mvn gwt:compile' - compiles gwt -->
             <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
-            <!-- 'mvn clean gwt:compile deploy -DskipTests' - deploys to 
+            <!-- 'mvn clean gwt:compile deploy -DskipTests' - deploys to
                 GAE out running tests -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -90,7 +89,7 @@
                     <extraJvmArgs>-Dappengine.sdk.root=${gae.home}</extraJvmArgs>
 
                     <runTarget>myproject.html</runTarget>
-                    <module>tld.domain.myproject.MyProject</module>
+                    <module>com.arcbees.myproject.MyProject</module>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -154,6 +153,62 @@
     </repositories>
 
     <dependencies>
+        <!-- Google Web Toolkit dependencies -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-dev</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- GWT-Platform dependencies -->
+        <dependency>
+            <groupId>com.arcbees.core</groupId>
+            <artifactId>arcbees-core</artifactId>
+            <version>${arcbees-core.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-mvp-client</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-client</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-server-guice</artifactId>
+            <version>${gwtp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-shared</artifactId>
+            <version>${gwtp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-processors</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- DI dependencies -->
         <dependency>
             <groupId>com.google.inject</groupId>
@@ -234,6 +289,20 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava-gwt</artifactId>
             <version>${guava-version}</version>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jukito</groupId>
+            <artifactId>jukito</artifactId>
+            <version>${jukito.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>

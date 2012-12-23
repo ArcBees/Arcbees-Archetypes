@@ -4,13 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>tld.domain.archetype</groupId>
+        <groupId>com.arcbees.archetype</groupId>
         <artifactId>archetypes</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     
     <artifactId>gwtp-appengine-basic</artifactId>
-    <version>0.1-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>GWTP AppEngine Basic</name>
     <description>Basic GWTP application using App Engine</description>
@@ -22,7 +21,7 @@
 
     <build>
         <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
-        
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -52,7 +51,7 @@
                     </excludes>
                 </configuration>
             </plugin>
-        
+
             <!-- GWT -->
             <!-- 'mvn gwt:run' - runs development mode -->
             <!-- 'mvn gwt:debug' - runs debug mode -->
@@ -68,11 +67,11 @@
                     <testTimeOut>180</testTimeOut>
                     <includes>**/*GwtTest.java</includes>
                     <mode>htmlunit</mode>
-                    
+
                     <extraJvmArgs>-Xss1024k -Xmx512M</extraJvmArgs>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
-                    
+
                     <copyWebapp>true</copyWebapp>
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
 
@@ -80,9 +79,9 @@
                     <appEngineVersion>${gae.version}</appEngineVersion>
                     <appEngineHome>${gae.home}</appEngineHome>
                     <extraJvmArgs>-Dappengine.sdk.root=${gae.home}</extraJvmArgs>
-                    
+
                     <runTarget>myproject.html</runTarget>
-                    <module>tld.domain.myproject.MyProject</module>
+                    <module>com.arcbees.myproject.MyProject</module>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -110,7 +109,7 @@
                 <version>${maven-gae-plugin.version}</version>
                 <configuration>
                     <sdkDir>${gae.home}</sdkDir>
-                    
+
                     <!-- Add credentials to ~/.m2/settings.xml <id>appengine-credentials</id> -->
                     <serverId>appengine-credentials</serverId>
                     <splitJars>true</splitJars>
@@ -147,6 +146,56 @@
     </repositories>
 
     <dependencies>
+        <!-- Google Web Toolkit dependencies -->
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-user</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.gwt</groupId>
+            <artifactId>gwt-servlet</artifactId>
+            <version>${gwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- GWT-Platform dependencies -->
+        <dependency>
+            <groupId>com.arcbees.core</groupId>
+            <artifactId>arcbees-core</artifactId>
+            <version>${arcbees-core.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-mvp-client</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-client</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-server-guice</artifactId>
+            <version>${gwtp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-dispatch-shared</artifactId>
+            <version>${gwtp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.gwtplatform</groupId>
+            <artifactId>gwtp-processors</artifactId>
+            <version>${gwtp.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
         <!-- DI dependencies -->
         <dependency>
             <groupId>com.google.inject</groupId>
@@ -169,7 +218,7 @@
             <version>${gin.version}</version>
             <scope>provided</scope>
         </dependency>
-        
+
         <!-- Google App Engine dependencies -->
         <dependency>
             <groupId>com.google.appengine</groupId>
@@ -207,6 +256,20 @@
             <artifactId>servlet-api</artifactId>
             <version>${servlet-api.version}</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <!-- Test dependencies -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jukito</groupId>
+            <artifactId>jukito</artifactId>
+            <version>${jukito.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
