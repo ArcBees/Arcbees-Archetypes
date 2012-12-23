@@ -26,12 +26,13 @@ import com.gwtplatform.dispatch.server.ExecutionContext;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserAction, FetchCurrentUserResult> {
+
     private CurrentUserDtoProvider currentUserDtoProvider;
 
     @Inject
     public FetchCurrentUserHandler(final CurrentUserDtoProvider currentUserDtoProvider) {
         super(FetchCurrentUserAction.class);
-
+        
         this.currentUserDtoProvider = currentUserDtoProvider;
     }
 
@@ -39,7 +40,7 @@ public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserActi
     public FetchCurrentUserResult execute(FetchCurrentUserAction action, ExecutionContext context)
             throws ActionException {
         CurrentUserDto currentUser = currentUserDtoProvider.get();
-
+        
         return new FetchCurrentUserResult(currentUser);
     }
 }

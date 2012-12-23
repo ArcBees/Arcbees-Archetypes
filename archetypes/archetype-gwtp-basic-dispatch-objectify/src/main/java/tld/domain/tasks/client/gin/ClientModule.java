@@ -20,6 +20,7 @@ import tld.domain.tasks.client.application.ApplicationModule;
 import tld.domain.tasks.client.place.DefaultPlace;
 import tld.domain.tasks.client.place.NameTokens;
 import tld.domain.tasks.client.place.PlaceManager;
+import tld.domain.tasks.shared.dto.CurrentUserDto;
 
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
@@ -31,5 +32,6 @@ public class ClientModule extends AbstractPresenterModule {
         install(new ApplicationModule());
 
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
+        bind(CurrentUserDto.class).asEagerSingleton();
     }
 }

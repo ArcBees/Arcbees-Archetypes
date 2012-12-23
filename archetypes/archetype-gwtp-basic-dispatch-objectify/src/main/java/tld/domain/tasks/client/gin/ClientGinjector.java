@@ -16,6 +16,7 @@
 
 package tld.domain.tasks.client.gin;
 
+import tld.domain.tasks.client.BootStrapper;
 import tld.domain.tasks.client.application.ApplicationPresenter;
 import tld.domain.tasks.client.application.home.HomePagePresenter;
 
@@ -31,6 +32,8 @@ public interface ClientGinjector extends Ginjector {
     EventBus getEventBus();
 
     PlaceManager getPlaceManager();
+    
+    BootStrapper getBootStrapper();
 
     Provider<ApplicationPresenter> getAppPresenter();
 

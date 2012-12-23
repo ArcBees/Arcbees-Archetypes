@@ -30,6 +30,7 @@ public class MyProject implements EntryPoint {
         // This is required for Gwt-Platform proxy's generator
         DelayedBindRegistry.bind(ginjector);
 
-        ginjector.getPlaceManager().revealCurrentPlace();
+        // process current user first
+        ginjector.getBootStrapper().init();
     }
 }
