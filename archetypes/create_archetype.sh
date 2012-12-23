@@ -38,14 +38,14 @@ BuildArcheTypeInDirectory()
     cd $CURRENTDIR
 
     # add deployment to pom.xml for deployment to sonatype
-    SONATYPE="<distributionManagement>\n<repository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/service\/local\/staging\/deploy\/maven2<\/url><\/repository>\n<snapshotRepository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/content\/repositories\/snapshots<\/url><\/snapshotRepository><\/distributionManagement>\n<\/project>\n"
+    SONATYPE="<distributionManagement><repository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/service\/local\/staging\/deploy\/maven2<\/url><\/repository><snapshotRepository><id>sona-nexus-deploy<\/id><url>https:\/\/oss.sonatype.org\/content\/repositories\/snapshots<\/url><\/snapshotRepository><\/distributionManagement><\/project>"
     echo $SONATYPE
 
     sed -ie "s@<\/project>@${SONATYPE}@g" $PROJECTDIR/target/generated-sources/archetype/pom.xml
     cd $PROJECTDIR/target/generated-sources/archetype
 
     # TODO add parameter to enable this
-    #mvn deploy
+#mvn deploy
 }
 
 mvn clean
@@ -55,7 +55,7 @@ for dir in `find $CURRENTDIR -maxdepth 1 -type d -name 'gwtp*'`; do
     BuildArcheTypeInDirectory $dir
 done
 
-echo "\n***Run this in a new project directory:***\nmvn archetype:generate -DarchetypeCatalog=local\n"
+echo "\\n***Run this in a new project directory:***\\nmvn archetype:generate -DarchetypeCatalog=local\\n"
 echo "Finished"
 
 # TODO produce a catalog

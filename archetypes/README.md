@@ -13,7 +13,7 @@
 
   ```
   mvn archetype:generate -DarchetypeGroupId=com.arcbees \
-  -DarchetypeArtifactId=gwtp-basic-appengine-archetype \
+  -DarchetypeArtifactId=gwtp-appengine-basic \
   -DarchetypeVersion=0.1-SNAPSHOT \
   -DgroupId=com.projectname \
   -DartifactId=new-project-name \
