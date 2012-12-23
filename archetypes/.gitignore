@@ -1,5 +1,6 @@
 .project
 *.iml
+.idea**
 .settings
 target**
 bin**
