@@ -14,25 +14,20 @@
  * the License.
  */
 
-package tld.domain.tasks.shared.domain;
+package tld.domain.tasks.shared.dispatch;
 
-import com.googlecode.objectify.annotation.Entity;
-import com.googlecode.objectify.annotation.Index;
+import tld.domain.tasks.shared.dto.CurrentUserDto;
 
-@Index
-@Entity
-public class Task extends BaseEntity {
-    private String name;
+import com.gwtplatform.dispatch.shared.Result;
 
-    public Task() {
-        name = "";
+public class FetchCurrentUserResult implements Result {
+    private CurrentUserDto currentUser;
+
+    public FetchCurrentUserResult(CurrentUserDto currentUser) {
+        this.currentUser = currentUser;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public CurrentUserDto getCurrentUser() {
+        return currentUser;
     }
 }

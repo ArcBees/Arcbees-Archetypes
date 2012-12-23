@@ -20,9 +20,11 @@ import com.gwtplatform.dispatch.shared.Action;
 import com.gwtplatform.dispatch.shared.Result;
 
 /**
- * Base abstract implementation of {@link com.gwtplatform.dispatch.shared.Action}.
- *
- * @param <R> The {@link com.gwtplatform.dispatch.shared.Result} type returned.
+ * Base abstract implementation of
+ * {@link com.gwtplatform.dispatch.shared.Action}.
+ * 
+ * @param <R>
+ *            The {@link com.gwtplatform.dispatch.shared.Result} type returned.
  */
 public abstract class ActionImpl<R extends Result> implements Action<R> {
     @Override
@@ -34,8 +36,7 @@ public abstract class ActionImpl<R extends Result> implements Action<R> {
     public String getServiceName() {
         String className = this.getClass().getName();
         int namePos = className.lastIndexOf(".") + 1;
-        className = com.gwtplatform.dispatch.shared.ActionImpl.DEFAULT_SERVICE_NAME
-                + className.substring(namePos);
+        className = com.gwtplatform.dispatch.shared.ActionImpl.DEFAULT_SERVICE_NAME + className.substring(namePos);
 
         return className;
     }

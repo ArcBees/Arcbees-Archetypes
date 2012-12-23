@@ -31,14 +31,14 @@ public class FetchTaskHandler extends AbstractAction<FetchTaskAction, FetchTaskR
     @Inject
     public FetchTaskHandler(final TaskDao taskDao) {
         super(FetchTaskAction.class);
-        
+
         this.taskDao = taskDao;
     }
 
     @Override
     public FetchTaskResult execute(FetchTaskAction action, ExecutionContext context) throws ActionException {
-      Task task = taskDao.get(action.getTaskId());
-          
-      return new FetchTaskResult(task);
+        Task task = taskDao.get(action.getTaskId());
+
+        return new FetchTaskResult(task);
     }
 }

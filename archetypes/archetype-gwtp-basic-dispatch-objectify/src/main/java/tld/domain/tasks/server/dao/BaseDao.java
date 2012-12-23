@@ -62,9 +62,11 @@ public abstract class BaseDao<T> {
     }
 
     public T get(Long id) {
-        // work around for objectify cacheing and new query not having the latest data
+        // work around for objectify cacheing and new query not having the
+        // latest
+        // data
         ofy().clear();
-        
+
         return ofy().get(clazz, id);
     }
 
@@ -87,7 +89,7 @@ public abstract class BaseDao<T> {
     public void delete(T object) {
         ofy().delete().entity(object);
     }
-    
+
     public void delete(Long id) {
         Key<T> key = Key.create(clazz, id);
         ofy().delete().entity(key);

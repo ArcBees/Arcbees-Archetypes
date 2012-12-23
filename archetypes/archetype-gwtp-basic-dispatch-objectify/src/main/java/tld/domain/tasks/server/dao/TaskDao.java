@@ -19,7 +19,7 @@ package tld.domain.tasks.server.dao;
 import tld.domain.tasks.shared.domain.Task;
 
 public class TaskDao extends BaseDao<Task> {
-  protected TaskDao() {
-    super(Task.class);
-  }
+    protected TaskDao() {
+        super(Task.class);
+    }
 }

@@ -18,15 +18,15 @@ package tld.domain.tasks.shared.dispatch;
 
 public class FetchTaskAction extends ActionImpl<FetchTaskResult> {
     private Long taskId;
-    
+
     public FetchTaskAction() {
     }
 
     public Long getTaskId() {
-      return taskId;
+        return taskId;
     }
 
     public void setTaskId(Long taskId) {
-      this.taskId = taskId;
+        this.taskId = taskId;
     }
 }

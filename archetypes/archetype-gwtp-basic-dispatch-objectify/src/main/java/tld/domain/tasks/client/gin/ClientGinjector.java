@@ -33,6 +33,6 @@ public interface ClientGinjector extends Ginjector {
     PlaceManager getPlaceManager();
 
     Provider<ApplicationPresenter> getAppPresenter();
-    
+
     Provider<HomePagePresenter> getHomePagePresenter();
 }

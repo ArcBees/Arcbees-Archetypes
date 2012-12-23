@@ -16,6 +16,7 @@
 
 package tld.domain.tasks.server.guice;
 
+import tld.domain.tasks.server.authentication.AuthenticationModule;
 import tld.domain.tasks.server.dispatch.DispatchHandlersModule;
 
 import com.gwtplatform.dispatch.server.guice.HandlerModule;
@@ -23,6 +24,7 @@ import com.gwtplatform.dispatch.server.guice.HandlerModule;
 public class ServerModule extends HandlerModule {
     @Override
     protected void configureHandlers() {
-      install(new DispatchHandlersModule());
+        install(new DispatchHandlersModule());
+        install(new AuthenticationModule());
     }
 }

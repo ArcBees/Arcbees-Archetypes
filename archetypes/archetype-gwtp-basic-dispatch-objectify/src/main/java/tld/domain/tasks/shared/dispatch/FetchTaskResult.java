@@ -25,12 +25,12 @@ public class FetchTaskResult implements Result {
 
     public FetchTaskResult() {
     }
-    
+
     public FetchTaskResult(Task task) {
-      this.task = task;
+        this.task = task;
     }
-    
+
     public Task getTask() {
-      return task;
+        return task;
     }
 }

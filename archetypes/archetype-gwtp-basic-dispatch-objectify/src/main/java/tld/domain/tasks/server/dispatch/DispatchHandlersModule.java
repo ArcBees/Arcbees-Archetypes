@@ -16,6 +16,7 @@
 
 package tld.domain.tasks.server.dispatch;
 
+import tld.domain.tasks.shared.dispatch.FetchCurrentUserAction;
 import tld.domain.tasks.shared.dispatch.FetchTaskAction;
 
 import com.gwtplatform.dispatch.server.guice.HandlerModule;
@@ -24,5 +25,6 @@ public class DispatchHandlersModule extends HandlerModule {
     @Override
     protected void configureHandlers() {
         bindHandler(FetchTaskAction.class, FetchTaskHandler.class);
+        bindHandler(FetchCurrentUserAction.class, FetchCurrentUserHandler.class);
     }
 }
