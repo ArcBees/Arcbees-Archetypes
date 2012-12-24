@@ -1,0 +1,46 @@
+/**
+ * Copyright 2012 ArcBees Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.arcbees.tasks.server.dispatch;
+
+
+import com.arcbees.tasks.server.authentication.CurrentUserDtoProvider;
+import com.arcbees.tasks.shared.dispatch.FetchCurrentUserAction;
+import com.arcbees.tasks.shared.dispatch.FetchCurrentUserResult;
+import com.arcbees.tasks.shared.dto.CurrentUserDto;
+import com.google.inject.Inject;
+import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.shared.ActionException;
+
+public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserAction, FetchCurrentUserResult> {
+
+    private CurrentUserDtoProvider currentUserDtoProvider;
+
+    @Inject
+    public FetchCurrentUserHandler(final CurrentUserDtoProvider currentUserDtoProvider) {
+        super(FetchCurrentUserAction.class);
+        
+        this.currentUserDtoProvider = currentUserDtoProvider;
+    }
+
+    @Override
+    public FetchCurrentUserResult execute(FetchCurrentUserAction action, ExecutionContext context)
+            throws ActionException {
+        CurrentUserDto currentUser = currentUserDtoProvider.get();
+        
+        return new FetchCurrentUserResult(currentUser);
+    }
+}
