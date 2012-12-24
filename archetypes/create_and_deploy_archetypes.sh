@@ -45,7 +45,7 @@ BuildArcheTypeInDirectory()
     cd $PROJECTDIR/target/generated-sources/archetype
 
     # TODO add parameter to enable this
-#mvn deploy
+    mvn deploy
 }
 
 mvn clean
