@@ -21,7 +21,7 @@
   -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
   ```
 
-  GWTP using AppEngine with Objectify and Google Login
+  GWTP using AppEngine with Objectify, RPC dispatch and Google Login
   ```
   mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
   -DarchetypeArtifactId=gwtp-appengine-objectify-archetype \
