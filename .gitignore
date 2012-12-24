@@ -1,0 +1,10 @@
+.project
+.classpath
+.settings
+bin**
+.gwt**
+target**
+*.DS_Store
+.DS_Store
+*.iml
+.idea**
