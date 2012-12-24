@@ -11,13 +11,34 @@
 ##Create Project
 * To create a GWTP basic App Engine project change the groupId and artifactId. 
 
+  GWTP AppEngine Basic
   ```
-  mvn archetype:generate -DarchetypeGroupId=com.arcbees \
-  -DarchetypeArtifactId=gwtp-appengine-basic \
-  -DarchetypeVersion=0.1-SNAPSHOT \
+  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
+  -DarchetypeArtifactId=gwtp-appengine-basic-archetype \
+  -DarchetypeVersion=1.0-SNAPSHOT \
   -DgroupId=com.projectname \
   -DartifactId=new-project-name \
-  -DremoteRepositories=https://oss.sonatype.org/content/repositories/snapshots/
+  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
+  ```
+
+  GWTP using AppEngine with Objectify and Google Login
+  ```
+  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
+  -DarchetypeArtifactId=gwtp-appengine-objectify-archetype \
+  -DarchetypeVersion=1.0-SNAPSHOT \
+  -DgroupId=com.projectname \
+  -DartifactId=new-project-name \
+  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
+  ```
+
+ GWTP using a generic servlet container using RequestFactory and spring. 
+  ```
+  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
+  -DarchetypeArtifactId=gwtp-servletcontainer-requestfactory-spring-archetype \
+  -DarchetypeVersion=1.0-SNAPSHOT \
+  -DgroupId=com.projectname \
+  -DartifactId=new-project-name \
+  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
   ```
 
 ##Archetype Creation
