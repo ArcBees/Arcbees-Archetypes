@@ -1,5 +1,10 @@
 .project
-*.iml
+.classpath
 .settings
-target**
 bin**
+.gwt**
+target**
+*.DS_Store
+.DS_Store
+*.iml
+.idea**
