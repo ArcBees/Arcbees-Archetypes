@@ -26,6 +26,7 @@ import com.arcbees.tasks.client.place.DefaultPlace;
 import com.arcbees.tasks.client.place.NameTokens;
 import com.arcbees.tasks.client.place.PlaceManager;
 import com.arcbees.tasks.shared.dto.CurrentUserDto;
+import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
@@ -33,6 +34,7 @@ public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         install(new DefaultModule(PlaceManager.class));
+        install(new DispatchAsyncModule.Builder().build());
         install(new ApplicationModule());
 
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
