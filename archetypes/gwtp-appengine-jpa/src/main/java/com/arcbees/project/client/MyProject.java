@@ -16,15 +16,25 @@
 
 package com.arcbees.project.client;
 
+import com.arcbees.project.client.gin.AppGinjector;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
-import com.gwtplatform.mvp.client.ApplicationController;
+import com.gwtplatform.mvp.client.DelayedBindRegistry;
 
 public class MyProject implements EntryPoint {
-    public final ApplicationController controller = GWT.create(ApplicationController.class);
+//    public final ApplicationController controller = GWT.create(ApplicationController.class);
+//
+//    @Override
+//    public void onModuleLoad() {
+//      controller.init();
+//    }
+    private final AppGinjector ginjector = GWT.create(AppGinjector.class);
 
     @Override
     public void onModuleLoad() {
-      controller.init();
+        // This is required for Gwt-Platform proxy's generator
+        DelayedBindRegistry.bind(ginjector);
+
+        ginjector.getPlaceManager().revealCurrentPlace();
     }
 }

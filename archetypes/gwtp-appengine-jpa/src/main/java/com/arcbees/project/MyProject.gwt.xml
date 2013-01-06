@@ -18,8 +18,10 @@
     <source path='client'/>
     <source path='shared'/>
 
-    <set-configuration-property name="gin.ginjector.modules"
-                              value="com.arcbees.project.client.gin.ClientModule"/>
+    <!-- <set-configuration-property name="gin.ginjector.modules"
+                              value="com.arcbees.project.client.gin.ClientModule"/> -->
+    <set-configuration-property name='gin.ginjector' value='com.arcbees.project.client.gin.AppGinjector'/>
+                              
     
     <!-- Uncomment this line to unobfuscate css class names during debugging -->
     <!-- <set-configuration-property name="CssResource.style" value="pretty"/> -->
