@@ -18,6 +18,6 @@
     <source path='client'/>
     <source path='shared'/>
 
-    <define-configuration-property name='gin.ginjector' is-multi-valued='false'/>
-    <set-configuration-property name='gin.ginjector' value='com.arcbees.myproject.client.gin.ClientGinjector'/>
+    <set-configuration-property name="gin.ginjector.modules"
+                              value="com.arcbees.myproject.client.gin.ClientModule"/>
 </module>

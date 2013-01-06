@@ -13,13 +13,13 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>0.8-SNAPSHOT</gwtp.version>
+        <gwtp.version>0.8-alpha-2</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
         
         <!-- server -->
-        <gae.version>1.7.3</gae.version>
+        <gae.version>1.7.4</gae.version>
         <guice.version>3.0</guice.version>
         <objectify.version>4.0b1</objectify.version>
         <persistence-api.version>1.0.2</persistence-api.version>
@@ -171,8 +171,8 @@
         </plugins>
     </build>
 
-    <repositories>
-        <!-- Use GWTP snapshots for the latest and greatest -->
+    <!-- <repositories>
+        Use GWTP snapshots for the latest and greatest
         <repository>
             <id>sonatype.snapshots</id>
             <name>Sonatype snapshot repository</name>
@@ -180,7 +180,7 @@
             <snapshots>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->

@@ -13,18 +13,17 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>0.8-SNAPSHOT</gwtp.version>
+        <gwtp.version>0.8-alpha-2</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
         
         <!-- server -->
-        <gae.version>1.7.3</gae.version>
+        <gae.version>1.7.4</gae.version>
         <guice.version>3.0</guice.version>
         <objectify.version>4.0b1</objectify.version>
         <persistence-api.version>1.0.2</persistence-api.version>
         <servlet-api.version>2.5</servlet-api.version>
-        <objectify.version>4.0b1</objectify.version>
         <javax.validation.version>1.0.0.GA</javax.validation.version>
         <guava-version>13.0.1</guava-version>
         <servlet-api.version>2.5</servlet-api.version>
@@ -163,8 +162,8 @@
         </plugins>
     </build>
 
-    <repositories>
-        <!-- Use GWTP snapshots for the latest and greatest -->
+    <!-- <repositories>
+        Use GWTP snapshots for the latest and greatest
         <repository>
             <id>sonatype.snapshots</id>
             <name>Sonatype snapshot repository</name>
@@ -173,7 +172,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+    </repositories> -->
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
@@ -271,13 +270,6 @@
             <artifactId>appengine-testing</artifactId>
             <version>${gae.version}</version>
             <scope>test</scope>
-        </dependency>
-
-        <!-- Persistence dependencies -->
-        <dependency>
-            <groupId>com.googlecode.objectify</groupId>
-            <artifactId>objectify</artifactId>
-            <version>${objectify.version}</version>
         </dependency>
 
         <!-- Other dependencies -->
