@@ -32,9 +32,7 @@ public class MyProject implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-        // This is required for Gwt-Platform proxy's generator
         DelayedBindRegistry.bind(ginjector);
-
-        ginjector.getPlaceManager().revealCurrentPlace();
+        ginjector.getBootStrapper().init();
     }
 }

@@ -31,24 +31,27 @@ public abstract class BaseDao<T> {
     protected EntityManager entityManager;
 
     protected BaseDao(final Class<T> clazz) {
-      this.clazz = clazz;
+        this.clazz = clazz;
     }
 
     public List<T> getAll() {
-      return entityManager.createQuery("select o from " + clazz.getName() + " o").getResultList();
+        List<T> list = entityManager.createQuery("select o from " + clazz.getName() + " o").getResultList();
+        return list; 
     }
 
     public T put(T object) {
-      entityManager.persist(object);
-      return object;
+        entityManager.persist(object);
+        return object;
     }
 
     public T get(Key key) {
-      return entityManager.find(clazz, key);
+        T value = entityManager.find(clazz, key);
+        return value;
     }
 
     public T get(Long id) {
-      Key key = KeyFactory.createKey(clazz.getName(), id);
-      return entityManager.find(clazz, key);
+        Key key = KeyFactory.createKey(clazz.getName(), id);
+        T value = entityManager.find(clazz, key);
+        return null;
     }
-  }
+}

@@ -18,7 +18,6 @@ package com.arcbees.project.client.gin;
 
 import javax.inject.Singleton;
 
-
 import com.arcbees.project.client.BootStrapper;
 import com.arcbees.project.client.BootStrapperImpl;
 import com.arcbees.project.client.application.ApplicationModule;
@@ -26,7 +25,6 @@ import com.arcbees.project.client.place.DefaultPlace;
 import com.arcbees.project.client.place.NameTokens;
 import com.arcbees.project.client.place.PlaceManager;
 import com.arcbees.project.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
@@ -34,7 +32,6 @@ public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         install(new DefaultModule(PlaceManager.class));
-        install(new DispatchAsyncModule.Builder().build());
         install(new ApplicationModule());
 
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);

@@ -53,6 +53,7 @@ public class BootStrapperImpl implements BootStrapper {
 
             @Override
             public void onFailure(Throwable caught) {
+                caught.printStackTrace();
                 super.onFailure(caught);
                 placeManager.revealCurrentPlace();
             }

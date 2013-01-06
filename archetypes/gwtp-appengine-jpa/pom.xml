@@ -52,7 +52,7 @@
 
         <resources>
             <resource>
-                <directory>${basedir}/src/main/resources</directory>
+                <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
@@ -140,48 +140,18 @@
 
             <!-- This plug-in "enhances" your domain model objects (i.e. 
                 makes them persistent for datanucleus) -->
-            <plugin>
-                <groupId>org.datanucleus</groupId>
-                <artifactId>maven-datanucleus-plugin</artifactId>
-                <version>3.0.2</version>
-                <configuration>
-                    <!-- Make sure this path contains your persistent classes! -->
-                    <mappingIncludes>**/bol/*.class</mappingIncludes>
-                    <verbose>true</verbose>
-                    <api>JPA</api>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>compile</phase>
-                        <goals>
-                            <goal>enhance</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>asm</groupId>
-                        <artifactId>asm-commons</artifactId>
-                        <version>3.3.1</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.datanucleus</groupId>
-                        <version>3.0.6</version>
-                        <artifactId>datanucleus-api-jpa</artifactId>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.datanucleus</groupId>
-                        <artifactId>datanucleus-core</artifactId>
-                        <version>3.0.6</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.datanucleus</groupId>
-                        <artifactId>datanucleus-enhancer</artifactId>
-                        <version>3.1.1</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            
+            <!-- <plugin> <groupId>org.datanucleus</groupId> <artifactId>maven-datanucleus-plugin</artifactId> 
+                <version>3.0.2</version> <configuration> Make sure this path contains your 
+                persistent classes! <mappingIncludes>**/domain/*.class</mappingIncludes> 
+                <verbose>true</verbose> <api>JPA</api> </configuration> <executions> <execution> 
+                <phase>compile</phase> <goals> <goal>enhance</goal> </goals> </execution> 
+                </executions> <dependencies> <dependency> <groupId>asm</groupId> <artifactId>asm-commons</artifactId> 
+                <version>3.3.1</version> </dependency> <dependency> <groupId>org.datanucleus</groupId> 
+                <version>3.0.6</version> <artifactId>datanucleus-api-jpa</artifactId> </dependency> 
+                <dependency> <groupId>org.datanucleus</groupId> <artifactId>datanucleus-core</artifactId> 
+                <version>3.0.6</version> </dependency> <dependency> <groupId>org.datanucleus</groupId> 
+                <artifactId>datanucleus-enhancer</artifactId> <version>3.1.1</version> </dependency> 
+                </dependencies> </plugin> -->
             <!-- Google App Engine Deployment -->
             <plugin>
                 <groupId>net.kindleit</groupId>
@@ -213,9 +183,16 @@
         </plugins>
     </build>
 
-    <!-- <repositories> Use GWTP snapshots for the latest and greatest <repository> 
-        <id>sonatype.snapshots</id> <name>Sonatype snapshot repository</name> <url>https://oss.sonatype.org/content/repositories/snapshots/</url> 
-        <snapshots> </snapshots> </repository> </repositories> -->
+    <repositories>
+        <!-- Use GWTP snapshots for the latest and greatest -->
+        <repository>
+            <id>sonatype.snapshots</id>
+            <name>Sonatype snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <snapshots>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
@@ -238,13 +215,21 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- GWT-Platform dependencies -->
+        <!-- Arcbees -->
         <dependency>
             <groupId>com.arcbees.core</groupId>
             <artifactId>arcbees-core</artifactId>
             <version>${arcbees-core.version}</version>
-            <scope>provided</scope>
+            <!-- <scope>provided</scope> -->
         </dependency>
+        <dependency>
+            <groupId>com.arcbees.appengine</groupId>
+            <artifactId>arcbees-appengine-gwt-serializers</artifactId>
+            <version>${arcbees-core.version}</version>
+            <!-- <scope>provided</scope> -->
+        </dependency>
+
+        <!-- GWT-Platform dependencies -->
         <dependency>
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-mvp-client</artifactId>
@@ -302,49 +287,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Google App Engine dependencies -->
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-1.0-sdk</artifactId>
-            <version>${gae.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-labs</artifactId>
-            <version>${gae.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-api-stubs</artifactId>
-            <version>${gae.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.appengine</groupId>
-            <artifactId>appengine-testing</artifactId>
-            <version>${gae.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <!-- Persistence dependencies -->
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-            <version>${persistence-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${javax.validation.version}</version>
-        </dependency>
-
         <!-- Other dependencies -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <scope>runtime</scope>
-        </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
@@ -372,56 +315,79 @@
 
         <!-- Persistence dependencies -->
         <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>persistence-api</artifactId>
-            <version>${persistence-api.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>${javax.validation.version}</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
         </dependency>
 
-        <!-- JPA 2.0 for GAE -->
+        <!-- Google App Engine dependencies -->
         <dependency>
-            <groupId>org.datanucleus</groupId>
-            <version>3.0.5</version>
-            <artifactId>datanucleus-api-jdo</artifactId>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>${gae.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-labs</artifactId>
+            <version>${gae.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-jsr107cache</artifactId>
+            <version>1.7.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm</artifactId>
+            <version>4.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.jdo</groupId>
+            <artifactId>jdo2-api</artifactId>
+            <version>2.3-eb</version>
+            <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.datanucleus</groupId>
-            <version>3.0.6</version>
+            <artifactId>datanucleus-api-jdo</artifactId>
+            <version>3.1.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.datanucleus</groupId>
             <artifactId>datanucleus-api-jpa</artifactId>
+            <version>3.1.1</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>com.google.appengine.orm</groupId>
             <artifactId>datanucleus-appengine</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.datanucleus</groupId>
-            <artifactId>datanucleus-core</artifactId>
-            <version>3.0.6</version>
+            <version>2.1.1</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-jpa_2.0_spec</artifactId>
             <version>1.0</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>javax.jdo</groupId>
             <artifactId>jdo-api</artifactId>
-            <version>3.0</version>
+            <version>3.0.1</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>3.0-alpha-1</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>jta</artifactId>
+            <groupId>net.sf.jsr107cache</groupId>
+            <artifactId>jsr107cache</artifactId>
             <version>1.1</version>
+            <scope>compile</scope>
         </dependency>
+
     </dependencies>
 </project>

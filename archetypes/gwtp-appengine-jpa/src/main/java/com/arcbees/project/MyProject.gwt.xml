@@ -12,6 +12,7 @@
     <!-- Other module inherits                                      -->
     <inherits name='com.gwtplatform.dispatch.Dispatch'/>
     <inherits name="com.arcbees.core.Mvp"/>
+    <inherits name="com.arcbees.appengine.Arcbees-GWT-Serializers"/>
 
     <entry-point class='com.arcbees.project.client.MyProject'/>
 

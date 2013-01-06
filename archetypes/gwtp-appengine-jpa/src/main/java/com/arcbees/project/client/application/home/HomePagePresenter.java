@@ -55,7 +55,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     protected void onReveal() {
         super.onReveal();
 
-        fetchTask();
+        //fetchTask();
     }
 
     private void fetchTask() {

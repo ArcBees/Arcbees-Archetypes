@@ -25,7 +25,9 @@ public class ServerModule extends HandlerModule {
     @Override
     protected void configureHandlers() {
         install(new JpaPersistModule("transactions-optional"));
+        bind(JpaInitilization.class).asEagerSingleton();
+        
         install(new DispatchHandlersModule());
-        install(new AuthenticationModule());
+        install(new AuthenticationModule()); 
     }
 }

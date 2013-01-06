@@ -12,7 +12,9 @@ public class UserDao extends BaseDao<User> {
     public User findByGoogleId(String googleId) {
       Query query = entityManager.createQuery("select o from " + User.class.getName() + " o where o.googleId = :googleId");
       query.setParameter("googleId", googleId);
-      return (User) query.getSingleResult();
+      User user = (User) query.getSingleResult();
+      entityManager.clear();
+      return user;
     }
   }
 

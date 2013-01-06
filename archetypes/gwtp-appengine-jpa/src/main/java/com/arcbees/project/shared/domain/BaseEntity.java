@@ -19,10 +19,12 @@ package com.arcbees.project.shared.domain;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 import com.arcbees.project.shared.dto.Dto;
 import com.google.appengine.api.datastore.Key;
 
+@MappedSuperclass
 public abstract class BaseEntity implements Dto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
