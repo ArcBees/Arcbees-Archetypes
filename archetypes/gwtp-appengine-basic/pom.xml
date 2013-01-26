@@ -100,7 +100,7 @@
                     <includes>**/*GwtTest.java</includes>
                     <mode>htmlunit</mode>
 
-                    <extraJvmArgs>-Xss1024k -Xmx512M -XX:MaxPermSize=128m</extraJvmArgs>
+                    <extraJvmArgs>-Xss1024k -Xmx1024m -XX:MaxPermSize=256m</extraJvmArgs>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
 
@@ -110,7 +110,6 @@
                     <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
                     <appEngineVersion>${gae.version}</appEngineVersion>
                     <appEngineHome>${gae.home}</appEngineHome>
-                    <extraJvmArgs>-Dappengine.sdk.root=${gae.home}</extraJvmArgs>
 
                     <runTarget>myproject.html</runTarget>
                     <module>com.arcbees.myproject.MyProject</module>
@@ -122,42 +121,9 @@
                 <groupId>net.kindleit</groupId>
                 <artifactId>maven-gae-plugin</artifactId>
                 <version>${maven-gae-plugin.version}</version>
-                <configuration>
-                    <sdkDir>${gae.home}</sdkDir>
-                    <!-- Add credentials to ~/.m2/settings.xml <id>appengine-credentials</id> -->
-                    <serverId>appengine-credentials</serverId>
-                    <splitJars>true</splitJars>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>install-server-jar</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>deploy</id>
-                        <goals>
-                            <goal>deploy</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <!-- Use GWTP snapshots for the latest and greatest -->
-        <repository>
-            <id>sonatype.snapshots</id>
-            <name>Sonatype snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
@@ -168,11 +134,6 @@
         </dependency>
 
         <!-- GWT-Platform dependencies -->
-        <dependency>
-            <groupId>com.arcbees.core</groupId>
-            <artifactId>arcbees-core</artifactId>
-            <version>${arcbees-core.version}</version>
-        </dependency>
         <dependency>
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-mvp-client</artifactId>
