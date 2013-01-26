@@ -5,7 +5,7 @@
     <welcome-file>myproject.html</welcome-file>
   </welcome-file-list>
   <listener>
-    <listener-class>com.arcbees.tasks.server.guice.GuiceServletConfig</listener-class>
+    <listener-class>com.arcbees.project.server.guice.GuiceServletConfig</listener-class>
   </listener>
   <filter>
     <filter-name>guiceFilter</filter-name>
