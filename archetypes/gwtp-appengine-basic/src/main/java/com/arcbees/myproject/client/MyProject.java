@@ -25,6 +25,6 @@ public class MyProject implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-      controller.init();
+        controller.init();
     }
 }
