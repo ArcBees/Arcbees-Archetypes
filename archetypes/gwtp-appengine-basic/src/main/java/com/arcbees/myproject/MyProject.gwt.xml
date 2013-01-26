@@ -17,7 +17,11 @@
     <source path='client' />
     <source path='shared' />
 
+    <!-- <set-configuration-property name="gin.ginjector.modules"
+        value="com.arcbees.myproject.client.gin.ClientModule,com.gwtplatform.dispatch.client.gin.DispatchAsyncModule" /> -->
+
     <set-configuration-property name="gin.ginjector.modules"
-        value="com.arcbees.myproject.client.gin.ClientModule,
-        com.gwtplatform.dispatch.client.gin.DispatchAsyncModule" />
+        value="com.arcbees.myproject.client.gin.ClientModule" />
+    <extend-configuration-property name="gin.ginjector.modules"
+        value="com.gwtplatform.dispatch.client.gin.DispatchAsyncModule" />
 </module>
