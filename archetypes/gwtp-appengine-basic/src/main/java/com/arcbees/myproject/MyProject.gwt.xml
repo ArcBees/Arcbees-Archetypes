@@ -12,13 +12,15 @@
     <!-- Other module inherits -->
     <inherits name='com.gwtplatform.dispatch.Dispatch' />
 
-    <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
+    <inherits name='com.gwtplatform.mvp.Mvp'/>
+
+    <!-- not working -->
+    <!-- <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' /> -->
+
+    <entry-point class='com.arcbees.myproject.client.MyProject' />
 
     <source path='client' />
     <source path='shared' />
-
-    <!-- <set-configuration-property name="gin.ginjector.modules"
-        value="com.arcbees.myproject.client.gin.ClientModule,com.gwtplatform.dispatch.client.gin.DispatchAsyncModule" /> -->
 
     <set-configuration-property name="gin.ginjector.modules"
         value="com.arcbees.myproject.client.gin.ClientModule" />

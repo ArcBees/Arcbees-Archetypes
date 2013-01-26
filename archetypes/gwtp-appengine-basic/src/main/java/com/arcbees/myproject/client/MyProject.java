@@ -14,17 +14,17 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.application;
+package com.arcbees.myproject.client;
 
-import com.arcbees.myproject.client.application.home.HomeModule;
-import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+import com.google.gwt.core.client.EntryPoint;
+import com.google.gwt.core.client.GWT;
+import com.gwtplatform.mvp.client.ApplicationController;
 
-public class ApplicationModule extends AbstractPresenterModule {
+public class MyProject implements EntryPoint {
+    public final ApplicationController controller = GWT.create(ApplicationController.class);
+
     @Override
-    protected void configure() {
-        install(new HomeModule());
-
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+    public void onModuleLoad() {
+      controller.init();
     }
 }
