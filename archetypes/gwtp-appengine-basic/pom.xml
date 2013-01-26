@@ -13,7 +13,7 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>0.8-alpha-2</gwtp.version>
+        <gwtp.version>0.8-beta-1</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
@@ -45,7 +45,9 @@
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
         
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
-        <gae.home>${settings.localRepository}/com/google/appengine/appengine-java-sdk/${gae.version}/appengine-java-sdk-${gae.version}</gae.home>
+        <gae.home>
+            ${settings.localRepository}/com/google/appengine/appengine-java-sdk/${gae.version}/appengine-java-sdk-${gae.version}
+        </gae.home>
     </properties>
 
     <build>
@@ -97,7 +99,7 @@
                     <includes>**/*GwtTest.java</includes>
                     <mode>htmlunit</mode>
 
-                    <extraJvmArgs>-Xss1024k -Xmx512M</extraJvmArgs>
+                    <extraJvmArgs>-Xss1024k -Xmx512M -XX:MaxPermSize=128m</extraJvmArgs>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
 
@@ -112,23 +114,6 @@
                     <runTarget>myproject.html</runTarget>
                     <module>com.arcbees.myproject.MyProject</module>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-user</artifactId>
-                        <version>${gwt.version}</version>
-                    </dependency>
-                    <!-- <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-dev</artifactId>
-                        <version>${gwt.version}</version>
-                    </dependency> -->
-                    <dependency>
-                        <groupId>com.google.gwt</groupId>
-                        <artifactId>gwt-codeserver</artifactId>
-                        <version>${gwt.version}</version>
-                    </dependency>
-                </dependencies>
             </plugin>
 
             <!-- Google App Engine Deployment -->
@@ -138,7 +123,6 @@
                 <version>${maven-gae-plugin.version}</version>
                 <configuration>
                     <sdkDir>${gae.home}</sdkDir>
-
                     <!-- Add credentials to ~/.m2/settings.xml <id>appengine-credentials</id> -->
                     <serverId>appengine-credentials</serverId>
                     <splitJars>true</splitJars>
@@ -162,8 +146,8 @@
         </plugins>
     </build>
 
-    <!-- <repositories>
-        Use GWTP snapshots for the latest and greatest
+    <repositories>
+        <!-- Use GWTP snapshots for the latest and greatest -->
         <repository>
             <id>sonatype.snapshots</id>
             <name>Sonatype snapshot repository</name>
@@ -172,7 +156,7 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories> -->
+    </repositories>
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
@@ -180,13 +164,6 @@
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
             <version>${gwt.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-servlet</artifactId>
-            <version>${gwt.version}</version>
-            <scope>runtime</scope>
         </dependency>
 
         <!-- GWT-Platform dependencies -->
@@ -194,19 +171,16 @@
             <groupId>com.arcbees.core</groupId>
             <artifactId>arcbees-core</artifactId>
             <version>${arcbees-core.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-mvp-client</artifactId>
             <version>${gwtp.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-dispatch-client</artifactId>
             <version>${gwtp.version}</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.gwtplatform</groupId>
@@ -222,7 +196,6 @@
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-processors</artifactId>
             <version>${gwtp.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <!-- DI dependencies -->
@@ -245,7 +218,6 @@
             <groupId>com.google.gwt.inject</groupId>
             <artifactId>gin</artifactId>
             <version>${gin.version}</version>
-            <scope>provided</scope>
         </dependency>
 
         <!-- Google App Engine dependencies -->
