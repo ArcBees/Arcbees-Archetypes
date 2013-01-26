@@ -1,23 +1,21 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <module rename-to='myproject'>
-    <!-- Inherit the core Web Toolkit stuff.                        -->
-    <inherits name='com.google.gwt.user.User'/>
-    <inherits name='com.google.gwt.inject.Inject'/>
-    
+    <!-- Inherit the core Web Toolkit stuff. -->
+    <inherits name='com.google.gwt.user.User' />
+    <inherits name='com.google.gwt.inject.Inject' />
+
     <!-- Default css -->
-    <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+    <inherits name='com.google.gwt.user.theme.standard.Standard' />
     <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
-    <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+    <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/> -->
 
-    <!-- Other module inherits                                      -->
-    <inherits name='com.gwtplatform.dispatch.Dispatch'/>
-    <inherits name="com.arcbees.core.Mvp"/>
+    <!-- Other module inherits -->
+    <inherits name='com.gwtplatform.dispatch.Dispatch' />
+    
+    <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
 
-    <entry-point class='com.arcbees.myproject.client.MyProject'/>
+    <source path='client' />
+    <source path='shared' />
 
-    <source path='client'/>
-    <source path='shared'/>
-
-    <set-configuration-property name="gin.ginjector.modules"
-                              value="com.arcbees.myproject.client.gin.ClientModule"/>
+    <set-configuration-property name="gin.ginjector.modules" value="com.arcbees.myproject.client.gin.ClientModule"/>
 </module>

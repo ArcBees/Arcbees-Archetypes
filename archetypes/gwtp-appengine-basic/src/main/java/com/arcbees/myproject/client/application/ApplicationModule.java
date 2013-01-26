@@ -16,7 +16,6 @@
 
 package com.arcbees.myproject.client.application;
 
-
 import com.arcbees.myproject.client.application.home.HomeModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
