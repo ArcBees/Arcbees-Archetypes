@@ -16,7 +16,6 @@
 
 package com.arcbees.myproject.client.application.home;
 
-
 import com.arcbees.myproject.client.application.ApplicationPresenter;
 import com.arcbees.myproject.client.place.NameTokens;
 import com.google.inject.Inject;
