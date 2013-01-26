@@ -125,18 +125,6 @@
         </plugins>
     </build>
 
-    <repositories>
-        <!-- Use GWTP snapshots for the latest and greatest -->
-        <repository>
-            <id>sonatype.snapshots</id>
-            <name>Sonatype snapshot repository</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
         <dependency>
@@ -146,12 +134,6 @@
         </dependency>
 
         <!-- GWT-Platform dependencies -->
-        <dependency>
-            <groupId>com.arcbees.core</groupId>
-            <artifactId>arcbees-core</artifactId>
-            <version>${arcbees-core.version}</version>
-            <scope>provided</scope>
-        </dependency>
         <dependency>
             <groupId>com.gwtplatform</groupId>
             <artifactId>gwtp-mvp-client</artifactId>
