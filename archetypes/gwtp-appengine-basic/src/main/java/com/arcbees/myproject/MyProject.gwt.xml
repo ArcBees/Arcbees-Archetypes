@@ -2,7 +2,6 @@
 <module rename-to='myproject'>
     <!-- Inherit the core Web Toolkit stuff. -->
     <inherits name='com.google.gwt.user.User' />
-    <inherits name='com.google.gwt.inject.Inject' />
 
     <!-- Default css -->
     <inherits name='com.google.gwt.user.theme.standard.Standard' />
@@ -11,8 +10,7 @@
 
     <!-- Other module inherits -->
     <inherits name='com.gwtplatform.dispatch.Dispatch' />
-
-    <inherits name='com.gwtplatform.mvp.Mvp'/>
+    <inherits name='com.gwtplatform.mvp.Mvp' />
 
     <!-- not working -->
     <!-- <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' /> -->
