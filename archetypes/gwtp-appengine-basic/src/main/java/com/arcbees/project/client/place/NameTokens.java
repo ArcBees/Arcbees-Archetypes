@@ -14,12 +14,12 @@
  * the License.
  */
 
-package com.arcbees.myproject.server.guice;
+package com.arcbees.project.client.place;
 
-import com.gwtplatform.dispatch.server.guice.HandlerModule;
+public class NameTokens {
+    public static final String home = "home";
 
-public class ServerModule extends HandlerModule {
-    @Override
-    protected void configureHandlers() {
+    public static String getHome() {
+        return home;
     }
 }

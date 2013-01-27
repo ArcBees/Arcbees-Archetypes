@@ -14,12 +14,12 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.gin;
+package com.arcbees.project.client.gin;
 
-import com.arcbees.myproject.client.application.ApplicationModule;
-import com.arcbees.myproject.client.place.DefaultPlace;
-import com.arcbees.myproject.client.place.NameTokens;
-import com.arcbees.myproject.client.place.PlaceManager;
+import com.arcbees.project.client.application.ApplicationModule;
+import com.arcbees.project.client.place.DefaultPlace;
+import com.arcbees.project.client.place.NameTokens;
+import com.arcbees.project.client.place.PlaceManager;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
