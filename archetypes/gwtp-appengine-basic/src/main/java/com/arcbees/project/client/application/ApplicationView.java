@@ -40,7 +40,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
     @Override
     public void setInSlot(Object slot, Widget content) {
-        if (content == null) {
+        if (slot == ApplicationPresenter.TYPE_SetMainContent && content == null) {
             main.clear();
         } else if (slot == ApplicationPresenter.TYPE_SetMainContent) {
             main.clear();
