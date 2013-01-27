@@ -29,6 +29,10 @@ mvn archetype:create-from-project
 cd target/generated-sources/archetype/
 mvn install
 
+# work around b/c com.arcbees inherits conflicts
+find . -name '*.xml' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+find . -name '*.java' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+
 cd $CURRENTDIR
 
 # add deployment to pom.xml for deployment to sonatype
