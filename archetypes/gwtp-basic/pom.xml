@@ -18,9 +18,6 @@
         
         <!-- server -->
         <guice.version>3.0</guice.version>
-        <servlet-api.version>2.5</servlet-api.version>
-        <javax.validation.version>1.0.0.GA</javax.validation.version>
-        <guava-version>13.0.1</guava-version>
 
         <!-- testing -->
         <junit.version>4.11</junit.version>
@@ -146,14 +143,6 @@
             <groupId>com.google.gwt.inject</groupId>
             <artifactId>gin</artifactId>
             <version>${gin.version}</version>
-        </dependency>
-
-        <!-- Other -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>${servlet-api.version}</version>
-            <scope>runtime</scope>
         </dependency>
 
         <!-- Test -->
