@@ -1,6 +1,6 @@
-#GWTP AppEngine Basic
+#GWTP Basic
 
-This is a basic GWTP using App Engine Archetype.
+This is a basic GWTP Archetype.
 
 ##Highlights
 * [Client Server Directories](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic/src/main/java/com/arcbees/myproject)
