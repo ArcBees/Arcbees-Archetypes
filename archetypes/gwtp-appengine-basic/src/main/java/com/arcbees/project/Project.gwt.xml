@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<module rename-to='myproject'>
+<module rename-to='project'>
     <!-- Inherit the core Web Toolkit stuff. -->
     <inherits name='com.google.gwt.user.User' />
     <inherits name='com.google.gwt.inject.Inject' />
@@ -17,5 +17,5 @@
     <source path='client' />
     <source path='shared' />
 
-    <set-configuration-property name="gin.ginjector.modules" value="com.arcbees.myproject.client.gin.ClientModule"/>
+    <set-configuration-property name="gin.ginjector.modules" value="com.arcbees.project.client.gin.ClientModule"/>
 </module>

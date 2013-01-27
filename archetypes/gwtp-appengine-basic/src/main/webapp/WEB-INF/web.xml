@@ -10,7 +10,7 @@
 	</welcome-file-list>
 
 	<listener>
-		<listener-class>com.arcbees.myproject.server.guice.GuiceServletConfig</listener-class>
+		<listener-class>com.arcbees.project.server.guice.GuiceServletConfig</listener-class>
 	</listener>
 
 	<filter>

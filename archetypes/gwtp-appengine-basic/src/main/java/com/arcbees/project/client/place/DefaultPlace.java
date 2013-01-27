@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.place;
+package com.arcbees.project.client.place;
 
 import static java.lang.annotation.ElementType.FIELD;
 import static java.lang.annotation.ElementType.METHOD;
