@@ -14,17 +14,15 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.guice;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
 
-public class SandboxGwtTest extends GWTTestCase {
+public class GuiceServletConfig extends GuiceServletContextListener {
     @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
+    protected Injector getInjector() {
+        return Guice.createInjector(new ServerModule(), new DispatchServletModule());
     }
 }

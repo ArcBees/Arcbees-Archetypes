@@ -14,17 +14,15 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.guice;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.google.inject.servlet.ServletModule;
+import com.gwtplatform.dispatch.server.guice.DispatchServiceImpl;
+import com.gwtplatform.dispatch.shared.ActionImpl;
 
-public class SandboxGwtTest extends GWTTestCase {
+public class DispatchServletModule extends ServletModule {
     @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
+    public void configureServlets() {
+        serve("/" + ActionImpl.DEFAULT_SERVICE_NAME + "*").with(DispatchServiceImpl.class);
     }
 }
