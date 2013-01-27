@@ -21,11 +21,9 @@
         <gae.version>1.7.4</gae.version>
         <guice.version>3.0</guice.version>
         <objectify.version>4.0b1</objectify.version>
-        <persistence-api.version>1.0.2</persistence-api.version>
         <servlet-api.version>2.5</servlet-api.version>
         <javax.validation.version>1.0.0.GA</javax.validation.version>
         <guava-version>13.0.1</guava-version>
-        <servlet-api.version>2.5</servlet-api.version>
 
         <!-- testing -->
         <junit.version>4.11</junit.version>
