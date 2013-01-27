@@ -14,17 +14,26 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.application;
+package com.arcbees.project.client.application.home;
 
-import com.arcbees.myproject.client.application.home.HomeModule;
-import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.inject.Inject;
+import com.gwtplatform.mvp.client.ViewImpl;
 
-public class ApplicationModule extends AbstractPresenterModule {
+public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
+    public interface Binder extends UiBinder<Widget, HomePageView> {
+    }
+
+    private Widget widget;
+
+    @Inject
+    public HomePageView(final Binder uiBinder) {
+        widget = uiBinder.createAndBindUi(this);
+    }
+
     @Override
-    protected void configure() {
-        install(new HomeModule());
-
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+    public Widget asWidget() {
+        return widget;
     }
 }

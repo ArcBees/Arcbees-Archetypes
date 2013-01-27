@@ -21,6 +21,8 @@ rm -R .settings
 rm -R bin
 rm -R *.iml
 rm -R .idea
+rm -R .gwt
+rm .DS_Store
 
 # generate archetype
 echo "mvn archetype:create-from-project"
@@ -28,6 +30,12 @@ mvn archetype:create-from-project
 
 cd target/generated-sources/archetype/
 mvn install
+
+# work around b/c com.arcbees inherits conflicts
+find . -name '*.xml' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+find . -name '*.java' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
+find . -name '*.xml' -type f -exec sed -i '' 's/<module>.*\.\(.*\)<\/module>/<module>${package}.\1<\/module>/g' {} \;
+
 
 cd $CURRENTDIR
 

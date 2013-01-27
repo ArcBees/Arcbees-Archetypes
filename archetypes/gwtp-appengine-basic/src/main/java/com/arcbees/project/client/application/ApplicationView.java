@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.application;
+package com.arcbees.project.client.application;
 
 import javax.inject.Inject;
 

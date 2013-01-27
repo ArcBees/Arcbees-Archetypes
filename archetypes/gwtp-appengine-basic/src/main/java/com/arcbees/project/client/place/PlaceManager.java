@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.place;
+package com.arcbees.project.client.place;
 
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
