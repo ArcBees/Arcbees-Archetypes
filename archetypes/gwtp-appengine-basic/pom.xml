@@ -15,7 +15,6 @@
         <gwt.version>2.5.0</gwt.version>
         <gwtp.version>0.8-beta-1</gwtp.version>
         <gin.version>2.0.0</gin.version>
-        <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- server -->
@@ -160,7 +159,7 @@
             <version>${gwtp.version}</version>
         </dependency>
 
-        <!-- DI dependencies -->
+        <!-- DI -->
         <dependency>
             <groupId>com.google.inject</groupId>
             <artifactId>guice</artifactId>
@@ -182,7 +181,7 @@
             <version>${gin.version}</version>
         </dependency>
 
-        <!-- Google App Engine dependencies -->
+        <!-- Google App Engine -->
         <dependency>
             <groupId>com.google.appengine</groupId>
             <artifactId>appengine-api-1.0-sdk</artifactId>
@@ -206,7 +205,7 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Other dependencies -->
+        <!-- Other -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -214,7 +213,7 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Test dependencies -->
+        <!-- Test -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
