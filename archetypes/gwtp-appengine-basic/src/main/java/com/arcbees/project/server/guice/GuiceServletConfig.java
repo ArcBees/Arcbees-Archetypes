@@ -14,12 +14,15 @@
  * the License.
  */
 
-package com.arcbees.myproject.client.place;
+package com.arcbees.project.server.guice;
 
-public class NameTokens {
-    public static final String home = "home";
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
 
-    public static String getHome() {
-        return home;
+public class GuiceServletConfig extends GuiceServletContextListener {
+    @Override
+    protected Injector getInjector() {
+        return Guice.createInjector(new ServerModule(), new DispatchServletModule());
     }
 }

@@ -111,8 +111,8 @@
                     <appEngineVersion>${gae.version}</appEngineVersion>
                     <appEngineHome>${gae.home}</appEngineHome>
 
-                    <runTarget>myproject.html</runTarget>
-                    <module>com.arcbees.myproject.MyProject</module>
+                    <runTarget>Project.html</runTarget>
+                    <module>com.arcbees.project.Project</module>
                 </configuration>
             </plugin>
 

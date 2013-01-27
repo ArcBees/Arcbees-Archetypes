@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.server.guice;
+package com.arcbees.project.server.guice;
 
 import com.google.inject.servlet.ServletModule;
 import com.gwtplatform.dispatch.server.guice.DispatchServiceImpl;

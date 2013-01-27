@@ -14,17 +14,12 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.guice;
 
-import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
-import com.gwtplatform.mvp.client.ApplicationController;
+import com.gwtplatform.dispatch.server.guice.HandlerModule;
 
-public class MyProject implements EntryPoint {
-    public final ApplicationController controller = GWT.create(ApplicationController.class);
-
+public class ServerModule extends HandlerModule {
     @Override
-    public void onModuleLoad() {
-        controller.init();
+    protected void configureHandlers() {
     }
 }
