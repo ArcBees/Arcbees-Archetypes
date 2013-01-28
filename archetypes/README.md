@@ -1,6 +1,6 @@
-#Arcbees Tools
+#Arcbees Archetypes
 
-#More about  [GWTP](https://github.com/ArcBees/GWTP)
+#More about [GWTP](https://github.com/ArcBees/GWTP)
 
 ##Community Help
 * [Join the GWT-Platform G+ Community](https://plus.google.com/communities/113139554133824081251)
@@ -8,48 +8,37 @@
 ##License
 * GWTP is freely distributable under the [Apache 2.0 License](http://www.apache.org/licenses/LICENSE-2.0.html)
 
-##Projects
+##ArcheTypes in this Project
+* Follow the links for the desired archetype below for project creation instructions.
+* [Eclipse Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/eclipse) - How to import a Maven project into Eclipse.
+* [IDEA Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/intellij-idea) - How to import a Maven project into IntelliJ IDEA.
 
-##Create Project
-* To create a GWTP basic App Engine project change the groupId and artifactId. 
+<table>
+	<tr>
+		<th>Archetype</th>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic">GWTP Basic</a></td>
+		<td>Simple basic GWTP Archetype</td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic">GWTP Basic AppEngine</a></td>
+		<td>Simple basic GWTP Archetype using App Engine</td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-objectify">GWTP AppEngine & Objectify</a></td>
+		<td>GWTP Archetype with App Engine, Objectify and Google login</td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-servletcontainer-requestfactory-spring">GWTP RequestFactory & Spring</a></td>
+		<td>GWTP using a servlet container using RequestFactory and Spring</td>
+	</tr>
+</table>
 
-  GWTP AppEngine Basic - [Source](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic)
-  ```
-  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
-  -DarchetypeArtifactId=gwtp-appengine-basic-archetype \
-  -DarchetypeVersion=1.0-SNAPSHOT \
-  -DgroupId=com.projectname \
-  -DartifactId=new-project-name \
-  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-  ```
-
-  GWTP using AppEngine with Objectify, RPC dispatch and Google Login - [Source](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-objectify)
-  ```
-  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
-  -DarchetypeArtifactId=gwtp-appengine-objectify-archetype \
-  -DarchetypeVersion=1.0-SNAPSHOT \
-  -DgroupId=com.projectname \
-  -DartifactId=new-project-name \
-  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-  ```
-
- GWTP using a generic servlet container using RequestFactory and spring - [Source](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-servletcontainer-requestfactory-spring)
-  ```
-  mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
-  -DarchetypeArtifactId=gwtp-servletcontainer-requestfactory-spring-archetype \
-  -DarchetypeVersion=1.0-SNAPSHOT \
-  -DgroupId=com.projectname \
-  -DartifactId=new-project-name \
-  -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/
-  ```
-
-##Archetype Creation
-* run 'sh ./create_archetype.sh'
-* Goto a new project directory
-* run 'mvn archetype:generate -DarchetypeCatalog=local'
-
-##Reference
-* [Archetype Guide](http://maven.apache.org/guides/mini/guide-creating-archetypes.html)
+##News
+* 1/27/2013 - gwtp-basic Archetype added.
+* 1/27/2013 - Enhanced gwtp-appengine-basic.
 
 ##Thanks to
 [![Arcbees.com](http://arcbees-ads.appspot.com/images/1.png)](http://arcbees.com)

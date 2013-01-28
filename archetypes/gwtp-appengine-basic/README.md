@@ -3,9 +3,9 @@
 This is a basic GWTP using App Engine Archetype.
 
 ##Highlights
-* [Client Server Directories](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic/src/main/java/com/arcbees/myproject)
-* [GWT Module](https://github.com/ArcBees/ArcBees-tools/blob/master/archetypes/gwtp-appengine-basic/src/main/java/com/arcbees/myproject/MyProject.gwt.xml)
-* [Tests](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic/src/test/java/com/arcbees/myproject/client)
+* [Client Server Directories](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic/src/main/java/com/arcbees/project)
+* [GWT Module](https://github.com/ArcBees/ArcBees-tools/blob/master/archetypes/gwtp-appengine-basic/src/main/java/com/arcbees/myproject/Project.gwt.xml)
+* [Tests](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic/src/test/java/com/arcbees/project/client)
 
 ##Maven Archetype Usage
 
