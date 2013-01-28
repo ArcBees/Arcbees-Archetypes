@@ -25,7 +25,7 @@ public class HeaderModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         bindPresenterWidget(HeaderPresenter.class, HeaderPresenter.MyView.class, HeaderView.class);
-
+        
         bind(new TypeLiteral<UiHandlersStrategy<HeaderUiHandlers>>() {
         }).to(new TypeLiteral<SetterUiHandlersStrategy<HeaderUiHandlers>>() {
         });

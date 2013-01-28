@@ -18,8 +18,6 @@ package com.arcbees.project.shared.domain;
 
 import com.arcbees.project.shared.dto.Dto;
 import com.googlecode.objectify.annotation.Id;
-import javax.annotation.Nullable;
-
 
 public abstract class BaseEntity implements Dto {
     @Id
@@ -67,7 +65,7 @@ public abstract class BaseEntity implements Dto {
         return id;
     }
 
-    public void setId(@Nullable Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
