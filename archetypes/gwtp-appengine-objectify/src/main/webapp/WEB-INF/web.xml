@@ -4,15 +4,15 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     version="2.5">
     <display-name>Project</display-name>
-    
+
     <welcome-file-list>
         <welcome-file>Project.html</welcome-file>
     </welcome-file-list>
-    
+
     <listener>
         <listener-class>com.arcbees.project.server.guice.GuiceServletConfig</listener-class>
     </listener>
-    
+
     <filter>
         <filter-name>guiceFilter</filter-name>
         <filter-class>com.google.inject.servlet.GuiceFilter</filter-class>
