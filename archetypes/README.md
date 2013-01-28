@@ -19,7 +19,7 @@
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-basic">GWTP Basic</a></td>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic">GWTP Basic</a></td>
 		<td>Simple basic GWTP Archetype</td>
 	</tr>
 	<tr>
