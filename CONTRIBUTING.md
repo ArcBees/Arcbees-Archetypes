@@ -21,5 +21,6 @@
 * Name the package `com.arcbees.project`.
 * In general follow the `gwtp-basic` Archetype layout.
 * Include the Sandbox GWTTestCase. This allows for quick compile verification.
-* Be sure the project can runs before adding it. 
+* Be sure the project will run before adding it. 
+  * If the project needs bootstrapping to run please provide the notes.
 * Deploy and test archetype after modification. 
