@@ -14,17 +14,20 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client.place;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.PARAMETER;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
 
-    public void testSandbox() {
-        assertTrue(true);
-    }
+import com.google.inject.BindingAnnotation;
+
+@BindingAnnotation
+@Target({ FIELD, PARAMETER, METHOD })
+@Retention(RUNTIME)
+public @interface DefaultPlace {
 }

@@ -14,17 +14,12 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.guice;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.gwtplatform.dispatch.server.guice.HandlerModule;
 
-public class SandboxGwtTest extends GWTTestCase {
+public class ServerModule extends HandlerModule {
     @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
+    protected void configureHandlers() {
     }
 }
