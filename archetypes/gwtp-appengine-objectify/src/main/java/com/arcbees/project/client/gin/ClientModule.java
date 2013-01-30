@@ -16,11 +16,6 @@
 
 package com.arcbees.project.client.gin;
 
-import javax.inject.Singleton;
-
-
-import com.arcbees.project.client.BootStrapper;
-import com.arcbees.project.client.BootStrapperImpl;
 import com.arcbees.project.client.application.ApplicationModule;
 import com.arcbees.project.client.place.DefaultPlace;
 import com.arcbees.project.client.place.NameTokens;
@@ -39,6 +34,5 @@ public class ClientModule extends AbstractPresenterModule {
 
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
         bind(CurrentUserDto.class).asEagerSingleton();
-        bind(BootStrapper.class).to(BootStrapperImpl.class).in(Singleton.class);
     }
 }
