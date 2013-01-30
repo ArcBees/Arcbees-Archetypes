@@ -5,6 +5,7 @@
     
     <g:HTMLPanel>
         Login:
+        <g:Button ui:field="test">Test</g:Button>
         <g:SimplePanel ui:field="login"/>
     </g:HTMLPanel>
 </ui:UiBinder>

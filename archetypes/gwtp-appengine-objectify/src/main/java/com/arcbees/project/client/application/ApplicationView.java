@@ -18,11 +18,11 @@ package com.arcbees.project.client.application;
 
 import javax.inject.Inject;
 
-import com.arcbees.core.client.mvp.ViewImpl;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
+import com.gwtplatform.mvp.client.ViewImpl;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
     public interface Binder extends UiBinder<Widget, ApplicationView> {
@@ -41,9 +41,11 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     @Override
     public void setInSlot(Object slot, Widget content) {
         if (slot == ApplicationPresenter.TYPE_HeaderPresenter) {
-            header.add(content);
+            header.setWidget(content);
         } else if (slot == ApplicationPresenter.TYPE_SetMainContent) {
-            main.add(content);
+            main.setWidget(content);
+        } else {
+            super.setInSlot(slot, content);
         }
     }
 }

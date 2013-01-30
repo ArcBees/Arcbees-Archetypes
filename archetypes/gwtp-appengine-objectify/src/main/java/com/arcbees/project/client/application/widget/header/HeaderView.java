@@ -16,8 +16,10 @@
 
 package com.arcbees.project.client.application.widget.header;
 
+import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
+import com.google.gwt.uibinder.client.UiHandler;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.SimplePanel;
 import com.google.gwt.user.client.ui.Widget;
@@ -32,16 +34,19 @@ public class HeaderView extends ViewWithUiHandlers<HeaderUiHandlers> implements 
     SimplePanel login;
 
     @Inject
-    public HeaderView(final Binder binder, final UiHandlersStrategy<HeaderUiHandlers> myUiHandlersUiHandlersStrategy) {
-        super(myUiHandlersUiHandlersStrategy);
-
+    public HeaderView(final Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
     
     @Override
     public void setInSlot(Object slot, Widget content) {
         if (slot == HeaderPresenter.TYPE_LoginPresenter) {
-            login.add(content);
+            login.setWidget(content);
         }
+    }
+    
+    @UiHandler("test")
+    public void onTestClick(ClickEvent event) {
+        getUiHandlers().onTestClick();
     }
 }

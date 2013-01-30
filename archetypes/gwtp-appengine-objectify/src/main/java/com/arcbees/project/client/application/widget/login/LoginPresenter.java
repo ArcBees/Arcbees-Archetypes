@@ -39,6 +39,7 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
     @Inject
     public LoginPresenter(final EventBus eventBus, final MyView view, final CurrentUserDto currentUserDto) {
         super(eventBus, view);
+        
         this.currentUserDto = currentUserDto;
 
         getView().setUiHandlers(this);
