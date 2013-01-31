@@ -31,11 +31,9 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
   @UiField
   SimplePanel main;
 
-  private Widget widget;
-
   @Inject
   public ApplicationView(final Binder uiBinder) {
-    widget = uiBinder.createAndBindUi(this);
+    initWidget(uiBinder.createAndBindUi(this));
   }
 
   @Override
@@ -45,10 +43,5 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     } else {
       super.setInSlot(slot, content);
     }
-  }
-
-  @Override
-  public Widget asWidget() {
-    return widget;
   }
 }
