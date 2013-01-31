@@ -14,17 +14,15 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.repos;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
+import com.arcbees.project.server.business.MyEntity;
 
-    public void testSandbox() {
-        assertTrue(true);
-    }
+
+import java.util.List;
+
+public interface MyEntityRepo extends JpaRepository<MyEntity, Long> {
+    List<MyEntity> findByFirstNameLikeOrLastNameLike(String firstName, String lastName);
 }

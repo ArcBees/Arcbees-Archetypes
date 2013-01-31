@@ -14,17 +14,12 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client.place;
 
-import com.google.gwt.junit.client.GWTTestCase;
+public class NameTokens {
+    public static final String home = "home";
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
+    public static String getHome() {
+        return home;
     }
 }

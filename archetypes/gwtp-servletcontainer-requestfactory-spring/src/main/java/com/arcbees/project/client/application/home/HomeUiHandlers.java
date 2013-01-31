@@ -14,17 +14,11 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client.application.home;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.arcbees.project.client.request.proxy.MyEntityProxy;
+import com.gwtplatform.mvp.client.UiHandlers;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
-    }
+public interface HomeUiHandlers extends UiHandlers {
+    void saveEntity(MyEntityProxy myEntity);
 }

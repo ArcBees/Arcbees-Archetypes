@@ -13,7 +13,7 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>0.8-beta-1</gwtp.version>
+        <gwtp.version>1.0-RC-1</gwtp.version>
         <gin.version>2.0.0</gin.version>
         
         <!-- server -->
@@ -81,6 +81,8 @@
                 <artifactId>gwt-maven-plugin</artifactId>
                 <version>${gwt.version}</version>
                 <configuration>
+                    <!-- With multiple tests use GwtTestSuite.java for speed -->
+                    <includes>**/*GwtTest.java</includes>
                     <extraJvmArgs>-Xss1024k -Xmx1024m -XX:MaxPermSize=256m</extraJvmArgs>
 
                     <copyWebapp>true</copyWebapp>
@@ -89,6 +91,14 @@
                     <runTarget>Project.html</runTarget>
                     <module>com.arcbees.project.Project</module>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
