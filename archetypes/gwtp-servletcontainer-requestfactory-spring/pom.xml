@@ -65,14 +65,6 @@
             <resource>
                 <directory>src/main/resources</directory>
             </resource>
-            
-            <!-- For Eclipse Users -->
-            <resource>
-                <directory>${project.build.directory}/generated-sources/apt</directory>
-            </resource>
-            <resource>
-                <directory>${project.build.directory}/generated-sources/gwt</directory>
-            </resource>
         </resources>
 
         <plugins>
@@ -186,38 +178,6 @@
                 </executions>
             </plugin>
         </plugins>
-
-        <!-- For Eclipse Users - https://github.com/ArcBees/GWTP/wiki/Maven-Configuration -->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.bsc.maven</groupId>
-                                        <artifactId>maven-processor-plugin</artifactId>
-                                        <versionRange>[2.0.5,)</versionRange>
-                                        <goals>
-                                            <goal>generate-sources</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute />
-                                    </action>
-                                </pluginExecution>
-
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
     <dependencies>
