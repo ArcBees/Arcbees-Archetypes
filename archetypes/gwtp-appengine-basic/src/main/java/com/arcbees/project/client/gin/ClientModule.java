@@ -18,10 +18,10 @@ package com.arcbees.project.client.gin;
 
 import com.arcbees.project.client.application.ApplicationModule;
 import com.arcbees.project.client.place.NameTokens;
+import com.arcbees.project.client.place.PlaceManager;
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
-import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
 public class ClientModule extends AbstractPresenterModule {
     @Override
