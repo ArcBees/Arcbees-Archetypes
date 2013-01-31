@@ -24,8 +24,7 @@ import com.gwtplatform.mvp.client.gin.DefaultModule;
 
 /**
  * See more on setting up the PlaceManager on <a
- * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager"
- * >DefaultModule's > DefaultPlaceManager</a>
+ * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager">DefaultModule's > DefaultPlaceManager</a>
  */
 public class ClientModule extends AbstractPresenterModule {
     @Override
