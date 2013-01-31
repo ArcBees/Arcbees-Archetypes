@@ -101,7 +101,7 @@
         </plugins>
     </build>
         
-    <!-- Temp till 1.0-RC-2 -->
+    <!-- TODO Temp till 1.0-RC-2 -->
     <repositories>
         <repository>
             <id>sonatype.snapshots</id>
