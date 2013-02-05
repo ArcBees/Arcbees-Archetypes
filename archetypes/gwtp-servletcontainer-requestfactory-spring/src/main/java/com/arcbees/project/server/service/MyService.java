@@ -14,17 +14,16 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.server.service;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import java.util.List;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
+import com.arcbees.project.server.business.MyEntity;
 
-    public void testSandbox() {
-        assertTrue(true);
-    }
+public interface MyService {
+    void create(MyEntity entity);
+
+    void delete(MyEntity entity);
+
+    List<MyEntity> loadAll(String searchToken);
 }

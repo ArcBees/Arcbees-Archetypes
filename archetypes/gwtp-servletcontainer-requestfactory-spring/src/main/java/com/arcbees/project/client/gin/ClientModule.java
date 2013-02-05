@@ -18,20 +18,38 @@ package com.arcbees.project.client.gin;
 
 import com.arcbees.project.client.application.ApplicationModule;
 import com.arcbees.project.client.place.NameTokens;
+import com.arcbees.project.client.request.MyRequestFactory;
+import com.google.gwt.core.client.GWT;
+import com.google.inject.Inject;
+import com.google.inject.Provider;
+import com.google.inject.Singleton;
+import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
+import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
-/**
- * See more on setting up the PlaceManager on <a
- * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager">DefaultModule's > DefaultPlaceManager</a>
- */
 public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new DefaultModule());
+        install(new DefaultModule(PlaceManager.class));
         install(new ApplicationModule());
 
+        bind(MyRequestFactory.class).toProvider(RequestFactoryProvider.class).in(Singleton.class);
         bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
+    }
+
+    static class RequestFactoryProvider implements Provider<MyRequestFactory> {
+        private final MyRequestFactory requestFactory;
+
+        @Inject
+        public RequestFactoryProvider(EventBus eventBus) {
+            requestFactory = GWT.create(MyRequestFactory.class);
+            requestFactory.initialize(eventBus);
+        }
+
+        public MyRequestFactory get() {
+            return requestFactory;
+        }
     }
 }

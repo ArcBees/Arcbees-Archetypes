@@ -14,17 +14,29 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client.request.proxy;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.arcbees.project.server.business.MyEntity;
+import com.google.web.bindery.requestfactory.shared.ProxyFor;
+import com.google.web.bindery.requestfactory.shared.ValueProxy;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
+import java.util.Date;
 
-    public void testSandbox() {
-        assertTrue(true);
-    }
+@ProxyFor(value = MyEntity.class)
+public interface MyEntityProxy extends ValueProxy {
+    Long getId();
+
+    void setId(Long id);
+
+    String getFirstName();
+
+    void setFirstName(String firstName);
+
+    String getLastName();
+
+    void setLastName(String lastName);
+
+    Date getCreated();
+
+    void setCreated(Date created);
 }
