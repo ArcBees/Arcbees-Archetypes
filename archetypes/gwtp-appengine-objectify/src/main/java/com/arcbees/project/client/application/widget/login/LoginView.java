@@ -16,14 +16,13 @@
 
 package com.arcbees.project.client.application.widget.login;
 
-import com.arcbees.core.client.mvp.ViewWithUiHandlers;
-import com.arcbees.core.client.mvp.uihandlers.UiHandlersStrategy;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Anchor;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.InlineHTML;
 import com.google.inject.Inject;
+import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
 public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements LoginPresenter.MyView {
     public interface Binder extends UiBinder<HTMLPanel, LoginView> {
@@ -35,9 +34,7 @@ public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements Lo
     Anchor link;
     
     @Inject
-    public LoginView(final Binder binder, final UiHandlersStrategy<LoginUiHandlers> myUiHandlersUiHandlersStrategy) {
-        super(myUiHandlersUiHandlersStrategy);
-
+    public LoginView(final Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
     
