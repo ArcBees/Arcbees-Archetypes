@@ -13,7 +13,7 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>1.0-RC-1</gwtp.version>
+        <gwtp.version>1.0-RC-2-SNAPSHOT</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
@@ -162,6 +162,7 @@
         </plugins>
     </build>
 
+    <!-- TODO Temp till 1.0-RC-2 -->
     <repositories>
         <repository>
             <id>sonatype.snapshots</id>

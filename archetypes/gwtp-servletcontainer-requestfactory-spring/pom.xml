@@ -13,7 +13,7 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>1.0-RC-1</gwtp.version>
+        <gwtp.version>1.0-RC-2-SNAPSHOT</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
@@ -64,14 +64,6 @@
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
-            </resource>
-            
-            <!-- For Eclipse Users -->
-            <resource>
-                <directory>${project.build.directory}/generated-sources/apt</directory>
-            </resource>
-            <resource>
-                <directory>${project.build.directory}/generated-sources/gwt</directory>
             </resource>
         </resources>
 
@@ -186,39 +178,17 @@
                 </executions>
             </plugin>
         </plugins>
-
-        <!-- For Eclipse Users - https://github.com/ArcBees/GWTP/wiki/Maven-Configuration -->
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>org.bsc.maven</groupId>
-                                        <artifactId>maven-processor-plugin</artifactId>
-                                        <versionRange>[2.0.5,)</versionRange>
-                                        <goals>
-                                            <goal>generate-sources</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <execute />
-                                    </action>
-                                </pluginExecution>
-
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
+    
+    <!-- TODO Temp till 1.0-RC-2 -->
+    <repositories>
+        <repository>
+            <id>sonatype.snapshots</id>
+            <name>Sonatype snapshot repository</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+            <layout>default</layout>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- Google Web Toolkit dependencies -->
