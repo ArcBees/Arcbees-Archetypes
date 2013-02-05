@@ -25,30 +25,23 @@ import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
-    public interface Binder extends UiBinder<Widget, ApplicationView> {
-    }
+  public interface Binder extends UiBinder<Widget, ApplicationView> {
+  }
 
-    @UiField
-    SimplePanel main;
-    
-    private Widget widget;
+  @UiField
+  SimplePanel main;
 
-    @Inject
-    public ApplicationView(final Binder uiBinder) {
-        widget = uiBinder.createAndBindUi(this);
-    }
+  @Inject
+  public ApplicationView(final Binder uiBinder) {
+    initWidget(uiBinder.createAndBindUi(this));
+  }
 
-    @Override
-    public void setInSlot(Object slot, Widget content) {
-        if (slot == ApplicationPresenter.TYPE_SetMainContent) {
-            main.setWidget(content);
-        } else {
-            super.setInSlot(slot, content);
-        }
+  @Override
+  public void setInSlot(Object slot, Widget content) {
+    if (slot == ApplicationPresenter.TYPE_SetMainContent) {
+      main.setWidget(content);
+    } else {
+      super.setInSlot(slot, content);
     }
-
-    @Override
-    public Widget asWidget() {
-        return widget;
-    }
+  }
 }
