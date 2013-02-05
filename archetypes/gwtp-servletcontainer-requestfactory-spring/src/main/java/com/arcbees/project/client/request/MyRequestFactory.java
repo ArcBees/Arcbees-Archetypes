@@ -14,17 +14,10 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client.request;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import com.google.web.bindery.requestfactory.shared.RequestFactory;
 
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
-
-    public void testSandbox() {
-        assertTrue(true);
-    }
+public interface MyRequestFactory extends RequestFactory {
+    MyServiceRequest myService();
 }

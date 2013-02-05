@@ -13,7 +13,7 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>0.8-beta-2-SNAPSHOT</gwtp.version>
+        <gwtp.version>1.0-RC-2-SNAPSHOT</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
@@ -102,11 +102,11 @@
                 <configuration>
                     <strict>true</strict>
                     <testTimeOut>180</testTimeOut>
+                    <!-- With multiple tests use GwtTestSuite.java for speed -->
                     <includes>**/*GwtTest.java</includes>
                     <mode>htmlunit</mode>
 
-                    <extraJvmArgs>-Xss1024k -Xmx1024m
-                        -XX:MaxPermSize=256m</extraJvmArgs>
+                    <extraJvmArgs>-Xss1024k -Xmx1024m -XX:MaxPermSize=256m</extraJvmArgs>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
 
@@ -121,6 +121,14 @@
                     <runTarget>Project.html</runTarget>
                     <module>com.arcbees.project.Project</module>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>test</goal>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
             <!-- Google App Engine Deployment -->
@@ -154,6 +162,7 @@
         </plugins>
     </build>
 
+    <!-- TODO Temp till 1.0-RC-2 -->
     <repositories>
         <repository>
             <id>sonatype.snapshots</id>

@@ -14,24 +14,14 @@
  * the License.
  */
 
-package com.arcbees.project.client.gin;
+package com.arcbees.project.client.application.home;
 
-import com.arcbees.project.client.application.ApplicationModule;
-import com.arcbees.project.client.place.NameTokens;
-import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
-import com.gwtplatform.mvp.client.gin.DefaultModule;
 
-/**
- * See more on setting up the PlaceManager on <a
- * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager">DefaultModule's > DefaultPlaceManager</a>
- */
-public class ClientModule extends AbstractPresenterModule {
+public class HomeModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new DefaultModule());
-        install(new ApplicationModule());
-
-        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
+        bindPresenter(HomePagePresenter.class, HomePagePresenter.MyView.class, HomePageView.class,
+                HomePagePresenter.MyProxy.class);
     }
 }
