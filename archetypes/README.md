@@ -4,6 +4,7 @@ Create a GWT-Platform project from a project template listed below.
 ##GWTP Reference
 * [GWTP Home](https://github.com/ArcBees/GWTP) - Find the GWT-Platform home here.
 * [GWTP Documentation](https://github.com/arcbees/gwtp/wiki) - Find out how to use GWT-Platform here.
+* [GWTP Samples](https://github.com/ArcBees/GWTP-Samples) - Find Sample GWT-Platform projects here.
 
 ##Community
 * [Join the GWT-Platform G+ Community](https://plus.google.com/communities/113139554133824081251) - See whats happening in the community.
