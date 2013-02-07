@@ -1,4 +1,5 @@
 #Arcbees Archetypes
+Create a GWT-Platform project from a project template listed below.
 
 #More about [GWTP](https://github.com/ArcBees/GWTP)
 
