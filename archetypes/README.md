@@ -39,6 +39,7 @@ Create a GWT-Platform project from a project template listed below.
 </table>
 
 ##News
+* 2/2013 Samples have been updated to 1.0-RC-2
 * 1/27/2013 - gwtp-basic Archetype added.
 * 1/27/2013 - Enhanced gwtp-appengine-basic.
 
