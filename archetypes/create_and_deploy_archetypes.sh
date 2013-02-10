@@ -23,16 +23,21 @@ rm -R *.iml
 rm -R .idea
 rm -R .gwt
 rm .DS_Store
-
-# only do this when deploy and not testing
-#rm -R *.sh
+rm -R war
+rm -R www-test
+rm -R gwt-unitCache
 
 # generate archetype
 echo "mvn archetype:create-from-project"
 mvn archetype:create-from-project
 
+# move to generated archetype base
 cd target/generated-sources/archetype/
 
+# clean up files in project.
+rm -R src/main/resources/archetype-resources/*.sh
+
+# sed -i works differently on mac and linux.
 # work around b/c com.arcbees inherits conflicts
 if [ $(uname) = "Darwin" ]; then
 find . -name '*.xml' -type f -exec sed -i '' 's/${groupId}.core/com.arcbees.core/g' {} \;
