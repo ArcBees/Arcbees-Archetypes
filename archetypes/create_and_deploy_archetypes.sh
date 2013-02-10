@@ -23,6 +23,7 @@ rm -R *.iml
 rm -R .idea
 rm -R .gwt
 rm .DS_Store
+rm -R *.sh
 
 # generate archetype
 echo "mvn archetype:create-from-project"
