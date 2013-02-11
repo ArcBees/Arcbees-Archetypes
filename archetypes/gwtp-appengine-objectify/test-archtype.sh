@@ -7,7 +7,7 @@ cd target/test
 
 mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
 -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/ \
--DarchetypeArtifactId=gwtp-basic-archetype \
+-DarchetypeArtifactId=gwtp-appengine-objectify-archetype \
 -DarchetypeVersion=1.0-SNAPSHOT \
 -DgroupId=com.projectname \
 -DartifactId=new-project-name \
