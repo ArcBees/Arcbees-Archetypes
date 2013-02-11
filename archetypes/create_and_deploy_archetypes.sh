@@ -35,7 +35,7 @@ mvn archetype:create-from-project
 cd target/generated-sources/archetype/
 
 # clean up files in project.
-rm -R src/main/resources/archetype-resources/*.sh
+find . -name "*.sh" -type f -exec rm -f {} \;
 
 # sed -i works differently on mac and linux.
 # work around b/c com.arcbees inherits conflicts
