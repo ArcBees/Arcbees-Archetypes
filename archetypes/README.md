@@ -14,7 +14,7 @@ Create a GWT-Platform project from a project template listed below.
 ##ArcheTypes in this Project
 Create a project from a project template called an Archetype. Follow the links below for instructions.
 
-* [Eclipse Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/eclipse) - How to import a Maven project into Eclipse. The module will need to be added manually for GWTP project imports!
+* [Eclipse Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/eclipse) - How to import a Maven project into Eclipse. The GWT module will need to be added manually for GWTP project imports!
 * [IDEA Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/intellij-idea) - How to import a Maven project into IntelliJ IDEA.
 
 <table>
