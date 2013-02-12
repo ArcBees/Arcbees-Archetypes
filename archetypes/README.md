@@ -45,6 +45,7 @@ Eclipse users will need to add the module to Google Eclipse Plugin. Since the en
 
 1. Right click on project > Google > Web Toolkit Settings > Entry point modules > Add
 2. Add the entry point module.
+3. See the screen shot at the bottom of these directions: [Eclipse Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/eclipse)
 
 ##News
 * 2/2013 Samples have been updated to 1.0-RC-2
