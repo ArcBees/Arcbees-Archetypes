@@ -32,30 +32,30 @@ import com.gwtplatform.mvp.client.gin.DefaultModule;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
 public class ClientModule extends AbstractPresenterModule {
-  @Override
-  protected void configure() {
-    install(new DefaultModule(PlaceManager.class));
-    install(new ApplicationModule());
+    @Override
+    protected void configure() {
+        install(new DefaultModule(PlaceManager.class));
+        install(new ApplicationModule());
 
-    // DefaultPlaceManager Places
-    bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
-    bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.home);
-    bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.home);
+        // DefaultPlaceManager Places
+        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
+        bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.home);
+        bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.home);
 
-    bind(MyRequestFactory.class).toProvider(RequestFactoryProvider.class).in(Singleton.class);
-  }
-
-  static class RequestFactoryProvider implements Provider<MyRequestFactory> {
-    private final MyRequestFactory requestFactory;
-
-    @Inject
-    public RequestFactoryProvider(EventBus eventBus) {
-      requestFactory = GWT.create(MyRequestFactory.class);
-      requestFactory.initialize(eventBus);
+        bind(MyRequestFactory.class).toProvider(RequestFactoryProvider.class).in(Singleton.class);
     }
 
-    public MyRequestFactory get() {
-      return requestFactory;
+    static class RequestFactoryProvider implements Provider<MyRequestFactory> {
+        private final MyRequestFactory requestFactory;
+
+        @Inject
+        public RequestFactoryProvider(EventBus eventBus) {
+            requestFactory = GWT.create(MyRequestFactory.class);
+            requestFactory.initialize(eventBus);
+        }
+
+        public MyRequestFactory get() {
+            return requestFactory;
+        }
     }
-  }
 }
