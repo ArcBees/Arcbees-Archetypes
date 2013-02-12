@@ -16,8 +16,6 @@
     <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
     <!-- Other module inherits                                      -->
-    <inherits name="com.arcbees.core.Mvp"/>
-
     <inherits name='com.gwtplatform.mvp.MvpWithEntryPoint' />
 
     <source path='client' />
