@@ -1,5 +1,5 @@
 #!/bin/sh
-# Test import archetype
+# Test import archetype 
 
 mvn clean
 mkdir -p target/test
