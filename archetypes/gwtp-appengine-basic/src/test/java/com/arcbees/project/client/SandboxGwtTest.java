@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client;
 
 import com.google.gwt.junit.client.GWTTestCase;
 

@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.myproject.client;
+package com.arcbees.project.client;
 
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;
