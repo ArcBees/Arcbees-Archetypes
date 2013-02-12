@@ -32,17 +32,17 @@ import com.gwtplatform.mvp.client.proxy.DefaultPlaceManager;
  * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager">DefaultModule's > DefaultPlaceManager</a>
  */
 public class ClientModule extends AbstractPresenterModule {
-  @Override
-  protected void configure() {
-    install(new DefaultModule(DefaultPlaceManager.class));
-    install(new DispatchAsyncModule.Builder().build());
-    install(new ApplicationModule());
+    @Override
+    protected void configure() {
+        install(new DefaultModule(DefaultPlaceManager.class));
+        install(new DispatchAsyncModule.Builder().build());
+        install(new ApplicationModule());
 
-    // DefaultPlaceManager Places
-    bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
-    bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.home);
-    bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.home);
+        // DefaultPlaceManager Places
+        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
+        bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.home);
+        bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.home);
 
-    bind(CurrentUserDto.class).asEagerSingleton();
-  }
+        bind(CurrentUserDto.class).asEagerSingleton();
+    }
 }
