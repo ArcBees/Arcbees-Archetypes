@@ -40,6 +40,12 @@ Create a project from a project template called an Archetype. Follow the links b
 	</tr>
 </table>
 
+##Eclipse Import Notes
+Eclipse users will need to add the module to Google Eclipse Plugin. Since the entry-point module is inherited in GWTP plugin, GPE doesn't see it and has to be added manually.
+
+1. Right click on project > Google > Web Toolkit Settings > Entry point modules > Add
+2. Add the entry point module.
+
 ##News
 * 2/2013 Samples have been updated to 1.0-RC-2
 * 1/27/2013 - gwtp-basic Archetype added.
