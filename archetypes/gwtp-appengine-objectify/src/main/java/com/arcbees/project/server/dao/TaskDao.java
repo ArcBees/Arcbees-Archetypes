@@ -22,4 +22,8 @@ public class TaskDao extends BaseDao<Task> {
     protected TaskDao() {
         super(Task.class);
     }
+
+    public Integer findTotalCount() {
+        return ofy().query(Task.class).count();
+    }
 }

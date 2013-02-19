@@ -23,10 +23,9 @@ import com.gwtplatform.dispatch.shared.Result;
  * Base abstract implementation of
  * {@link com.gwtplatform.dispatch.shared.Action}.
  * 
- * @param <R>
- *            The {@link com.gwtplatform.dispatch.shared.Result} type returned.
+ * @param <R> The {@link com.gwtplatform.dispatch.shared.Result} type returned.
  */
-public abstract class ActionImpl<R extends Result> implements Action<R> {
+public abstract class DefaultActionImpl<R extends Result> implements Action<R> {
     @Override
     public boolean equals(Object obj) {
         return this.getClass().equals(obj.getClass());

@@ -16,17 +16,19 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchTaskAction extends DefaultActionImpl<FetchTaskResult> {
-    private Long taskId;
+import com.gwtplatform.dispatch.shared.Result;
 
-    public FetchTaskAction() {
+public class FetchAdminTaskCountResult implements Result {
+    private Integer totalTasks;
+
+    public FetchAdminTaskCountResult() {
     }
 
-    public Long getTaskId() {
-        return taskId;
+    public FetchAdminTaskCountResult(Integer totalTasks) {
+        this.totalTasks = totalTasks;
     }
-
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
+    
+    public Integer getTotalTasksCount() {
+        return totalTasks;
     }
 }
