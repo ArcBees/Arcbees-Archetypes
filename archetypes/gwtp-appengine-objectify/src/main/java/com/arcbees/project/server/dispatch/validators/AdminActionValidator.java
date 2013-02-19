@@ -14,19 +14,19 @@
  * the License.
  */
 
-package com.arcbees.project.shared.dispatch;
+package com.arcbees.project.server.dispatch.validators;
 
-public class FetchTaskAction extends DefaultActionImpl<FetchTaskResult> {
-    private Long taskId;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
+import com.gwtplatform.dispatch.server.actionvalidator.ActionValidator;
+import com.gwtplatform.dispatch.shared.Action;
+import com.gwtplatform.dispatch.shared.Result;
 
-    public FetchTaskAction() {
-    }
-
-    public Long getTaskId() {
-        return taskId;
-    }
-
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
+public class AdminActionValidator implements ActionValidator {
+    @Override
+    public boolean isValid(Action<? extends Result> action) {
+        UserService user = UserServiceFactory.getUserService();
+        
+        return user.isUserAdmin();
     }
 }

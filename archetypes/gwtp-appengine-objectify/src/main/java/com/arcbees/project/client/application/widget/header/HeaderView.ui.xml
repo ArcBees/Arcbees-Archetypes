@@ -1,11 +1,20 @@
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'>
     <ui:style>
+        .widget {
+            padding-bottom: 15px;    
+        }
+        
+        .inline {
+            display: inline;
+        }
     </ui:style>
     
-    <g:HTMLPanel>
-        Login:
+    <g:HTMLPanel styleName="{style.widget}">
+        Header: 
+        <a href="#home">Home</a>
+        <a href="#admin">Admin</a>
+        <g:SimplePanel ui:field="login" styleName="{style.inline}"/> 
         <g:Button ui:field="test">Test</g:Button>
-        <g:SimplePanel ui:field="login"/>
     </g:HTMLPanel>
 </ui:UiBinder>
