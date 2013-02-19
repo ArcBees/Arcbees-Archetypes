@@ -39,7 +39,7 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
     }
 
     /**
-     * The logged in Gatekeeper prevents folks that are not logged in form seeing this presenter.
+     * The logged in Gatekeeper prevents folks that are not logged in from seeing this presenter.
      */
     @ProxyStandard
     @NameToken(NameTokens.admin)
