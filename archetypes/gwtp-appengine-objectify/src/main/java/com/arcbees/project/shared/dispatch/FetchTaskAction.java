@@ -16,7 +16,9 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchTaskAction extends DefaultActionImpl<FetchTaskResult> {
+import com.gwtplatform.dispatch.shared.UnsecuredActionImpl;
+
+public class FetchTaskAction extends UnsecuredActionImpl<FetchTaskResult> {
     private Long taskId;
 
     public FetchTaskAction() {

@@ -16,7 +16,9 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchAdminTaskCountAction extends DefaultActionImpl<FetchAdminTaskCountResult> {
+import com.gwtplatform.dispatch.shared.UnsecuredActionImpl;
+
+public class FetchAdminTaskCountAction extends UnsecuredActionImpl<FetchAdminTaskCountResult> {
     public FetchAdminTaskCountAction() {
     }
 }
