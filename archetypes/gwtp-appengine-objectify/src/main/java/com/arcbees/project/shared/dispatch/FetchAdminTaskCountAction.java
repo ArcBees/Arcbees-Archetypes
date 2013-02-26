@@ -16,17 +16,7 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchTaskAction extends DefaultActionImpl<FetchTaskResult> {
-    private Long taskId;
-
-    public FetchTaskAction() {
-    }
-
-    public Long getTaskId() {
-        return taskId;
-    }
-
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
+public class FetchAdminTaskCountAction extends DefaultActionImpl<FetchAdminTaskCountResult> {
+    public FetchAdminTaskCountAction() {
     }
 }

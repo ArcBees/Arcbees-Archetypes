@@ -146,7 +146,7 @@
                     <!-- First time GAE Users, run 'mvn gae:unpack' -->
                     <execution>
                         <id>install-server-jar</id>
-                        <phase>verify</phase>
+                        <phase>validate</phase>
                         <goals>
                             <goal>unpack</goal>
                         </goals>

@@ -14,19 +14,14 @@
  * the License.
  */
 
-package com.arcbees.project.shared.dispatch;
+package com.arcbees.project.client.application.admin;
 
-public class FetchTaskAction extends DefaultActionImpl<FetchTaskResult> {
-    private Long taskId;
+import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
-    public FetchTaskAction() {
-    }
-
-    public Long getTaskId() {
-        return taskId;
-    }
-
-    public void setTaskId(Long taskId) {
-        this.taskId = taskId;
+public class AdminModule extends AbstractPresenterModule {
+    @Override
+    protected void configure() {
+        bindPresenter(AdminPresenter.class, AdminPresenter.MyView.class, AdminView.class,
+                AdminPresenter.MyProxy.class);
     }
 }

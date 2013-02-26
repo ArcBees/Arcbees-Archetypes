@@ -16,7 +16,7 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchCurrentUserAction extends ActionImpl<FetchCurrentUserResult> {
+public class FetchCurrentUserAction extends DefaultActionImpl<FetchCurrentUserResult> {
     public FetchCurrentUserAction() {
     }
 }
