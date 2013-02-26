@@ -16,7 +16,9 @@
 
 package com.arcbees.project.shared.dispatch;
 
-public class FetchCurrentUserAction extends DefaultActionImpl<FetchCurrentUserResult> {
+import com.gwtplatform.dispatch.shared.UnsecuredActionImpl;
+
+public class FetchCurrentUserAction extends UnsecuredActionImpl<FetchCurrentUserResult> {
     public FetchCurrentUserAction() {
     }
 }
