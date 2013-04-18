@@ -86,7 +86,6 @@
             <!-- 'mvn gwt:debug' - runs debug mode -->
             <!-- 'mvn gwt:compile' - compiles gwt -->
             <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
-            <!-- 'mvn clean gwt:compile deploy -DskipTests' - deploys to GAE out running tests -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
@@ -127,7 +126,7 @@
             <plugin>
                 <groupId>net.kindleit</groupId>
                 <artifactId>maven-gae-plugin</artifactId>
-                <version>0.9.5</version>
+                <version>${maven-gae-plugin.version}</version>
                 <configuration>
                     <sdkDir>${gae.home}</sdkDir>
                     <appDir>${webappDirectory}</appDir>
@@ -137,6 +136,21 @@
                     <serverId>appengine-credentials</serverId>
                     <splitJars>true</splitJars>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>deploy</id>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <dependencies>
                     <!-- Google App Engine API -->
                     <dependency>
