@@ -1,0 +1,17 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>com.arcbees.archetypes</groupId>
+  <artifactId>archetype-generation</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>archetype-generation</name>
+  <description>archetype-generation</description>
+  
+  <dependencies>
+    <dependency>
+        <groupId>com.github.branflake2267.archetypes</groupId>
+        <artifactId>archetype-generator</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
+</project>
