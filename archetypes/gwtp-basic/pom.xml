@@ -15,7 +15,7 @@
         <gwt.version>2.5.1</gwt.version>
         <gwtp.version>1.0-RC-3</gwtp.version>
         <gin.version>2.0.0</gin.version>
-        
+
         <!-- server -->
         <guice.version>3.0</guice.version>
 
@@ -30,7 +30,7 @@
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
-        
+
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
