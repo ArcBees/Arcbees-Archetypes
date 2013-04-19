@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+    <groupId>com.arcbees.archetypes</groupId>
+    <artifactId>archetypes-parent-pom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Archetypes Parent</name>
+
+    <url>https://github.com/ArcBees/ArcBees-tools.git</url>
+    <inceptionYear>2013</inceptionYear>
+
+    <organization>
+        <name>ArcBees</name>
+        <url>http://arcbees.com</url>
+    </organization>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <issueManagement>
+        <system>github</system>
+        <url>https://github.com/ArcBees/ArcBees-tools/issues</url>
+    </issueManagement>
+
+    <scm>
+        <connection>scm:git:git://github.com/ArcBees/ArcBees-tools.git/</connection>
+        <developerConnection>scm:git:git@github.com:ArcBees/ArcBees-tools.git</developerConnection>
+        <url>https://github.com/ArcBees/ArcBees-tools.git</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>branflake2267</id>
+            <name>Brandon Donnelson</name>
+            <email>branflake2267@gmail.com</email>
+            <organization>Gone Vertical LLC</organization>
+            <organizationUrl>http://gonevertical.com</organizationUrl>
+            <roles>
+                <role>Lead Developer</role>
+            </roles>
+            <timezone>-8</timezone>
+        </developer>
+    </developers>
+
+    <ciManagement>
+        <system>Team City</system>
+        <url>http://teamcity.arcbees.com</url>
+    </ciManagement>
+
+    <modules>
+        <module>generated</module>
+    </modules>
+</project>
