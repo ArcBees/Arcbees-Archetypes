@@ -4,17 +4,17 @@
 
   <parent>
     <groupId>com.arcbees.archetypes</groupId>
-    <artifactId>generated</artifactId>
+    <artifactId>archetypes-parent-pom</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
 
-  <groupId>com.arcbees.archetypes</groupId>
-  <artifactId>gwtp-basic-archetype</artifactId>
+  <groupId>com.arcbees.project</groupId>
+  <artifactId>project</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>gwtp-basic-archetype</name>
+  <name>project</name>
 
   <build>
     <extensions>
