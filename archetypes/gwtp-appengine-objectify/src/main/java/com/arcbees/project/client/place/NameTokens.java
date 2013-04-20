@@ -23,7 +23,7 @@ public class NameTokens {
     public static String getHome() {
         return home;
     }
-    
+
     public static final String getAdmin() {
         return admin;
     }

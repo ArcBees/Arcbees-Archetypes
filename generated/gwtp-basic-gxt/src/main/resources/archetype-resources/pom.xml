@@ -111,7 +111,7 @@
             <artifactId>gxt</artifactId>
             <version>${gxt.version}</version>
         </dependency>
-    
+
         <!-- Google Web Toolkit -->
         <dependency>
             <groupId>com.google.gwt</groupId>

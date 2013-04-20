@@ -26,7 +26,7 @@ public class AdminActionValidator implements ActionValidator {
     @Override
     public boolean isValid(Action<? extends Result> action) {
         UserService user = UserServiceFactory.getUserService();
-        
+
         return user.isUserAdmin();
     }
 }

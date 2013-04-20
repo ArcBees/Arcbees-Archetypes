@@ -30,7 +30,7 @@
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
-        
+
         <!-- new GWT Maven plugin -->
         <maven-gwt-plugin.version>1.0-alpha-2</maven-gwt-plugin.version>
 
@@ -79,41 +79,7 @@
                     <moduleName>com.arcbees.project.Project</moduleName>
                 </configuration>
             </plugin>
-
         </plugins>
-        
-        <pluginManagement>
-            <plugins>
-                <!-- Eclipse m2e settings only. It has no influence on the Maven build itself. -->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>net.ltgt.gwt.maven</groupId>
-                                        <artifactId>gwt-maven-plugin</artifactId>
-                                        <versionRange>[1.0-alpha-2,)</versionRange>
-                                        <goals>
-                                            <goal>enforce-encoding</goal>
-                                            <goal>import-test-sources</goal>
-                                            <goal>generate-module</goal>
-                                            <goal>import-sources</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore></ignore>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
     <dependencies>

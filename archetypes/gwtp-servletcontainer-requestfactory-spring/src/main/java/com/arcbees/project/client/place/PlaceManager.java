@@ -30,7 +30,7 @@ public class PlaceManager extends PlaceManagerImpl {
     public PlaceManager(final EventBus eventBus, final TokenFormatter tokenFormatter,
             @DefaultPlace final String defaultPlaceNameToken) {
         super(eventBus, tokenFormatter);
-        
+
         this.defaultPlaceRequest = new PlaceRequest(defaultPlaceNameToken);
     }
 
