@@ -20,7 +20,7 @@
 
     <!-- VerticalLayoutData layoutData -->
     <ui:with type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData" field="layoutData">
-        <ui:attributes width="1" height=".5d" margins="{margins}" />
+        <ui:attributes width="-1" height="-1" margins="{margins}" />
     </ui:with>
     
     <container:SimpleContainer>
@@ -30,7 +30,10 @@
 
             <!-- VerticalLayoutContainer child with layoutData -->
             <container:child layoutData="{layoutData}">
-                <g:Label text="Vertical Row, Hellow world..." />
+                <g:Label text="Hellow world..." />
+            </container:child>
+            <container:child layoutData="{layoutData}">
+                <g:HTML>Find more GXT guides here <a href='http://docs.sencha.com/gxt-guides/3'>GXT Guides</a></g:HTML>
             </container:child>
 
         </container:VerticalLayoutContainer>
