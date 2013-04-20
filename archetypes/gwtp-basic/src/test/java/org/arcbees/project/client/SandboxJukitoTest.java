@@ -14,17 +14,25 @@
  * the License.
  */
 
-package com.arcbees.project.client.application;
+package org.arcbees.project.client;
 
-import com.arcbees.project.client.application.home.HomeModule;
-import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+import static org.junit.Assert.assertTrue;
 
-public class ApplicationModule extends AbstractPresenterModule {
-    @Override
-    protected void configure() {
-        install(new HomeModule());
+import org.jukito.JukitoModule;
+import org.jukito.JukitoRunner;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+@RunWith(JukitoRunner.class)
+public class SandboxJukitoTest {
+    public static class Module extends JukitoModule {
+        @Override
+        protected void configureTest() {
+        }
+    }
+
+    @Test
+    public void testSandbox() {
+      assertTrue(true);
     }
 }

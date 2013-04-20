@@ -21,6 +21,7 @@ package ${package}.client.application.home;
 
 import ${package}.client.application.ApplicationPresenter;
 import ${package}.client.place.NameTokens;
+
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;

@@ -14,14 +14,15 @@
  * the License.
  */
 
-package com.arcbees.project.client.application.home;
+package org.arcbees.project.server.guice;
 
-import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
 
-public class HomeModule extends AbstractPresenterModule {
+public class GuiceServletConfig extends GuiceServletContextListener {
     @Override
-    protected void configure() {
-        bindPresenter(HomePagePresenter.class, HomePagePresenter.MyView.class, HomePageView.class,
-                HomePagePresenter.MyProxy.class);
+    protected Injector getInjector() {
+        return Guice.createInjector(new ServerModule(), new DispatchServletModule());
     }
 }

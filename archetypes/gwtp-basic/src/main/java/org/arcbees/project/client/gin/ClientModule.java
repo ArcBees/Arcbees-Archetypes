@@ -14,10 +14,11 @@
  * the License.
  */
 
-package com.arcbees.project.client.gin;
+package org.arcbees.project.client.gin;
 
-import com.arcbees.project.client.application.ApplicationModule;
-import com.arcbees.project.client.place.NameTokens;
+import org.arcbees.project.client.application.ApplicationModule;
+import org.arcbees.project.client.place.NameTokens;
+
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;

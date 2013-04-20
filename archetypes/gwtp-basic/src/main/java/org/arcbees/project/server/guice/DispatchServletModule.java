@@ -14,12 +14,15 @@
  * the License.
  */
 
-package com.arcbees.project.server.guice;
+package org.arcbees.project.server.guice;
 
-import com.gwtplatform.dispatch.server.guice.HandlerModule;
+import com.google.inject.servlet.ServletModule;
+import com.gwtplatform.dispatch.server.guice.DispatchServiceImpl;
+import com.gwtplatform.dispatch.shared.ActionImpl;
 
-public class ServerModule extends HandlerModule {
+public class DispatchServletModule extends ServletModule {
     @Override
-    protected void configureHandlers() {
+    public void configureServlets() {
+        serve("/" + ActionImpl.DEFAULT_SERVICE_NAME + "*").with(DispatchServiceImpl.class);
     }
 }
