@@ -26,12 +26,12 @@ import com.gwtplatform.mvp.client.ViewImpl;
 public class AdminView extends ViewImpl implements AdminPresenter.MyView {
     public interface Binder extends UiBinder<Widget, AdminView> {
     }
-    
+
     @UiField
     HTML totalTaskCount;
 
     @Inject
-    public AdminView(final Binder uiBinder) {
+    public AdminView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

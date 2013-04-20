@@ -1,22 +1,6 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-/**
- * Copyright 2012 ArcBees Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package com.arcbees.project.client.application.admin;
 
 import com.arcbees.project.client.application.ApplicationPresenter;
@@ -53,8 +37,7 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
     private DispatchAsync dispatcher;
 
     @Inject
-    public AdminPresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
-            final DispatchAsync dispatcher) {
+    public AdminPresenter(EventBus eventBus, MyView view, MyProxy proxy, DispatchAsync dispatcher) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
 
         this.dispatcher = dispatcher;
@@ -69,12 +52,13 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
 
     private void fetchTaskCount() {
         FetchAdminTaskCountAction action = new FetchAdminTaskCountAction();
-        
+
         dispatcher.execute(action, new AsyncCallbackImpl<FetchAdminTaskCountResult>() {
             @Override
             public void onSuccess(FetchAdminTaskCountResult result) {
                 displayTaskCount(result.getTotalTasksCount());
             }
+
             @Override
             public void onFailure(Throwable caught) {
                 if (caught.getMessage().contains("not logged in")) {

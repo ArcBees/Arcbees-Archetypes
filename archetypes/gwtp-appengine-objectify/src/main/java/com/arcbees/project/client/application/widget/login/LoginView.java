@@ -32,12 +32,12 @@ public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements Lo
     InlineHTML nickname;
     @UiField
     Anchor link;
-    
+
     @Inject
-    public LoginView(final Binder binder) {
+    public LoginView(Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
-    
+
     @Override
     public void displayNickname(String nickname) {
         this.nickname.setHTML(nickname);
