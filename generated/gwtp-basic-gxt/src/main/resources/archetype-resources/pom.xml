@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.arcbees.archetypes</groupId>
-    <artifactId>gwtp-plugin2-basic</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>gwt-app</packaging>
-    <name>GWTP Plugin2 Basic</name>
-    <description>Basic GWTP application using the new GWT Maven plugin.</description>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+    <packaging>war</packaging>
+    <name>GWTP Basic with GXT</name>
+    <description>Basic GWTP application with the GXT library</description>
 
     <properties>
         <!-- client -->
+        <gxt.version>3.0.1</gxt.version>
         <gwt.version>2.5.1</gwt.version>
         <gwtp.version>1.0-RC-3</gwtp.version>
         <gin.version>2.0.0</gin.version>
@@ -30,16 +30,17 @@
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
-        
-        <!-- new GWT Maven plugin -->
-        <maven-gwt-plugin.version>1.0-alpha-2</maven-gwt-plugin.version>
 
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
 
     <build>
+        <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -68,55 +69,49 @@
                 </configuration>
             </plugin>
 
-            <!-- https://github.com/tbroyer/gwt-maven-plugin -->
-            <!-- 'mvn gwt:help' -->
+            <!-- GWT -->
+            <!-- 'mvn gwt:run' - runs development mode -->
+            <!-- 'mvn gwt:debug' - runs debug mode -->
+            <!-- 'mvn gwt:compile' - compiles gwt -->
+            <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
             <plugin>
-                <groupId>net.ltgt.gwt.maven</groupId>
+                <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>${maven-gwt-plugin.version}</version>
-                <extensions>true</extensions>
+                <version>${gwt.version}</version>
                 <configuration>
-                    <moduleName>com.arcbees.project.Project</moduleName>
-                </configuration>
-            </plugin>
+                    <!-- With multiple tests use GwtTestSuite.java for speed -->
+                    <includes>**/*GwtTest.java</includes>
+                    <extraJvmArgs>-Xss1024K -Xmx1024M -XX:MaxPermSize=256M</extraJvmArgs>
 
+                    <copyWebapp>true</copyWebapp>
+                    <hostedWebapp>${webappDirectory}</hostedWebapp>
+
+                    <runTarget>${module}.html</runTarget>
+                    <modules>
+                        <module>${package}.${module}</module>
+                    </modules>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
-        
-        <pluginManagement>
-            <plugins>
-                <!-- Eclipse m2e settings only. It has no influence on the Maven build itself. -->
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId>net.ltgt.gwt.maven</groupId>
-                                        <artifactId>gwt-maven-plugin</artifactId>
-                                        <versionRange>[1.0-alpha-2,)</versionRange>
-                                        <goals>
-                                            <goal>enforce-encoding</goal>
-                                            <goal>import-test-sources</goal>
-                                            <goal>generate-module</goal>
-                                            <goal>import-sources</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore></ignore>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
     </build>
 
     <dependencies>
+        <!-- GXT -->
+        <!-- http://docs.sencha.com/gxt-guides/3/ -->
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt</artifactId>
+            <version>${gxt.version}</version>
+        </dependency>
+    
         <!-- Google Web Toolkit -->
         <dependency>
             <groupId>com.google.gwt</groupId>
