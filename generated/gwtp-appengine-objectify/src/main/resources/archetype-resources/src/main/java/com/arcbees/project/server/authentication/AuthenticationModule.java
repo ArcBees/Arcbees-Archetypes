@@ -1,7 +1,9 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.authentication;
 
 import javax.inject.Singleton;
-
 
 import com.arcbees.project.shared.dto.CurrentUserDto;
 import com.google.inject.AbstractModule;

@@ -1,4 +1,7 @@
-package ${package}.server.guice;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.server.guice;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;

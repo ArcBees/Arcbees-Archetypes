@@ -1,4 +1,7 @@
-package ${package}.client;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client;
 
 import static org.junit.Assert.assertTrue;
 
@@ -17,6 +20,6 @@ public class SandboxJukitoTest {
 
     @Test
     public void testSandbox() {
-      assertTrue(true);
+        assertTrue(true);
     }
 }

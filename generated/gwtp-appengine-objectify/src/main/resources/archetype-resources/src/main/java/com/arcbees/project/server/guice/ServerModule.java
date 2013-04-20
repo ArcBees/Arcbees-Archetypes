@@ -1,5 +1,7 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.guice;
-
 
 import com.arcbees.project.server.authentication.AuthenticationModule;
 import com.arcbees.project.server.dispatch.DispatchHandlersModule;

@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.application;
 
 import javax.inject.Inject;
@@ -19,7 +22,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     SimplePanel main;
 
     @Inject
-    public ApplicationView(final Binder uiBinder) {
+    public ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.shared.domain;
 
 import com.googlecode.objectify.annotation.Entity;

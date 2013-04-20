@@ -1,7 +1,7 @@
-package ${package}.client.application.home;
-
-import ${package}.client.application.ApplicationPresenter;
-import ${package}.client.place.NameTokens;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.place.NameTokens;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
@@ -20,7 +20,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     }
 
     @Inject
-    public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
+    public HomePagePresenter(EventBus eventBus, MyView view, MyProxy proxy) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
     }
 }

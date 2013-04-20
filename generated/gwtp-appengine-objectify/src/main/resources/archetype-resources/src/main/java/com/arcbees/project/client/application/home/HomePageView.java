@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.application.home;
 
 import com.google.gwt.uibinder.client.UiBinder;
@@ -10,7 +13,7 @@ public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
     }
 
     @Inject
-    public HomePageView(final Binder uiBinder) {
+    public HomePageView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 }

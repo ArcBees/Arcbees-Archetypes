@@ -1,9 +1,7 @@
-package ${package}.server.repos;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import ${package}.server.business.MyEntity;
-
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.server.business.MyEntity;
 
 import java.util.List;
 

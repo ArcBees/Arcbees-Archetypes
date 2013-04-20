@@ -1,10 +1,7 @@
-package ${package}.client.application.home;
-
-import ${package}.client.application.ApplicationPresenter;
-import ${package}.client.place.NameTokens;
-import ${package}.client.request.MyRequestFactory;
-import ${package}.client.request.MyServiceRequest;
-import ${package}.client.request.proxy.MyEntityProxy;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.request.proxy.MyEntityProxy;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.requestfactory.shared.Receiver;
@@ -17,9 +14,8 @@ import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
 import java.util.List;
 
-
-public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy>
-        implements HomeUiHandlers {
+public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> implements
+        HomeUiHandlers {
     public interface MyView extends View, HasUiHandlers<HomeUiHandlers> {
         void editUser(MyEntityProxy myEntity);
 
@@ -38,7 +34,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
 
     @Inject
     public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
-                             final MyRequestFactory requestFactory) {
+            final MyRequestFactory requestFactory) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
 
         this.requestFactory = requestFactory;

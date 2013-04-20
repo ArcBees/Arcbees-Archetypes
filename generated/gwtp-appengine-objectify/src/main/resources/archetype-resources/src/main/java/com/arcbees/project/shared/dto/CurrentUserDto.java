@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.shared.dto;
 
 import com.arcbees.project.shared.domain.User;
@@ -26,11 +29,11 @@ public class CurrentUserDto implements Dto {
     public Boolean isAdmin() {
         return isAdmin;
     }
-    
+
     public Boolean isLoggedIn() {
         return isLoggedIn;
     }
-    
+
     public User getUser() {
         return user;
     }
@@ -38,7 +41,7 @@ public class CurrentUserDto implements Dto {
     public void setLogoutUrl(String logoutUrl) {
         this.logoutUrl = logoutUrl;
     }
-    
+
     public String getLogoutUrl() {
         return logoutUrl;
     }
@@ -46,7 +49,7 @@ public class CurrentUserDto implements Dto {
     public void setLoginUrl(String loginUrl) {
         this.loginUrl = loginUrl;
     }
-    
+
     public String getLoginUrl() {
         return loginUrl;
     }
@@ -54,7 +57,7 @@ public class CurrentUserDto implements Dto {
     public void setNickname(String nickname) {
         this.nickname = nickname;
     }
-    
+
     public String getNickname() {
         return nickname;
     }

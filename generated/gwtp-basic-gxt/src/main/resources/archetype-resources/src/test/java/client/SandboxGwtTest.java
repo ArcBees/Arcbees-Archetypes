@@ -1,14 +1,10 @@
-package ${package}.client;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.${module}";
+    }
 
-import com.google.gwt.junit.client.GWTTestCase;
-
-public class SandboxGwtTest extends GWTTestCase {
-  @Override
-  public String getModuleName() {
-    return "${package}.${module}";
-  }
-
-  public void testSandbox() {
-    assertTrue(true);
-  }
+    public void testSandbox() {
+        assertTrue(true);
+    }
 }

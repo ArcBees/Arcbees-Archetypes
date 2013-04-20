@@ -1,6 +1,7 @@
-package ${package}.client.request.proxy;
-
-import ${package}.server.business.MyEntity;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.server.business.MyEntity;
 import com.google.web.bindery.requestfactory.shared.ProxyFor;
 import com.google.web.bindery.requestfactory.shared.ValueProxy;
 

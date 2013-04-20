@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.authentication;
 
 import javax.inject.Inject;
@@ -9,13 +12,12 @@ import com.arcbees.project.shared.dto.CurrentUserDto;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 
-
 public class CurrentUserDtoProvider implements Provider<CurrentUserDto> {
     private final UserService userService = UserServiceFactory.getUserService();
     private final UserDao userDao;
 
     @Inject
-    public CurrentUserDtoProvider(final UserDao userDao) {
+    public CurrentUserDtoProvider(UserDao userDao) {
         this.userDao = userDao;
     }
 
@@ -30,7 +32,7 @@ public class CurrentUserDtoProvider implements Provider<CurrentUserDto> {
         CurrentUserDto currentUser = new CurrentUserDto(isLoggedIn, getUser());
         currentUser.setLogoutUrl(userService.createLogoutURL("/"));
         currentUser.setLoginUrl(userService.createLoginURL("/"));
-        
+
         if (isLoggedIn) {
             currentUser.setIsAdmin(userService.isUserAdmin());
             currentUser.setNickname(userService.getCurrentUser().getNickname());

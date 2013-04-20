@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.application.widget.login;
 
 import com.google.gwt.uibinder.client.UiBinder;
@@ -16,12 +19,12 @@ public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements Lo
     InlineHTML nickname;
     @UiField
     Anchor link;
-    
+
     @Inject
-    public LoginView(final Binder binder) {
+    public LoginView(Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
-    
+
     @Override
     public void displayNickname(String nickname) {
         this.nickname.setHTML(nickname);

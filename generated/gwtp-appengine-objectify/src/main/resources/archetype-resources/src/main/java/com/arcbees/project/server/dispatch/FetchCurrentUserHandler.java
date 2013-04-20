@@ -1,5 +1,7 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.dispatch;
-
 
 import com.arcbees.project.server.authentication.CurrentUserDtoProvider;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserAction;
@@ -13,9 +15,9 @@ public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserActi
     private CurrentUserDtoProvider currentUserDtoProvider;
 
     @Inject
-    public FetchCurrentUserHandler(final CurrentUserDtoProvider currentUserDtoProvider) {
+    public FetchCurrentUserHandler(CurrentUserDtoProvider currentUserDtoProvider) {
         super(FetchCurrentUserAction.class);
-        
+
         this.currentUserDtoProvider = currentUserDtoProvider;
     }
 
@@ -23,7 +25,7 @@ public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserActi
     public FetchCurrentUserResult execute(FetchCurrentUserAction action, ExecutionContext context)
             throws ActionException {
         CurrentUserDto currentUser = currentUserDtoProvider.get();
-        
+
         return new FetchCurrentUserResult(currentUser);
     }
 }

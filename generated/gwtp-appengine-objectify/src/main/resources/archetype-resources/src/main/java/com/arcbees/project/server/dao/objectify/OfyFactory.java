@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.dao.objectify;
 
 import static com.arcbees.project.server.dao.objectify.OfyService.ofy;

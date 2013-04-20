@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.gin;
 
 import javax.inject.Inject;
@@ -22,7 +25,7 @@ public class BootstrapperImpl implements Bootstrapper {
         this.dispatcher = dispatcher;
         this.currentUserDto = currentUserDto;
     }
-    
+
     @Override
     public void onBootstrap() {
         fetchCurrentUser();
@@ -45,7 +48,7 @@ public class BootstrapperImpl implements Bootstrapper {
 
     private void onFetchCurrentUserSuccess(CurrentUserDto currentUser) {
         currentUserDto.copyFrom(currentUser);
-        
+
         placeManager.revealCurrentPlace();
     }
 }

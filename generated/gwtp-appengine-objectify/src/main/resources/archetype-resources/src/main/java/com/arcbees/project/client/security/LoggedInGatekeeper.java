@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.security;
 
 import com.arcbees.project.shared.dto.CurrentUserDto;
@@ -10,7 +13,7 @@ public class LoggedInGatekeeper implements Gatekeeper {
     private final CurrentUserDto currentUser;
 
     @Inject
-    public LoggedInGatekeeper(final CurrentUserDto currentUser) {
+    public LoggedInGatekeeper(CurrentUserDto currentUser) {
         this.currentUser = currentUser;
     }
 

@@ -1,4 +1,7 @@
-package ${package}.client.place;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.place;
 
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
@@ -14,7 +17,7 @@ public class PlaceManager extends PlaceManagerImpl {
     public PlaceManager(final EventBus eventBus, final TokenFormatter tokenFormatter,
             @DefaultPlace final String defaultPlaceNameToken) {
         super(eventBus, tokenFormatter);
-        
+
         this.defaultPlaceRequest = new PlaceRequest(defaultPlaceNameToken);
     }
 

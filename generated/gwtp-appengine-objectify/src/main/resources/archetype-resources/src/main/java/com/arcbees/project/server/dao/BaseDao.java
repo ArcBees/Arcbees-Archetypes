@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.dao;
 
 import java.util.ArrayList;
@@ -7,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
-
 
 import com.arcbees.project.server.dao.objectify.Ofy;
 import com.arcbees.project.server.dao.objectify.OfyFactory;

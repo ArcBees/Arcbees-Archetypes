@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.client.application.admin;
 
 import com.google.gwt.uibinder.client.UiBinder;
@@ -10,12 +13,12 @@ import com.gwtplatform.mvp.client.ViewImpl;
 public class AdminView extends ViewImpl implements AdminPresenter.MyView {
     public interface Binder extends UiBinder<Widget, AdminView> {
     }
-    
+
     @UiField
     HTML totalTaskCount;
 
     @Inject
-    public AdminView(final Binder uiBinder) {
+    public AdminView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

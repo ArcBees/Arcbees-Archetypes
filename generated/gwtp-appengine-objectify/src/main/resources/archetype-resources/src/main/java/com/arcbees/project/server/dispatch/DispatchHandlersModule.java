@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.dispatch;
 
 import com.arcbees.project.server.dispatch.validators.AdminActionValidator;
@@ -11,7 +14,7 @@ public class DispatchHandlersModule extends HandlerModule {
     protected void configureHandlers() {
         bindHandler(FetchTaskAction.class, FetchTaskHandler.class);
         bindHandler(FetchCurrentUserAction.class, FetchCurrentUserHandler.class);
-        
+
         // This fetch has a Validator which only lets App Admins fetch it.
         bindHandler(FetchAdminTaskCountAction.class, FetchAdminTaskCountHandler.class, AdminActionValidator.class);
     }

@@ -1,7 +1,7 @@
-package ${package}.client.application.home.ui;
-
-
-import ${package}.client.request.proxy.MyEntityProxy;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.request.proxy.MyEntityProxy;
 import com.google.gwt.editor.client.Editor;
 import com.google.gwt.editor.client.SimpleBeanEditorDriver;
 import com.google.gwt.uibinder.client.UiBinder;
@@ -26,7 +26,7 @@ public class MyEntityEditor extends Composite implements Editor<MyEntityProxy> {
     private final Driver driver;
 
     @Inject
-    public MyEntityEditor(final Binder uiBinder, final Driver driver) {
+    public MyEntityEditor(Binder uiBinder, Driver driver) {
         this.driver = driver;
 
         initWidget(uiBinder.createAndBindUi(this));

@@ -1,3 +1,6 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
 package com.arcbees.project.server.dispatch.validators;
 
 import com.google.appengine.api.users.UserService;
@@ -10,7 +13,7 @@ public class AdminActionValidator implements ActionValidator {
     @Override
     public boolean isValid(Action<? extends Result> action) {
         UserService user = UserServiceFactory.getUserService();
-        
+
         return user.isUserAdmin();
     }
 }

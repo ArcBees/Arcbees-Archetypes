@@ -1,4 +1,7 @@
-package ${package}.server.util;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.server.util;
 
 import com.google.web.bindery.requestfactory.server.ExceptionHandler;
 import com.google.web.bindery.requestfactory.server.RequestFactoryServlet;

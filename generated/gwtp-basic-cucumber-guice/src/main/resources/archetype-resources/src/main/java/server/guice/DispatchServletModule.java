@@ -1,4 +1,7 @@
-package ${package}.server.guice;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.server.guice;
 
 import com.google.inject.servlet.ServletModule;
 import com.gwtplatform.dispatch.server.guice.DispatchServiceImpl;

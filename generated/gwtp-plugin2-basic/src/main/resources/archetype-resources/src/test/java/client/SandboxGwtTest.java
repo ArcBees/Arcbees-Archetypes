@@ -1,11 +1,7 @@
-package ${package}.client;
-
-import com.google.gwt.junit.client.GWTTestCase;
-
-public class SandboxGwtTest extends GWTTestCase {
-    @Override
-    public String getModuleName() {
-        return "${package}.${module}";
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.${module}";
     }
 
     public void testSandbox() {

@@ -1,4 +1,7 @@
-package ${package}.client.application;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.application;
 
 import javax.inject.Inject;
 
@@ -15,12 +18,10 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
     @UiField
     SimplePanel main;
-    
-    private Widget widget;
 
     @Inject
-    public ApplicationView(final Binder uiBinder) {
-        widget = uiBinder.createAndBindUi(this);
+    public ApplicationView(Binder uiBinder) {
+        initWidget(uiBinder.createAndBindUi(this));
     }
 
     @Override
@@ -30,10 +31,5 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
         } else {
             super.setInSlot(slot, content);
         }
-    }
-
-    @Override
-    public Widget asWidget() {
-        return widget;
     }
 }

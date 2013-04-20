@@ -1,4 +1,7 @@
-package ${package}.client.application;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client.application;
 
 import com.google.gwt.event.shared.GwtEvent.Type;
 import com.google.inject.Inject;
@@ -22,7 +25,7 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
 
     @Inject
-    public ApplicationPresenter(final EventBus eventBus, final MyView view, final MyProxy proxy) {
+    public ApplicationPresenter(EventBus eventBus, MyView view, MyProxy proxy) {
         super(eventBus, view, proxy, RevealType.Root);
     }
 }

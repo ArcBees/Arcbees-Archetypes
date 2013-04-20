@@ -1,4 +1,7 @@
-package ${package}.client;
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+package}.client;
 
 import static org.junit.Assert.assertTrue;
 
@@ -9,14 +12,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(JukitoRunner.class)
 public class SandboxJukitoTest {
-  public static class Module extends JukitoModule {
-    @Override
-    protected void configureTest() {
+    public static class Module extends JukitoModule {
+        @Override
+        protected void configureTest() {
+        }
     }
-  }
 
-  @Test
-  public void testSandbox() {
-    assertTrue(true);
-  }
+    @Test
+    public void testSandbox() {
+        assertTrue(true);
+    }
 }
