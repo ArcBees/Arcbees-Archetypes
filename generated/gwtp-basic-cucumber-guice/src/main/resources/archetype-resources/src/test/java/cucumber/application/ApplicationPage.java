@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package ${package}.cucumber.application;
 
 import static com.google.gwt.user.client.ui.UIObject.DEBUG_ID_PREFIX;

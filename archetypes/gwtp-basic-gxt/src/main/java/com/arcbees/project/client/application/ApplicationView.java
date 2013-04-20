@@ -29,30 +29,23 @@ import com.sencha.gxt.widget.core.client.container.Viewport;
  * See more on GXT <a href="http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html">Layout Containers</a>
  */
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
-  public interface Binder extends UiBinder<Widget, ApplicationView> {
-  }
-
-  @UiField
-  Viewport main;
-
-  private Widget widget;
-
-  @Inject
-  public ApplicationView(final Binder uiBinder) {
-    widget = uiBinder.createAndBindUi(this);
-  }
-
-  @Override
-  public void setInSlot(Object slot, IsWidget content) {
-    if (slot == ApplicationPresenter.TYPE_SetMainContent) {
-      main.setWidget(content);
-    } else {
-      super.setInSlot(slot, content);
+    public interface Binder extends UiBinder<Widget, ApplicationView> {
     }
-  }
 
-  @Override
-  public Widget asWidget() {
-    return widget;
-  }
+    @UiField
+    Viewport main;
+    
+    @Inject
+    public ApplicationView(Binder uiBinder) {
+        initWidget(uiBinder.createAndBindUi(this));
+    }
+
+    @Override
+    public void setInSlot(Object slot, IsWidget content) {
+        if (slot == ApplicationPresenter.TYPE_SetMainContent) {
+            main.setWidget(content);
+        } else {
+            super.setInSlot(slot, content);
+        }
+    }
 }

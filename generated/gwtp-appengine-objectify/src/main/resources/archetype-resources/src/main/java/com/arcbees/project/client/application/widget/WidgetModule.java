@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 package com.arcbees.project.client.application.widget;
 
 import com.arcbees.project.client.application.widget.header.HeaderModule;

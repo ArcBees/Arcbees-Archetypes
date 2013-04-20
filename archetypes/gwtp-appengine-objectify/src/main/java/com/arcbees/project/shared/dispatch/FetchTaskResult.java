@@ -16,7 +16,6 @@
 
 package com.arcbees.project.shared.dispatch;
 
-
 import com.arcbees.project.shared.domain.Task;
 import com.gwtplatform.dispatch.shared.Result;
 

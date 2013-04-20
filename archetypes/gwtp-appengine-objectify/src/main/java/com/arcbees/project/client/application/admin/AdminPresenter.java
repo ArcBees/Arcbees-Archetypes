@@ -50,8 +50,7 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
     private DispatchAsync dispatcher;
 
     @Inject
-    public AdminPresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
-            final DispatchAsync dispatcher) {
+    public AdminPresenter(EventBus eventBus, MyView view, MyProxy proxy, DispatchAsync dispatcher) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
 
         this.dispatcher = dispatcher;
@@ -66,12 +65,13 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
 
     private void fetchTaskCount() {
         FetchAdminTaskCountAction action = new FetchAdminTaskCountAction();
-        
+
         dispatcher.execute(action, new AsyncCallbackImpl<FetchAdminTaskCountResult>() {
             @Override
             public void onSuccess(FetchAdminTaskCountResult result) {
                 displayTaskCount(result.getTotalTasksCount());
             }
+
             @Override
             public void onFailure(Throwable caught) {
                 if (caught.getMessage().contains("not logged in")) {
