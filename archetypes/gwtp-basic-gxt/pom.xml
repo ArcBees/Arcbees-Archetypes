@@ -12,6 +12,7 @@
 
     <properties>
         <!-- client -->
+        <gxt.version>3.0.1</gxt.version>
         <gwt.version>2.5.1</gwt.version>
         <gwtp.version>1.0-RC-3</gwtp.version>
         <gin.version>2.0.0</gin.version>
@@ -104,6 +105,14 @@
     </build>
 
     <dependencies>
+        <!-- GXT -->
+        <!-- http://docs.sencha.com/gxt-guides/3/ -->
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt</artifactId>
+            <version>${gxt.version}</version>
+        </dependency>
+    
         <!-- Google Web Toolkit -->
         <dependency>
             <groupId>com.google.gwt</groupId>
