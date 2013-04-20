@@ -3,8 +3,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>${groupId}</groupId>
-    <version>${version}</version>
     <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
     <packaging>war</packaging>
     <name>GWTP Basic</name>
     <description>Basic GWTP application</description>
