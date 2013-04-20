@@ -12,3 +12,4 @@ www-test
 gwt-unitCache
 war
 .factorypath
+chromedriver.log

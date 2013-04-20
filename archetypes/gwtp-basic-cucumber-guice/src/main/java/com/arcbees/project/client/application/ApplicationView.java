@@ -31,7 +31,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
 
     @UiField
     SimplePanel main;
-    
+
     private Widget widget;
 
     @Inject
