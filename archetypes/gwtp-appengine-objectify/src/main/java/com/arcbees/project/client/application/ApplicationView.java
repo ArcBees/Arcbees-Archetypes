@@ -35,7 +35,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     SimplePanel main;
 
     @Inject
-    public ApplicationView(final Binder uiBinder) {
+    public ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

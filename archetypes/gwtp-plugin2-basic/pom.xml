@@ -6,9 +6,9 @@
     <groupId>com.arcbees.archetypes</groupId>
     <artifactId>gwtp-plugin2-basic</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>gwt-app</packaging>
     <name>GWTP Plugin2 Basic</name>
-    <description>Basic GWTP application using the new GWT maven plugin.</description>
+    <description>Basic GWTP application using the new GWT Maven plugin.</description>
 
     <properties>
         <!-- client -->
@@ -31,16 +31,15 @@
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
 
+        <!-- new GWT Maven plugin -->
+        <maven-gwt-plugin.version>1.0-alpha-2</maven-gwt-plugin.version>
+
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
-        <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
     </properties>
 
     <build>
-        <outputDirectory>${webappDirectory}/WEB-INF/classes</outputDirectory>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -69,36 +68,16 @@
                 </configuration>
             </plugin>
 
-            <!-- GWT -->
-            <!-- 'mvn gwt:run' - runs development mode -->
-            <!-- 'mvn gwt:debug' - runs debug mode -->
-            <!-- 'mvn gwt:compile' - compiles gwt -->
-            <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
+            <!-- https://github.com/tbroyer/gwt-maven-plugin -->
+            <!-- 'mvn gwt:help' -->
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
+                <groupId>net.ltgt.gwt.maven</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>${gwt.version}</version>
+                <version>${maven-gwt-plugin.version}</version>
+                <extensions>true</extensions>
                 <configuration>
-                    <!-- With multiple tests use GwtTestSuite.java for speed -->
-                    <includes>**/*GwtTest.java</includes>
-                    <extraJvmArgs>-Xss1024K -Xmx1024M -XX:MaxPermSize=256M</extraJvmArgs>
-
-                    <copyWebapp>true</copyWebapp>
-                    <hostedWebapp>${webappDirectory}</hostedWebapp>
-
-                    <runTarget>Project.html</runTarget>
-                    <modules>
-                        <module>com.arcbees.project.Project</module>
-                    </modules>
+                    <moduleName>com.arcbees.project.Project</moduleName>
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

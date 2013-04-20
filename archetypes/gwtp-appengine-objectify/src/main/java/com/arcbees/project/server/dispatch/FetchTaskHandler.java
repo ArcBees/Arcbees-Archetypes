@@ -16,7 +16,6 @@
 
 package com.arcbees.project.server.dispatch;
 
-
 import com.arcbees.project.server.dao.TaskDao;
 import com.arcbees.project.shared.dispatch.FetchTaskAction;
 import com.arcbees.project.shared.dispatch.FetchTaskResult;
@@ -29,7 +28,7 @@ public class FetchTaskHandler extends AbstractAction<FetchTaskAction, FetchTaskR
     private final TaskDao taskDao;
 
     @Inject
-    public FetchTaskHandler(final TaskDao taskDao) {
+    public FetchTaskHandler(TaskDao taskDao) {
         super(FetchTaskAction.class);
 
         this.taskDao = taskDao;

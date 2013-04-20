@@ -38,7 +38,7 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
     private final CurrentUserDto currentUserDto;
 
     @Inject
-    public LoginPresenter(final EventBus eventBus, final MyView view, final CurrentUserDto currentUserDto) {
+    public LoginPresenter(EventBus eventBus, MyView view, CurrentUserDto currentUserDto) {
         super(eventBus, view);
 
         this.currentUserDto = currentUserDto;
@@ -77,7 +77,7 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
         if (queryString != null) {
             url += URL.encode(queryString);
         }
-        
+
         if (token != null && token.length() > 0) {
             url += "%23" + path + URL.encode(token);
         }

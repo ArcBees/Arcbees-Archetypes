@@ -1,22 +1,6 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-/**
- * Copyright 2012 ArcBees Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License"); you may not
- * use this file except in compliance with the License. You may obtain a copy of
- * the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
- * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
- * License for the specific language governing permissions and limitations under
- * the License.
- */
-
 package com.arcbees.project.client.application.widget.login;
 
 import com.arcbees.project.shared.dto.CurrentUserDto;
@@ -41,7 +25,7 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
     private final CurrentUserDto currentUserDto;
 
     @Inject
-    public LoginPresenter(final EventBus eventBus, final MyView view, final CurrentUserDto currentUserDto) {
+    public LoginPresenter(EventBus eventBus, MyView view, CurrentUserDto currentUserDto) {
         super(eventBus, view);
 
         this.currentUserDto = currentUserDto;
@@ -80,7 +64,7 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
         if (queryString != null) {
             url += URL.encode(queryString);
         }
-        
+
         if (token != null && token.length() > 0) {
             url += "%23" + path + URL.encode(token);
         }

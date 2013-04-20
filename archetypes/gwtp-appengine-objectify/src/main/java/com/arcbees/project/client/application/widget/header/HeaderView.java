@@ -29,22 +29,22 @@ import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 public class HeaderView extends ViewWithUiHandlers<HeaderUiHandlers> implements HeaderPresenter.MyView {
     public interface Binder extends UiBinder<HTMLPanel, HeaderView> {
     }
-    
+
     @UiField
     SimplePanel login;
 
     @Inject
-    public HeaderView(final Binder binder) {
+    public HeaderView(Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
-    
+
     @Override
     public void setInSlot(Object slot, IsWidget content) {
         if (slot == HeaderPresenter.TYPE_LoginPresenter) {
             login.setWidget(content);
         }
     }
-    
+
     @UiHandler("test")
     public void onTestClick(ClickEvent event) {
         getUiHandlers().onTestClick();

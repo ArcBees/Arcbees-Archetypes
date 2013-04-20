@@ -2,6 +2,9 @@
 
 This is a basic GWTP Archetype using the new GWT Maven plugin.
 
+##New Maven Plugin Home
+* [GWT Maven Plugin](https://github.com/tbroyer/gwt-maven-plugin)
+
 ##Highlights
 
 

@@ -27,7 +27,7 @@ public class FetchAdminTaskCountResult implements Result {
     public FetchAdminTaskCountResult(Integer totalTasks) {
         this.totalTasks = totalTasks;
     }
-    
+
     public Integer getTotalTasksCount() {
         return totalTasks;
     }
