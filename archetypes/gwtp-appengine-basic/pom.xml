@@ -34,7 +34,7 @@
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
-        <maven-gae-plugin.version>0.9.5</maven-gae-plugin.version>
+        <maven-gae-plugin.version>0.9.6</maven-gae-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
 
@@ -203,6 +203,35 @@
                 </dependencies>
             </plugin>
         </plugins>
+        <pluginManagement>
+            <plugins>
+                <!-- Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>net.kindleit</groupId>
+                                        <artifactId>maven-gae-plugin</artifactId>
+                                        <versionRange>[0.9.5,)</versionRange>
+                                        <goals>
+                                            <goal>unpack</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
     </build>
 
     <dependencies>
