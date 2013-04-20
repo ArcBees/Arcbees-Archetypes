@@ -11,4 +11,5 @@ mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
 -DarchetypeVersion=1.0-SNAPSHOT \
 -DgroupId=com.projectname \
 -DartifactId=new-project-name \
+-Dmodule=Project \
 -DinteractiveMode=false

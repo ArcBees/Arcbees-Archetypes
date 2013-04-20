@@ -16,7 +16,6 @@
 
 package com.arcbees.project.client.application.widget.login;
 
-import com.google.inject.TypeLiteral;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
 public class LoginModule extends AbstractPresenterModule {
