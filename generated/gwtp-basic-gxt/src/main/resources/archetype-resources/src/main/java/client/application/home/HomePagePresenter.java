@@ -1,7 +1,10 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client.place.NameTokens;
+package ${package}.client.application.home;
+
+import ${package}.client.application.ApplicationPresenter;
+import ${package}.client.place.NameTokens;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;

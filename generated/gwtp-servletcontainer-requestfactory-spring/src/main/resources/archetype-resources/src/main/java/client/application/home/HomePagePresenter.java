@@ -1,7 +1,13 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client.request.proxy.MyEntityProxy;
+package ${package}.client.application.home;
+
+import ${package}.client.application.ApplicationPresenter;
+import ${package}.client.place.NameTokens;
+import ${package}.client.request.MyRequestFactory;
+import ${package}.client.request.MyServiceRequest;
+import ${package}.client.request.proxy.MyEntityProxy;
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.requestfactory.shared.Receiver;

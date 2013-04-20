@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client.place;
+package ${package}.client.place;
 
 import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;

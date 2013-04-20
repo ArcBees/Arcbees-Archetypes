@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.server.business;
+package ${package}.server.business;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

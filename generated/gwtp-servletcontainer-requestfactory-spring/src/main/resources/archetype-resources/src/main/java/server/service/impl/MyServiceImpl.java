@@ -1,7 +1,15 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.server.service.MyService;
+package ${package}.server.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ${package}.server.business.MyEntity;
+import ${package}.server.repos.MyEntityRepo;
+import ${package}.server.service.MyService;
 
 import java.util.List;
 

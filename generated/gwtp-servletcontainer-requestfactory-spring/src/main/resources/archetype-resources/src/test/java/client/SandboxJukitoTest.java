@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client;
+package ${package}.client;
 
 import org.jukito.JukitoModule;
 import org.jukito.JukitoRunner;

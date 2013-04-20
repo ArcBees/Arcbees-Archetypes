@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client;
+package ${package}.client;
 
 import static org.junit.Assert.assertTrue;
 

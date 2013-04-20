@@ -1,7 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client.request.proxy.MyEntityProxy;
+package ${package}.client.application.home;
+
+import java.util.List;
+
+import ${package}.client.application.home.ui.MyEntityEditor;
+import ${package}.client.request.proxy.MyEntityProxy;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;

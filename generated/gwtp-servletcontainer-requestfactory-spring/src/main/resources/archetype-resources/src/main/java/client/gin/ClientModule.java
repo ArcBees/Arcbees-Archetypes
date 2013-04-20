@@ -1,7 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package}.client.request.MyRequestFactory;
+package ${package}.client.gin;
+
+import ${package}.client.application.ApplicationModule;
+import ${package}.client.place.NameTokens;
+import ${package}.client.request.MyRequestFactory;
 import com.google.gwt.core.client.GWT;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
