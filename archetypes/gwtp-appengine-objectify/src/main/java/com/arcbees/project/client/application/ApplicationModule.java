@@ -16,7 +16,6 @@
 
 package com.arcbees.project.client.application;
 
-
 import com.arcbees.project.client.application.admin.AdminModule;
 import com.arcbees.project.client.application.home.HomeModule;
 import com.arcbees.project.client.application.widget.WidgetModule;

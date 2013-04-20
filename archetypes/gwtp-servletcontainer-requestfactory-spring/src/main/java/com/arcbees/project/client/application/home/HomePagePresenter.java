@@ -33,9 +33,8 @@ import com.gwtplatform.mvp.client.proxy.ProxyPlace;
 
 import java.util.List;
 
-
-public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy>
-        implements HomeUiHandlers {
+public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> implements
+        HomeUiHandlers {
     public interface MyView extends View, HasUiHandlers<HomeUiHandlers> {
         void editUser(MyEntityProxy myEntity);
 
@@ -54,7 +53,7 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
 
     @Inject
     public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
-                             final MyRequestFactory requestFactory) {
+            final MyRequestFactory requestFactory) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
 
         this.requestFactory = requestFactory;

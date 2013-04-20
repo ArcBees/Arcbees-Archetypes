@@ -16,7 +16,6 @@
 
 package com.arcbees.project.client.application.home;
 
-
 import com.arcbees.project.client.application.ApplicationPresenter;
 import com.arcbees.project.client.dispatch.AsyncCallbackImpl;
 import com.arcbees.project.client.place.NameTokens;
