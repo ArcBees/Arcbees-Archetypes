@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>gwt-app</packaging>
     <name>GWTP Plugin2 Basic</name>
-    <description>Basic GWTP application using the new GWT maven plugin.</description>
+    <description>Basic GWTP application using the new GWT Maven plugin.</description>
 
     <properties>
         <!-- client -->
@@ -30,6 +30,9 @@
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
+        
+        <!-- new GWT Maven plugin -->
+        <maven-gwt-plugin.version>1.0-alpha-2</maven-gwt-plugin.version>
 
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,10 +70,12 @@
                 </configuration>
             </plugin>
 
+            <!-- https://github.com/tbroyer/gwt-maven-plugin -->
+            <!-- 'mvn gwt:help' -->
             <plugin>
                 <groupId>net.ltgt.gwt.maven</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
-                <version>1.0-alpha-2</version>
+                <version>${maven-gwt-plugin.version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <moduleName>com.arcbees.project.Project</moduleName>
@@ -80,8 +85,7 @@
         </plugins>
         <pluginManagement>
             <plugins>
-                <!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven 
-                    build itself. -->
+                <!-- Eclipse m2e settings only. It has no influence on the Maven build itself. -->
                 <plugin>
                     <groupId>org.eclipse.m2e</groupId>
                     <artifactId>lifecycle-mapping</artifactId>
