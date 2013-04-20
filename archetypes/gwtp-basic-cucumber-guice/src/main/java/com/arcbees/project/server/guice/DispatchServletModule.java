@@ -23,6 +23,6 @@ import com.gwtplatform.dispatch.shared.ActionImpl;
 public class DispatchServletModule extends ServletModule {
     @Override
     public void configureServlets() {
-        serve("/" + ActionImpl.DEFAULT_SERVICE_NAME + "*").with(DispatchServiceImpl.class);
+        serveRegex("^/(?!_ah.*)" + ActionImpl.DEFAULT_SERVICE_NAME + "*").with(DispatchServiceImpl.class);
     }
 }
