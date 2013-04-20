@@ -50,7 +50,7 @@ public class HomePageView extends ViewWithUiHandlers<HomeUiHandlers> implements 
         this.myTable = new CellTable<MyEntityProxy>();
 
         initWidget(uiBinder.createAndBindUi(this));
-        
+
         initCellTable();
         dataProvider.addDataDisplay(myTable);
     }

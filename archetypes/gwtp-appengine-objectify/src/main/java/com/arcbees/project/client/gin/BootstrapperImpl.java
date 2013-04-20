@@ -38,7 +38,7 @@ public class BootstrapperImpl implements Bootstrapper {
         this.dispatcher = dispatcher;
         this.currentUserDto = currentUserDto;
     }
-    
+
     @Override
     public void onBootstrap() {
         fetchCurrentUser();
@@ -61,7 +61,7 @@ public class BootstrapperImpl implements Bootstrapper {
 
     private void onFetchCurrentUserSuccess(CurrentUserDto currentUser) {
         currentUserDto.copyFrom(currentUser);
-        
+
         placeManager.revealCurrentPlace();
     }
 }

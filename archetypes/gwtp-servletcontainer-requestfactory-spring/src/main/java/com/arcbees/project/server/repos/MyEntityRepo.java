@@ -20,7 +20,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.arcbees.project.server.business.MyEntity;
 
-
 import java.util.List;
 
 public interface MyEntityRepo extends JpaRepository<MyEntity, Long> {

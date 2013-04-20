@@ -23,9 +23,7 @@ import org.springframework.web.context.support.WebApplicationContextUtils;
 
 public class SpringServiceLocator implements ServiceLocator {
     public Object getInstance(Class<?> clazz) {
-        ApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(
-                RequestFactoryServlet.getThreadLocalServletContext());
+        ApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(RequestFactoryServlet.getThreadLocalServletContext());
         return context.getBean(clazz);
     }
 }
-
