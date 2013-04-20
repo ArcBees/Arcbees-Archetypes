@@ -14,17 +14,18 @@
  * the License.
  */
 
-package com.arcbees.project.client;
+package org.arcbees.project.client.application;
 
-import com.google.gwt.junit.client.GWTTestCase;
+import org.arcbees.project.client.application.home.HomeModule;
 
-public class SandboxGwtTest extends GWTTestCase {
+import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
+
+public class ApplicationModule extends AbstractPresenterModule {
     @Override
-    public String getModuleName() {
-        return "com.arcbees.project.Project";
-    }
+    protected void configure() {
+        install(new HomeModule());
 
-    public void testSandbox() {
-        assertTrue(true);
+        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
+                ApplicationPresenter.MyProxy.class);
     }
 }

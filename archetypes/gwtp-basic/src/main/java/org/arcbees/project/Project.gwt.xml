@@ -18,5 +18,5 @@
     <source path='shared' />
 
     <set-configuration-property name="gin.ginjector.modules" 
-                                value="com.arcbees.project.client.gin.ClientModule"/>
+                                value="org.arcbees.project.client.gin.ClientModule"/>
 </module>

@@ -21,6 +21,7 @@ package ${package}.client.gin;
 
 import ${package}.client.application.ApplicationModule;
 import ${package}.client.place.NameTokens;
+
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;

@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.project.client.place;
+package org.arcbees.project.client.place;
 
 public class NameTokens {
     public static final String home = "home";

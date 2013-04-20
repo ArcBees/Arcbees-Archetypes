@@ -14,25 +14,19 @@
  * the License.
  */
 
-package com.arcbees.project.client;
+package org.arcbees.project.client.application.home;
 
-import static org.junit.Assert.assertTrue;
+import com.google.gwt.uibinder.client.UiBinder;
+import com.google.gwt.user.client.ui.Widget;
+import com.google.inject.Inject;
+import com.gwtplatform.mvp.client.ViewImpl;
 
-import org.jukito.JukitoModule;
-import org.jukito.JukitoRunner;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-@RunWith(JukitoRunner.class)
-public class SandboxJukitoTest {
-    public static class Module extends JukitoModule {
-        @Override
-        protected void configureTest() {
-        }
+public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
+    public interface Binder extends UiBinder<Widget, HomePageView> {
     }
 
-    @Test
-    public void testSandbox() {
-      assertTrue(true);
+    @Inject
+    public HomePageView(final Binder uiBinder) {
+        initWidget(uiBinder.createAndBindUi(this));
     }
 }
