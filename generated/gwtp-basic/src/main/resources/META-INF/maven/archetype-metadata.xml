@@ -28,18 +28,6 @@
       </includes>
     </fileSet>
     
-    <fileSet encoding="UTF-8">
-      <directory>bin/target</directory>
-      <includes>
-        <include>**/*.class</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>bin/src</directory>
-      <includes>
-        <include>**/*.class</include>
-      </includes>
-    </fileSet>
     
     
     
