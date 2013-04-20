@@ -20,9 +20,9 @@ public class RunProjectToArchetypeGenerator {
    
     List<String> projects = new ArrayList<String>();
     projects.add("gwtp-basic");
-    //projects.add("gwtp-appengine-basic");
-    //projects.add("gwtp-appengine-objectify");
-    //projects.add("gwtp-servletcontainer-requestfactory-spring");
+    projects.add("gwtp-appengine-basic");
+    projects.add("gwtp-appengine-objectify");
+    projects.add("gwtp-servletcontainer-requestfactory-spring");
     
     GwtArchetypeGenerator generate = new GwtArchetypeGenerator();
     generate.setProjects(projects);

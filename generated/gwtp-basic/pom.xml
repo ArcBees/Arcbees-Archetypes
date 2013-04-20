@@ -10,11 +10,11 @@
 
 
   <groupId>com.arcbees.archetypes</groupId>
-  <artifactId>gwtp-basic</artifactId>
+  <artifactId>gwtp-basic-archetype</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>maven-archetype</packaging>
 
-  <name>gwtp-basic</name>
+  <name>gwtp-basic-archetype</name>
 
   <build>
     <extensions>
