@@ -60,7 +60,8 @@ Eclipse users will need to add the module to Google Eclipse Plugin. Since the en
 3. See the screen shot at the bottom of these directions: [Eclipse Maven Import Instructions](http://c.gwt-examples.com/home/maven/ide-import/eclipse)
 
 ##News
-* 2/2013 Samples have been updated to 1.0-RC-2
+* 4/2013 - Added 3 Archetypes and test all the others. 
+* 2/2013 - Samples have been updated to 1.0-RC-2.
 * 1/27/2013 - gwtp-basic Archetype added.
 * 1/27/2013 - Enhanced gwtp-appengine-basic.
 
