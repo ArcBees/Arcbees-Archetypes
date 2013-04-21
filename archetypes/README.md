@@ -38,6 +38,18 @@ Create a project from a project template called an Archetype. Follow the links b
 		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-servletcontainer-requestfactory-spring">GWTP RequestFactory & Spring</a></td>
 		<td>GWTP using a servlet container using RequestFactory and Spring</td>
 	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic-gxt">GWTP with GXT</a></td>
+		<td>GWT with the GXT library.</td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic-cucumber-guice">GWTP Basic Cucumber</a></td>
+		<td>Basic GWTP with Cucumber configuration.</td>
+	</tr>
+	<tr>
+		<td><a href="https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-plugin2-basic">GWTP Plugin2</a></td>
+		<td>GWTP with the new GWT plugin configuration - Alpha!</td>
+	</tr>
 </table>
 
 ##Eclipse Import Notes
