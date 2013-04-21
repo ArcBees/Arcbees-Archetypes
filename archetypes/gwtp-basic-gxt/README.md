@@ -9,7 +9,7 @@ This is a basic GWTP Archetype with the GXT library setup.
 * [LayoutContainers](http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html)
 
 ##Highlights
-* [GXT Library Module Configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
+* [GXT Library GWT Module Configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
 * [GXT Application Root Widget](src/main/java/com/arcbees/project/client/application/ApplicationView.ui.xml)
 * [GXT UiBinder Widget](src/main/java/com/arcbees/project/client/application/home/HomePageView.ui.xml)
 
