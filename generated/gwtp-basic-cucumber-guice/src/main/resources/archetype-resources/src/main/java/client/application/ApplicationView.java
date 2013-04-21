@@ -22,6 +22,9 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     @Inject
     public ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
+        
+        // Allows cucumber to find an id, so it knows when the app is loaded.
+        main.ensureDebugId("loaded");
     }
 
     @Override
