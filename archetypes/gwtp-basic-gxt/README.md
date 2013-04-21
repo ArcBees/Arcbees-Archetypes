@@ -10,7 +10,7 @@ This is a basic GWTP Archetype with the GXT library setup.
 
 ##Highlights
 [GWT project module configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
-
+[Application Main Widget](src/main/java/com/arcbees/project/client/application/ApplicationView.ui.xml)
 
 ##Maven Archetype Usage
 
