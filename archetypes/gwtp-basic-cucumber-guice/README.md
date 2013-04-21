@@ -3,6 +3,9 @@
 This is a basic GWTP Archetype with Cucumber guide configuration. It also has a Selenium configuration.
 
 ##Highlights
+* [Client Server Directory](src/main/java/com/arcbees/project)
+* [Testing Directory](src/test/java/com/arcbees/project)
+* [Cucumber Directory](src/test/java/com/arcbees/project/cucumber)
 
 ##Maven Archetype Usage
 
