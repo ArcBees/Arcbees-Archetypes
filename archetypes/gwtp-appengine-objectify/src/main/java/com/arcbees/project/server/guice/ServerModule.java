@@ -16,7 +16,6 @@
 
 package com.arcbees.project.server.guice;
 
-
 import com.arcbees.project.server.authentication.AuthenticationModule;
 import com.arcbees.project.server.dispatch.DispatchHandlersModule;
 import com.gwtplatform.dispatch.server.guice.HandlerModule;

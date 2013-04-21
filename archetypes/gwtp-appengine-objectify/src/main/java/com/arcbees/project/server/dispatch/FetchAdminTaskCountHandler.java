@@ -27,7 +27,7 @@ public class FetchAdminTaskCountHandler extends AbstractAction<FetchAdminTaskCou
     private final TaskDao taskDao;
 
     @Inject
-    public FetchAdminTaskCountHandler(final TaskDao taskDao) {
+    public FetchAdminTaskCountHandler(TaskDao taskDao) {
         super(FetchAdminTaskCountAction.class);
 
         this.taskDao = taskDao;
@@ -37,7 +37,7 @@ public class FetchAdminTaskCountHandler extends AbstractAction<FetchAdminTaskCou
     public FetchAdminTaskCountResult execute(FetchAdminTaskCountAction action, ExecutionContext context)
             throws ActionException {
         Integer totalCount = taskDao.findTotalCount();
-        
+
         return new FetchAdminTaskCountResult(totalCount);
     }
 }
