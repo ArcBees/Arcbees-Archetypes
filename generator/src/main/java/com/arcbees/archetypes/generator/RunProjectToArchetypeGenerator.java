@@ -24,7 +24,7 @@ public class RunProjectToArchetypeGenerator {
 //    projects.add("gwtp-appengine-objectify");
 //    projects.add("gwtp-servletcontainer-requestfactory-spring");
 //    projects.add("gwtp-basic-gxt");
-    projects.add("gwtp-basic-cucumber-guice");
+//    projects.add("gwtp-basic-cucumber-guice");
 //    projects.add("gwtp-plugin2-basic");
     
     GwtArchetypeGenerator generate = new GwtArchetypeGenerator();
