@@ -9,6 +9,7 @@ This is a basic GWTP Archetype with the GXT library setup.
 * [LayoutContainers](http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html)
 
 ##Highlights
+[GWT project module configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
 
 
 ##Maven Archetype Usage
