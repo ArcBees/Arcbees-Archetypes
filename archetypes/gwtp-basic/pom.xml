@@ -4,18 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.arcbees.archetypes</groupId>
-    <version>1.0-SNAPSHOT</version>
     <artifactId>gwtp-basic</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>GWTP Basic</name>
     <description>Basic GWTP application</description>
 
     <properties>
         <!-- client -->
-        <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>1.0-RC-2</gwtp.version>
+        <gwt.version>2.5.1</gwt.version>
+        <gwtp.version>1.0-RC-3</gwtp.version>
         <gin.version>2.0.0</gin.version>
-        
+
         <!-- server -->
         <guice.version>3.0</guice.version>
 
@@ -30,7 +30,7 @@
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
-        
+
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -81,19 +81,21 @@
                 <configuration>
                     <!-- With multiple tests use GwtTestSuite.java for speed -->
                     <includes>**/*GwtTest.java</includes>
-                    <extraJvmArgs>-Xss1024k -Xmx1024m -XX:MaxPermSize=256m</extraJvmArgs>
+                    <extraJvmArgs>-Xss1024K -Xmx1024M -XX:MaxPermSize=256M</extraJvmArgs>
 
                     <copyWebapp>true</copyWebapp>
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
 
                     <runTarget>Project.html</runTarget>
-                    <module>com.arcbees.project.Project</module>
+                    <modules>
+                        <module>com.arcbees.project.Project</module>
+                    </modules>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>test</goal>
                             <goal>compile</goal>
+                            <goal>test</goal>
                         </goals>
                     </execution>
                 </executions>

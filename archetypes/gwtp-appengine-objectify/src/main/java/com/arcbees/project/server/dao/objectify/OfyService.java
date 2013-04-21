@@ -16,7 +16,6 @@
 
 package com.arcbees.project.server.dao.objectify;
 
-
 import com.arcbees.project.shared.domain.Task;
 import com.arcbees.project.shared.domain.User;
 import com.googlecode.objectify.Objectify;
@@ -24,8 +23,7 @@ import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
 /**
- * For use of: import static
- * com.sceneverse.shozon.server.dao.objectify.OfyService.ofy;
+ * For use of: import static com.sceneverse.shozon.server.dao.objectify.OfyService.ofy;
  */
 public class OfyService {
     static {

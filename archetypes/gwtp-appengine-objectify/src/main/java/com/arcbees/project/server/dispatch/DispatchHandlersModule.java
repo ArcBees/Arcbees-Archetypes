@@ -27,7 +27,7 @@ public class DispatchHandlersModule extends HandlerModule {
     protected void configureHandlers() {
         bindHandler(FetchTaskAction.class, FetchTaskHandler.class);
         bindHandler(FetchCurrentUserAction.class, FetchCurrentUserHandler.class);
-        
+
         // This fetch has a Validator which only lets App Admins fetch it.
         bindHandler(FetchAdminTaskCountAction.class, FetchAdminTaskCountHandler.class, AdminActionValidator.class);
     }

@@ -18,7 +18,6 @@ package com.arcbees.project.server.authentication;
 
 import javax.inject.Singleton;
 
-
 import com.arcbees.project.shared.dto.CurrentUserDto;
 import com.google.inject.AbstractModule;
 import com.google.inject.servlet.RequestScoped;

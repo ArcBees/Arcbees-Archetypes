@@ -24,7 +24,6 @@ import com.arcbees.project.server.business.MyEntity;
 import com.arcbees.project.server.repos.MyEntityRepo;
 import com.arcbees.project.server.service.MyService;
 
-
 import java.util.List;
 
 @Service("myService")

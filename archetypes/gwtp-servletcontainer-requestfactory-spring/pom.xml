@@ -12,8 +12,8 @@
 
     <properties>
         <!-- client -->
-        <gwt.version>2.5.0</gwt.version>
-        <gwtp.version>1.0-RC-2</gwtp.version>
+        <gwt.version>2.5.1</gwt.version>
+        <gwtp.version>1.0-RC-3</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
@@ -52,7 +52,7 @@
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
-        <maven-gae-plugin.version>0.9.5</maven-gae-plugin.version>
+        <maven-gae-plugin.version>0.9.6</maven-gae-plugin.version>
         <maven-processor-plugin.version>2.0.5</maven-processor-plugin.version>
         <maven-build-helper-plugin.version>1.7</maven-build-helper-plugin.version>
 
@@ -103,8 +103,6 @@
             <!-- 'mvn gwt:debug' - runs debug mode -->
             <!-- 'mvn gwt:compile' - compiles gwt -->
             <!-- 'mvn integration-test' - runs the gwt tests (*GwtTest.java) -->
-            <!-- 'mvn clean gwt:compile deploy -DskipTests' - deploys to 
-                GAE out running tests -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>gwt-maven-plugin</artifactId>
@@ -114,7 +112,7 @@
                     <includes>**/*GwtTest.java</includes>
                     <mode>htmlunit</mode>
 
-                    <extraJvmArgs>-Xss1024k -Xmx1024m -XX:MaxPermSize=256m</extraJvmArgs>
+                    <extraJvmArgs>-Xss1024K -Xmx1024M -XX:MaxPermSize=256M</extraJvmArgs>
                     <logLevel>INFO</logLevel>
                     <style>${gwt.style}</style>
 
@@ -122,13 +120,15 @@
                     <hostedWebapp>${webappDirectory}</hostedWebapp>
 
                     <runTarget>Project.html</runTarget>
-                    <module>com.arcbees.project.Project</module>
+                    <modules>
+                        <module>com.arcbees.project.Project</module>
+                    </modules>
                 </configuration>
                 <executions>
                     <execution>
                         <goals>
-                            <goal>test</goal>
                             <goal>compile</goal>
+                            <goal>test</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -296,7 +296,7 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j-log4j12.version}</version>
             <scope>runtime</scope>
-        </dependency>        
+        </dependency>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>

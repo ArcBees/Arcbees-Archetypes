@@ -26,7 +26,7 @@ public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
     }
 
     @Inject
-    public HomePageView(final Binder uiBinder) {
+    public HomePageView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 }

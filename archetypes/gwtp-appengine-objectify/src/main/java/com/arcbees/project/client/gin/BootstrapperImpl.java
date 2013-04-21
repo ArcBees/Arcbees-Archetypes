@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.project.client;
+package com.arcbees.project.client.gin;
 
 import javax.inject.Inject;
 
@@ -24,10 +24,8 @@ import com.arcbees.project.shared.dispatch.FetchCurrentUserResult;
 import com.arcbees.project.shared.dto.CurrentUserDto;
 import com.gwtplatform.dispatch.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Bootstrapper;
-import com.gwtplatform.mvp.client.annotations.Bootstrap;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
-@Bootstrap
 public class BootstrapperImpl implements Bootstrapper {
     private final PlaceManager placeManager;
     private final DispatchAsync dispatcher;
@@ -40,7 +38,7 @@ public class BootstrapperImpl implements Bootstrapper {
         this.dispatcher = dispatcher;
         this.currentUserDto = currentUserDto;
     }
-    
+
     @Override
     public void onBootstrap() {
         fetchCurrentUser();
@@ -63,7 +61,7 @@ public class BootstrapperImpl implements Bootstrapper {
 
     private void onFetchCurrentUserSuccess(CurrentUserDto currentUser) {
         currentUserDto.copyFrom(currentUser);
-        
+
         placeManager.revealCurrentPlace();
     }
 }
