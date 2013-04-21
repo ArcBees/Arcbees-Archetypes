@@ -11,8 +11,8 @@
     <artifactId>generated-pom</artifactId>
     <packaging>pom</packaging>
     
-    <!-- TODO
+    
     <modules>
-        <module>generated</module>
-    </modules>-->
+        <module>gwtp-basic</module>
+    </modules>
 </project>
