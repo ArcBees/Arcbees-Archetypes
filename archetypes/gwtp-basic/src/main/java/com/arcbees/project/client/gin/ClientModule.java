@@ -23,7 +23,6 @@ import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
-import com.gwtplatform.mvp.client.proxy.DefaultPlaceManager;
 
 /**
  * See more on setting up the PlaceManager on <a
@@ -32,7 +31,7 @@ import com.gwtplatform.mvp.client.proxy.DefaultPlaceManager;
 public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new DefaultModule(DefaultPlaceManager.class));
+        install(new DefaultModule());
         install(new ApplicationModule());
 
         // DefaultPlaceManager Places
