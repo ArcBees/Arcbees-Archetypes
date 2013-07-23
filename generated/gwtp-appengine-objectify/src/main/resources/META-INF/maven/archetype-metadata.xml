@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><archetype-descriptor xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="gwtp-appengine-objectify" xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
   <fileSets>
-    <fileSet encoding="UTF-8" filtered="true">
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
       <directory>src/main/java</directory>
       <includes>
         <include>**/*.xml</include>
@@ -21,59 +21,10 @@
         <include>**/*.ico</include>
       </includes>
     </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
+    <fileSet encoding="UTF-8" filtered="true" packaged="true">
       <directory>src/test/java</directory>
       <includes>
         <include>**/*.java</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
-      <directory>bin/target</directory>
-      <includes>
-        <include>**/*.html</include>
-        <include>**/*.xml</include>
-        <include>**/*.properties</include>
-        <include>**/*.txt</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
-      <directory>bin/src</directory>
-      <includes>
-        <include>**/*.html</include>
-        <include>**/*.xml</include>
-        <include>**/*.properties</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8" filtered="true">
-      <directory>bin</directory>
-      <includes>
-        <include>**/*.project</include>
-        <include>**/*.xml</include>
-      </includes>
-    </fileSet>
-    
-    <fileSet encoding="UTF-8">
-      <directory>bin/target</directory>
-      <includes>
-        <include>**/*.md</include>
-        <include>**/*.xmle</include>
-        <include>**/*.jar</include>
-        <include>**/*.ico</include>
-        <include>**/*.class</include>
-        <include>**/*.log</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>bin/src</directory>
-      <includes>
-        <include>**/*.ico</include>
-        <include>**/*.class</include>
-      </includes>
-    </fileSet>
-    <fileSet encoding="UTF-8">
-      <directory>bin</directory>
-      <includes>
-        <include>**/*.md</include>
       </includes>
     </fileSet>
     
