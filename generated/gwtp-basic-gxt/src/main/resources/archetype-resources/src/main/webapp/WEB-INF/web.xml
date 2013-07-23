@@ -6,10 +6,10 @@
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
     version="2.5">
 
-    <display-name>Project</display-name>
+    <display-name>${module}</display-name>
 
     <welcome-file-list>
-        <welcome-file>myproject.html</welcome-file>
+        <welcome-file>${module}.html</welcome-file>
     </welcome-file-list>
 
     <listener>
