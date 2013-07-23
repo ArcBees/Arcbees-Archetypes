@@ -32,8 +32,7 @@ public class BootstrapperImpl implements Bootstrapper {
     private final CurrentUserDto currentUserDto;
 
     @Inject
-    public BootstrapperImpl(final PlaceManager placeManager, final DispatchAsync dispatcher,
-            final CurrentUserDto currentUserDto) {
+    public BootstrapperImpl(PlaceManager placeManager, DispatchAsync dispatcher, CurrentUserDto currentUserDto) {
         this.placeManager = placeManager;
         this.dispatcher = dispatcher;
         this.currentUserDto = currentUserDto;
