@@ -2,9 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.arcbees.archetypes</groupId>
-  <artifactId>archetype-generation</artifactId>
+  <artifactId>archetype-generator-arcbees</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>archetype-generation</name>
+  <name>archetype-generator-arcbees</name>
   <description>archetype-generation</description>
   
   <dependencies>

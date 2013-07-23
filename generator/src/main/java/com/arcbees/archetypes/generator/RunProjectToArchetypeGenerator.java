@@ -19,12 +19,12 @@ public class RunProjectToArchetypeGenerator {
     //findInReplaceList.add(new FindInReplace("*.java", "\\${groupId}.core", "com.arcbees.core"));
    
     List<String> projects = new ArrayList<String>();
-//    projects.add("gwtp-basic");
-//    projects.add("gwtp-appengine-basic");
-//    projects.add("gwtp-appengine-objectify");
-//    projects.add("gwtp-servletcontainer-requestfactory-spring");
-//    projects.add("gwtp-basic-gxt");
-//    projects.add("gwtp-basic-cucumber-guice");
+    projects.add("gwtp-basic");
+    projects.add("gwtp-appengine-basic");
+    projects.add("gwtp-appengine-objectify");
+    projects.add("gwtp-servletcontainer-requestfactory-spring");
+    projects.add("gwtp-basic-gxt");
+    projects.add("gwtp-basic-cucumber-guice");
     projects.add("gwtp-plugin2-basic");
     
     GwtArchetypeGenerator generate = new GwtArchetypeGenerator();

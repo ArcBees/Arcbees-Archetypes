@@ -12,9 +12,8 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.1</gwt.version>
-        <gwtp.version>1.0-RC-3</gwtp.version>
+        <gwtp.version>1.0</gwtp.version>
         <gin.version>2.0.0</gin.version>
-        <arcbees-core.version>1.0-SNAPSHOT</arcbees-core.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- server -->
@@ -47,7 +46,7 @@
         <target.jdk>1.6</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <gwt-maven-plugin.version>2.5.0</gwt-maven-plugin.version>
+        <gwt-maven-plugin.version>2.5.1</gwt-maven-plugin.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
