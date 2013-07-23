@@ -6,7 +6,7 @@
     <display-name>Project</display-name>
 
     <welcome-file-list>
-        <welcome-file>myproject.html</welcome-file>
+        <welcome-file>Project.html</welcome-file>
     </welcome-file-list>
 
     <listener>
