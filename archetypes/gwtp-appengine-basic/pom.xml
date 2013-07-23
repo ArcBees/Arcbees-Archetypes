@@ -138,13 +138,6 @@
                 </configuration>
                 <executions>
                     <execution>
-                        <id>unpack</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                    </execution>
-                    <execution>
                         <id>deploy</id>
                         <goals>
                             <goal>deploy</goal>

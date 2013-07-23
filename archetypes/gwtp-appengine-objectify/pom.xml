@@ -145,14 +145,6 @@
                     <splitJars>true</splitJars>
                 </configuration>
                 <executions>
-                    <!-- First time GAE Users, run 'mvn gae:unpack' -->
-                    <execution>
-                        <id>unpack</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                    </execution>
                     <execution>
                         <id>deploy</id>
                         <goals>

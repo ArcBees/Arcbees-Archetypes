@@ -12,12 +12,12 @@
     <properties>
         <!-- client -->
         <gwt.version>2.5.1</gwt.version>
-        <gwtp.version>1.0-RC-3</gwtp.version>
+        <gwtp.version>1.0</gwtp.version>
         <gin.version>2.0.0</gin.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- server -->
-        <gae.version>1.7.7</gae.version>
+        <gae.version>1.8.0</gae.version>
         <guice.version>3.0</guice.version>
         <objectify.version>4.0b1</objectify.version>
         <servlet-api.version>2.5</servlet-api.version>
@@ -29,7 +29,7 @@
         <jukito.version>1.1</jukito.version>
 
         <!-- maven -->
-        <gwt-maven-plugin.version>2.5.0</gwt-maven-plugin.version>
+        <gwt-maven-plugin.version>2.5.1</gwt-maven-plugin.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
@@ -134,13 +134,6 @@
                     <splitJars>true</splitJars>
                 </configuration>
                 <executions>
-                    <execution>
-                        <id>unpack</id>
-                        <phase>validate</phase>
-                        <goals>
-                            <goal>unpack</goal>
-                        </goals>
-                    </execution>
                     <execution>
                         <id>deploy</id>
                         <goals>
