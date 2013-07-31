@@ -40,25 +40,17 @@ public abstract class BaseEntity implements Dto {
             return true;
         }
 
-        if (obj == null) {
-            return false;
-        }
-
-        if (getClass() != obj.getClass()) {
+        if (obj == null || getClass() != obj.getClass()) {
             return false;
         }
 
         BaseEntity other = (BaseEntity) obj;
 
         if (id == null) {
-            if (other.id != null) {
-                return false;
-            }
-        } else if (!id.equals(other.id)) {
             return false;
+        } else {
+            return id.equals(other.id);
         }
-
-        return true;
     }
 
     public Long getId() {
