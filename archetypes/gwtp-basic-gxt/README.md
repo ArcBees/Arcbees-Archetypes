@@ -8,11 +8,6 @@ This is a basic GWTP Archetype with the GXT library setup.
 * [Guides](http://docs.sencha.com/gxt-guides/3/)
 * [LayoutContainers](http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html)
 
-##Highlights
-* [GXT Library GWT Module Configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
-* [GXT Application Root Widget](src/main/java/com/arcbees/project/client/application/ApplicationView.ui.xml)
-* [GXT UiBinder Widget](src/main/java/com/arcbees/project/client/application/home/HomePageView.ui.xml)
-
 ##Maven Archetype Usage
 
 1. Goto directory you want the project.
