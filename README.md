@@ -1,5 +1,5 @@
-#Arcbees Tools
 [![githalytics.com alpha](https://cruel-carlota.gopagoda.com/72e98acf6030390584223f56d26e5ce3 "githalytics.com")](http://githalytics.com/ArcBees/ArcBees-tools)
+#Arcbees Tools
 #[Archetypes](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes) - Find the Archetypes here.
 
 
