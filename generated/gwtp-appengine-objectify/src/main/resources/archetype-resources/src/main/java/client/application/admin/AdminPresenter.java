@@ -38,7 +38,7 @@ public class AdminPresenter extends Presenter<AdminPresenter.MyView, AdminPresen
 
     @Inject
     public AdminPresenter(EventBus eventBus, MyView view, MyProxy proxy, DispatchAsync dispatcher) {
-        super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
+        super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
 
         this.dispatcher = dispatcher;
     }

@@ -19,9 +19,9 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
 
     @ContentSlot
-    public static final Type<RevealContentHandler<?>> TYPE_SetMainContent = new Type<RevealContentHandler<?>>();
+    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<RevealContentHandler<?>>();
 
-    public static final Object TYPE_HeaderPresenter = new Object();
+    public static final Object SLOT_HeaderPresenter = new Object();
 
     private HeaderPresenter headerPresenter;
 
@@ -30,8 +30,7 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
 
     @Inject
-    public ApplicationPresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
-            final HeaderPresenter headerPresenter) {
+    public ApplicationPresenter(EventBus eventBus, MyView view, MyProxy proxy, HeaderPresenter headerPresenter) {
         super(eventBus, view, proxy, RevealType.Root);
 
         this.headerPresenter = headerPresenter;
@@ -41,6 +40,6 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     protected void onBind() {
         super.onBind();
 
-        setInSlot(TYPE_HeaderPresenter, headerPresenter);
+        setInSlot(SLOT_HeaderPresenter, headerPresenter);
     }
 }
