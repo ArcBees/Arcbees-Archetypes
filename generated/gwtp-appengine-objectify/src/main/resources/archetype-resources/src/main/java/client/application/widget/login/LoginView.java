@@ -31,14 +31,14 @@ public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements Lo
     }
 
     @Override
-    public void displayLoggedIn(String logoutUrl) {
-        link.setText("Log Out");
-        link.setHref(logoutUrl);
+    public void displayLogInLink(String loginUrl) {
+        link.setText("Log In");
+        link.setHref(loginUrl);
     }
 
     @Override
-    public void displayLoggedOut(String loginUrl) {
-        link.setText("Log In");
-        link.setHref(loginUrl);
+    public void displayLogOutLink(String logoutUrl) {
+        link.setText("Log Out");
+        link.setHref(logoutUrl);
     }
 }

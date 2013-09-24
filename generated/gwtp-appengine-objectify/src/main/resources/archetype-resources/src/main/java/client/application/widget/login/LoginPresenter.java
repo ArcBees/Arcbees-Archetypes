@@ -15,9 +15,9 @@ import com.gwtplatform.mvp.client.View;
 
 public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> implements LoginUiHandlers {
     public interface MyView extends View, HasUiHandlers<LoginUiHandlers> {
-        void displayLoggedIn(String string);
+        void displayLogInLink(String string);
 
-        void displayLoggedOut(String string);
+        void displayLogOutLink(String string);
 
         void displayNickname(String nickname);
     }
@@ -44,11 +44,11 @@ public class LoginPresenter extends PresenterWidget<LoginPresenter.MyView> imple
         if (currentUserDto.isLoggedIn()) {
             String url = replaceReturnPath(currentUserDto.getLogoutUrl());
             getView().displayNickname(currentUserDto.getNickname());
-            getView().displayLoggedIn(url);
+            getView().displayLogOutLink(url);
         } else {
             String url = replaceReturnPath(currentUserDto.getLoginUrl());
             getView().displayNickname("");
-            getView().displayLoggedOut(url);
+            getView().displayLogInLink(url);
         }
     }
 
