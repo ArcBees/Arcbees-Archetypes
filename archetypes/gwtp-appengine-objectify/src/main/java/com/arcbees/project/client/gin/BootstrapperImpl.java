@@ -22,7 +22,7 @@ import com.arcbees.project.client.dispatch.AsyncCallbackImpl;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserAction;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserResult;
 import com.arcbees.project.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Bootstrapper;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 

@@ -20,7 +20,7 @@ import com.arcbees.project.server.dispatch.validators.AdminActionValidator;
 import com.arcbees.project.shared.dispatch.FetchAdminTaskCountAction;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserAction;
 import com.arcbees.project.shared.dispatch.FetchTaskAction;
-import com.gwtplatform.dispatch.server.guice.HandlerModule;
+import com.gwtplatform.dispatch.rpc.server.guice.HandlerModule;
 
 public class DispatchHandlersModule extends HandlerModule {
     @Override

@@ -17,7 +17,7 @@
 package com.arcbees.project.shared.dispatch;
 
 import com.arcbees.project.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.shared.Result;
+import com.gwtplatform.dispatch.rpc.shared.Result;
 
 public class FetchCurrentUserResult implements Result {
     private CurrentUserDto currentUser;

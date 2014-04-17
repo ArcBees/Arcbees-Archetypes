@@ -82,7 +82,7 @@ public abstract class BaseDao<T> {
     }
 
     public Map<Long, T> getSubsetMap(List<Long> ids) {
-        return new HashMap<Long, T>(ofy().query(clazz).ids(ids));
+        return new HashMap<>(ofy().query(clazz).ids(ids));
     }
 
     public void delete(T object) {

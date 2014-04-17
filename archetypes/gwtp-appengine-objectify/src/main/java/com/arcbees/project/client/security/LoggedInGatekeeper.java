@@ -16,8 +16,9 @@
 
 package com.arcbees.project.client.security;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.shared.dto.CurrentUserDto;
-import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.gwtplatform.mvp.client.proxy.Gatekeeper;
 

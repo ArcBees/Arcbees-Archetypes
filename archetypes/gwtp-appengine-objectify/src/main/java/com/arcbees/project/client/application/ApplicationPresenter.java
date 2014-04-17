@@ -16,9 +16,10 @@
 
 package com.arcbees.project.client.application;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.client.application.widget.header.HeaderPresenter;
 import com.google.gwt.event.shared.GwtEvent.Type;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -32,7 +33,7 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
 
     @ContentSlot
-    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<RevealContentHandler<?>>();
+    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<>();
 
     public static final Object SLOT_HeaderPresenter = new Object();
 

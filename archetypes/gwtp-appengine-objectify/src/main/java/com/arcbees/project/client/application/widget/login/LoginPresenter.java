@@ -16,11 +16,12 @@
 
 package com.arcbees.project.client.application.widget.login;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.shared.dto.CurrentUserDto;
 import com.google.gwt.http.client.URL;
 import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.Window;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.HasUiHandlers;
 import com.gwtplatform.mvp.client.PresenterWidget;
