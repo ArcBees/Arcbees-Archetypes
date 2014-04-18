@@ -36,13 +36,13 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     Viewport main;
     
     @Inject
-    public ApplicationView(Binder uiBinder) {
+    ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
     @Override
     public void setInSlot(Object slot, IsWidget content) {
-        if (slot == ApplicationPresenter.TYPE_SetMainContent) {
+        if (slot == ApplicationPresenter.SLOT_SetMainContent) {
             main.setWidget(content);
         } else {
             super.setInSlot(slot, content);

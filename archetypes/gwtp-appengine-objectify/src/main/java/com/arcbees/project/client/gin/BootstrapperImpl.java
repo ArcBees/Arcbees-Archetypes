@@ -22,7 +22,7 @@ import com.arcbees.project.client.dispatch.AsyncCallbackImpl;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserAction;
 import com.arcbees.project.shared.dispatch.FetchCurrentUserResult;
 import com.arcbees.project.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Bootstrapper;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 
@@ -32,7 +32,9 @@ public class BootstrapperImpl implements Bootstrapper {
     private final CurrentUserDto currentUserDto;
 
     @Inject
-    public BootstrapperImpl(PlaceManager placeManager, DispatchAsync dispatcher, CurrentUserDto currentUserDto) {
+    BootstrapperImpl(PlaceManager placeManager,
+                     DispatchAsync dispatcher,
+                     CurrentUserDto currentUserDto) {
         this.placeManager = placeManager;
         this.dispatcher = dispatcher;
         this.currentUserDto = currentUserDto;

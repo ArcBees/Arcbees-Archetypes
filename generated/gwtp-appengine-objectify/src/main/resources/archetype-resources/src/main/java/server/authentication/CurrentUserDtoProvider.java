@@ -17,7 +17,7 @@ public class CurrentUserDtoProvider implements Provider<CurrentUserDto> {
     private final UserDao userDao;
 
     @Inject
-    public CurrentUserDtoProvider(UserDao userDao) {
+    CurrentUserDtoProvider(UserDao userDao) {
         this.userDao = userDao;
     }
 

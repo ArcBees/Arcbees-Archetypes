@@ -13,7 +13,7 @@ public class LoggedInGatekeeper implements Gatekeeper {
     private final CurrentUserDto currentUser;
 
     @Inject
-    public LoggedInGatekeeper(CurrentUserDto currentUser) {
+    LoggedInGatekeeper(CurrentUserDto currentUser) {
         this.currentUser = currentUser;
     }
 

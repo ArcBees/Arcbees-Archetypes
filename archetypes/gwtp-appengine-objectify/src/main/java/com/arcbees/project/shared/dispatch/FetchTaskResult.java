@@ -17,7 +17,7 @@
 package com.arcbees.project.shared.dispatch;
 
 import com.arcbees.project.shared.domain.Task;
-import com.gwtplatform.dispatch.shared.Result;
+import com.gwtplatform.dispatch.rpc.shared.Result;
 
 public class FetchTaskResult implements Result {
     private Task task;

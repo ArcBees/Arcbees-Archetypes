@@ -16,6 +16,8 @@
 
 package com.arcbees.project.client.application.home.ui;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.client.request.proxy.MyEntityProxy;
 import com.google.gwt.editor.client.Editor;
 import com.google.gwt.editor.client.SimpleBeanEditorDriver;
@@ -24,7 +26,6 @@ import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.Widget;
-import com.google.inject.Inject;
 
 public class MyEntityEditor extends Composite implements Editor<MyEntityProxy> {
     public interface Binder extends UiBinder<Widget, MyEntityEditor> {
@@ -41,7 +42,8 @@ public class MyEntityEditor extends Composite implements Editor<MyEntityProxy> {
     private final Driver driver;
 
     @Inject
-    public MyEntityEditor(Binder uiBinder, Driver driver) {
+    MyEntityEditor(Binder uiBinder,
+                   Driver driver) {
         this.driver = driver;
 
         initWidget(uiBinder.createAndBindUi(this));

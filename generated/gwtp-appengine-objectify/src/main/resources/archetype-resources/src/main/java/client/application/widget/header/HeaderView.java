@@ -21,7 +21,7 @@ public class HeaderView extends ViewWithUiHandlers<HeaderUiHandlers> implements 
     SimplePanel login;
 
     @Inject
-    public HeaderView(Binder binder) {
+    HeaderView(Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
 

@@ -15,7 +15,7 @@ public class FetchCurrentUserHandler extends AbstractAction<FetchCurrentUserActi
     private CurrentUserDtoProvider currentUserDtoProvider;
 
     @Inject
-    public FetchCurrentUserHandler(CurrentUserDtoProvider currentUserDtoProvider) {
+    FetchCurrentUserHandler(CurrentUserDtoProvider currentUserDtoProvider) {
         super(FetchCurrentUserAction.class);
 
         this.currentUserDtoProvider = currentUserDtoProvider;
