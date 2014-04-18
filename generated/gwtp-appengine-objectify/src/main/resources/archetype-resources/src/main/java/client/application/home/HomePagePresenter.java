@@ -30,7 +30,10 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     private DispatchAsync dispatcher;
 
     @Inject
-    public HomePagePresenter(EventBus eventBus, MyView view, MyProxy proxy, DispatchAsync dispatcher) {
+    HomePagePresenter(EventBus eventBus,
+                      MyView view,
+                      MyProxy proxy,
+                      DispatchAsync dispatcher) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
 
         this.dispatcher = dispatcher;

@@ -28,7 +28,7 @@ public class FetchAdminTaskCountHandler extends AbstractAction<FetchAdminTaskCou
     private final TaskDao taskDao;
 
     @Inject
-    public FetchAdminTaskCountHandler(TaskDao taskDao) {
+    FetchAdminTaskCountHandler(TaskDao taskDao) {
         super(FetchAdminTaskCountAction.class);
 
         this.taskDao = taskDao;

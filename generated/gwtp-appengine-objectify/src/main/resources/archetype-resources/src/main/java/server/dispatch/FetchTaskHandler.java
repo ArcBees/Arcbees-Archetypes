@@ -15,7 +15,7 @@ public class FetchTaskHandler extends AbstractAction<FetchTaskAction, FetchTaskR
     private final TaskDao taskDao;
 
     @Inject
-    public FetchTaskHandler(TaskDao taskDao) {
+    FetchTaskHandler(TaskDao taskDao) {
         super(FetchTaskAction.class);
 
         this.taskDao = taskDao;

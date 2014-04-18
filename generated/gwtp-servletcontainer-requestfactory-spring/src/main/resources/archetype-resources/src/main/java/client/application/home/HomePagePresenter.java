@@ -39,7 +39,9 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     private String searchToken;
 
     @Inject
-    public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
+    HomePagePresenter(EventBus eventBus,
+                      MyView view,
+                      MyProxy proxy,
             final MyRequestFactory requestFactory) {
         super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
 

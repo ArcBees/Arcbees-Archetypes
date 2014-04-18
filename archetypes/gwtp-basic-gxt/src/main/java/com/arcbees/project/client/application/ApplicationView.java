@@ -36,7 +36,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     Viewport main;
     
     @Inject
-    public ApplicationView(Binder uiBinder) {
+    ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

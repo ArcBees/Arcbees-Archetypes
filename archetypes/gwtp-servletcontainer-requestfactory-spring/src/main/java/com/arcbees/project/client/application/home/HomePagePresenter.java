@@ -54,9 +54,9 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
 
     @Inject
     HomePagePresenter(EventBus eventBus,
-                             MyView view,
-                             MyProxy proxy,
-            final MyRequestFactory requestFactory) {
+                      MyView view,
+                      MyProxy proxy,
+                      final MyRequestFactory requestFactory) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
 
         this.requestFactory = requestFactory;

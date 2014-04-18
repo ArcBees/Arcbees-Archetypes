@@ -50,7 +50,7 @@ public class ClientModule extends AbstractPresenterModule {
         private final MyRequestFactory requestFactory;
 
         @Inject
-        public RequestFactoryProvider(EventBus eventBus) {
+        RequestFactoryProvider(EventBus eventBus) {
             requestFactory = GWT.create(MyRequestFactory.class);
             requestFactory.initialize(eventBus);
         }

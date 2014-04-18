@@ -33,7 +33,7 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
     SimplePanel main;
 
     @Inject
-    public ApplicationView(Binder uiBinder) {
+    ApplicationView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
         
         // Allows cucumber to find an id, so it knows when the app is loaded.
