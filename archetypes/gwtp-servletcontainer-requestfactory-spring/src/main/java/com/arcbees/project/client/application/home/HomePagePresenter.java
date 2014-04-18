@@ -16,12 +16,15 @@
 
 package com.arcbees.project.client.application.home;
 
+import java.util.List;
+
+import javax.inject.Inject;
+
 import com.arcbees.project.client.application.ApplicationPresenter;
 import com.arcbees.project.client.place.NameTokens;
 import com.arcbees.project.client.request.MyRequestFactory;
 import com.arcbees.project.client.request.MyServiceRequest;
 import com.arcbees.project.client.request.proxy.MyEntityProxy;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.google.web.bindery.requestfactory.shared.Receiver;
 import com.gwtplatform.mvp.client.HasUiHandlers;
@@ -30,8 +33,6 @@ import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.ProxyPlace;
-
-import java.util.List;
 
 public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomePagePresenter.MyProxy> implements
         HomeUiHandlers {
@@ -52,9 +53,11 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     private String searchToken;
 
     @Inject
-    public HomePagePresenter(final EventBus eventBus, final MyView view, final MyProxy proxy,
+    HomePagePresenter(EventBus eventBus,
+                             MyView view,
+                             MyProxy proxy,
             final MyRequestFactory requestFactory) {
-        super(eventBus, view, proxy, ApplicationPresenter.TYPE_SetMainContent);
+        super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
 
         this.requestFactory = requestFactory;
 

@@ -16,11 +16,12 @@
 
 package com.arcbees.project.client.gin;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.client.application.ApplicationModule;
 import com.arcbees.project.client.place.NameTokens;
 import com.arcbees.project.client.request.MyRequestFactory;
 import com.google.gwt.core.client.GWT;
-import com.google.inject.Inject;
 import com.google.inject.Provider;
 import com.google.inject.Singleton;
 import com.google.web.bindery.event.shared.EventBus;
