@@ -6,6 +6,7 @@
 
     <!-- GXT -->
     <stylesheet src="reset.css" />
+    <inherits name='com.sencha.gxt.ui.GXT' />
 
     <!-- GXT Theme -->
     <!-- <inherits name='com.sencha.gxt.theme.blue.Blue'/> -->
