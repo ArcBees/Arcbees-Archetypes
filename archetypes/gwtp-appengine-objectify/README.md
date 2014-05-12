@@ -9,6 +9,8 @@ GWTP using AppEngine with Objectify, RPC dispatch and Google Login.
 
 ##Maven Archetype Usage
 
+Since this archetype isn't in maven central, there are [prerequisites before using it](https://github.com/ArcBees/ArcBees-tools/wiki/archetype).
+
 1. Goto directory you want the project.
 2. Rename parameter below `com.projectname.project` to a package naming scheme you like.
 3. Rename parameter `new-project-name` to a project title you like.
