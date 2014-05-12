@@ -12,7 +12,7 @@
 
     <properties>
         <!-- client -->
-        <gxt.version>3.0.1</gxt.version>
+        <gxt.version>3.1.0-beta</gxt.version>
         <gwt.version>2.6.0</gwt.version>
         <gwtp.version>1.2.1</gwtp.version>
         <gin.version>2.1.2</gin.version>
