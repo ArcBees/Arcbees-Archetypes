@@ -16,19 +16,20 @@
 
 package com.arcbees.project.server.dispatch;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.server.dao.TaskDao;
 import com.arcbees.project.shared.dispatch.FetchTaskAction;
 import com.arcbees.project.shared.dispatch.FetchTaskResult;
 import com.arcbees.project.shared.domain.Task;
-import com.google.inject.Inject;
-import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class FetchTaskHandler extends AbstractAction<FetchTaskAction, FetchTaskResult> {
     private final TaskDao taskDao;
 
     @Inject
-    public FetchTaskHandler(TaskDao taskDao) {
+    FetchTaskHandler(TaskDao taskDao) {
         super(FetchTaskAction.class);
 
         this.taskDao = taskDao;

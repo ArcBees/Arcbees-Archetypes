@@ -21,7 +21,7 @@ public class LoginView extends ViewWithUiHandlers<LoginUiHandlers> implements Lo
     Anchor link;
 
     @Inject
-    public LoginView(Binder binder) {
+    LoginView(Binder binder) {
         initWidget(binder.createAndBindUi(this));
     }
 

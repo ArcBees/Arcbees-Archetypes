@@ -30,7 +30,8 @@ public class HomePageView extends ViewWithUiHandlers<HomeUiHandlers> implements 
     private final ListDataProvider<MyEntityProxy> dataProvider;
 
     @Inject
-    public HomePageView(final Binder uiBinder, final MyEntityEditor myEntityEditor,
+    HomePageView(Binder uiBinder,
+                 MyEntityEditor myEntityEditor,
             final ListDataProvider<MyEntityProxy> dataProvider) {
         this.myEntityEditor = myEntityEditor;
         this.dataProvider = dataProvider;

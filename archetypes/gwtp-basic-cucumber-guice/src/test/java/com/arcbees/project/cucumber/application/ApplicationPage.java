@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ApplicationPage extends BasePage {
     @Inject
-    public ApplicationPage(WebDriver webDriver) {
+    ApplicationPage(WebDriver webDriver) {
         super(webDriver);
     }
 

@@ -28,7 +28,8 @@ public class MyEntityEditor extends Composite implements Editor<MyEntityProxy> {
     private final Driver driver;
 
     @Inject
-    public MyEntityEditor(Binder uiBinder, Driver driver) {
+    MyEntityEditor(Binder uiBinder,
+                   Driver driver) {
         this.driver = driver;
 
         initWidget(uiBinder.createAndBindUi(this));

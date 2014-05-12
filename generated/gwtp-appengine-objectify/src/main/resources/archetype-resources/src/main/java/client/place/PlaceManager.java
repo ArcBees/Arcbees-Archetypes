@@ -14,7 +14,9 @@ public class PlaceManager extends PlaceManagerImpl {
     private final PlaceRequest defaultPlaceRequest;
 
     @Inject
-    public PlaceManager(EventBus eventBus, TokenFormatter tokenFormatter, @DefaultPlace String defaultPlaceNameToken) {
+    PlaceManager(EventBus eventBus,
+                 TokenFormatter tokenFormatter,
+                 @DefaultPlace String defaultPlaceNameToken) {
         super(eventBus, tokenFormatter);
 
         this.defaultPlaceRequest = new PlaceRequest(defaultPlaceNameToken);

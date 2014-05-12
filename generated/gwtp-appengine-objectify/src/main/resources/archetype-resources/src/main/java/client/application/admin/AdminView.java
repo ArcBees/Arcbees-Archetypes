@@ -18,7 +18,7 @@ public class AdminView extends ViewImpl implements AdminPresenter.MyView {
     HTML totalTaskCount;
 
     @Inject
-    public AdminView(Binder uiBinder) {
+    AdminView(Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 

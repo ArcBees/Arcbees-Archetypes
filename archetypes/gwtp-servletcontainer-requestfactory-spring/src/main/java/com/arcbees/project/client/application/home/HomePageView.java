@@ -18,6 +18,8 @@ package com.arcbees.project.client.application.home;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import com.arcbees.project.client.application.home.ui.MyEntityEditor;
 import com.arcbees.project.client.request.proxy.MyEntityProxy;
 import com.google.gwt.event.dom.client.ClickEvent;
@@ -28,7 +30,6 @@ import com.google.gwt.user.cellview.client.CellTable;
 import com.google.gwt.user.cellview.client.TextColumn;
 import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.view.client.ListDataProvider;
-import com.google.inject.Inject;
 import com.gwtplatform.mvp.client.ViewWithUiHandlers;
 
 public class HomePageView extends ViewWithUiHandlers<HomeUiHandlers> implements HomePagePresenter.MyView {
@@ -43,11 +44,12 @@ public class HomePageView extends ViewWithUiHandlers<HomeUiHandlers> implements 
     private final ListDataProvider<MyEntityProxy> dataProvider;
 
     @Inject
-    public HomePageView(final Binder uiBinder, final MyEntityEditor myEntityEditor,
-            final ListDataProvider<MyEntityProxy> dataProvider) {
+    HomePageView(Binder uiBinder,
+                 MyEntityEditor myEntityEditor,
+                 ListDataProvider<MyEntityProxy> dataProvider) {
         this.myEntityEditor = myEntityEditor;
         this.dataProvider = dataProvider;
-        this.myTable = new CellTable<MyEntityProxy>();
+        this.myTable = new CellTable<>();
 
         initWidget(uiBinder.createAndBindUi(this));
 

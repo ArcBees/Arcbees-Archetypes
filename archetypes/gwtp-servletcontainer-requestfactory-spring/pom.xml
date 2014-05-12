@@ -12,9 +12,9 @@
 
     <properties>
         <!-- client -->
-        <gwt.version>2.5.1</gwt.version>
-        <gwtp.version>1.0</gwtp.version>
-        <gin.version>2.0.0</gin.version>
+        <gwt.version>2.6.0</gwt.version>
+        <gwtp.version>1.2.1</gwtp.version>
+        <gin.version>2.1.2</gin.version>
         <gwt.style>OBF</gwt.style>
 
         <!-- server -->
@@ -41,10 +41,10 @@
 
         <!-- testing -->
         <junit.version>4.11</junit.version>
-        <jukito.version>1.1</jukito.version>
+        <jukito.version>1.4</jukito.version>
 
         <!-- maven -->
-        <target.jdk>1.6</target.jdk>
+        <target.jdk>1.7</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <gwt-maven-plugin.version>2.5.1</gwt-maven-plugin.version>
