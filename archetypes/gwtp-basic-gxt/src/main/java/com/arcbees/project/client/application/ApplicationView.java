@@ -26,7 +26,7 @@ import com.gwtplatform.mvp.client.ViewImpl;
 import com.sencha.gxt.widget.core.client.container.Viewport;
 
 /**
- * See more on GXT <a href="http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html">Layout Containers</a>
+ * @See http://docs.sencha.com/gxt/3.1/ui/layout/LayoutContainers.html
  */
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
     public interface Binder extends UiBinder<Widget, ApplicationView> {

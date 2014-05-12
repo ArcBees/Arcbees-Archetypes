@@ -12,8 +12,8 @@
 
     <properties>
         <!-- client -->
-        <gxt.version>3.1.0-beta</gxt.version>
-        <gwt.version>2.6.0</gwt.version>
+        <gxt.version>3.1.0</gxt.version>
+        <gwt.version>2.6.1</gwt.version>
         <gwtp.version>1.2.1</gwtp.version>
         <gin.version>2.1.2</gin.version>
 
@@ -25,7 +25,7 @@
         <jukito.version>1.4</jukito.version>
 
         <!-- maven -->
-        <gwt-maven-plugin.version>2.5.1</gwt-maven-plugin.version>
+        <gwt-maven-plugin.version>2.6.1</gwt-maven-plugin.version>
         <maven-surefire-plugin.version>2.6</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
         <maven-resources-plugin.version>2.5</maven-resources-plugin.version>
@@ -106,10 +106,15 @@
 
     <dependencies>
         <!-- GXT -->
-        <!-- http://docs.sencha.com/gxt-guides/3/ -->
+        <!-- http://docs.sencha.com/gxt/3.1/getting_started/maven/Maven.html -->
         <dependency>
             <groupId>com.sencha.gxt</groupId>
             <artifactId>gxt</artifactId>
+            <version>${gxt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sencha.gxt</groupId>
+            <artifactId>gxt-theme-neptune</artifactId>
             <version>${gxt.version}</version>
         </dependency>
 

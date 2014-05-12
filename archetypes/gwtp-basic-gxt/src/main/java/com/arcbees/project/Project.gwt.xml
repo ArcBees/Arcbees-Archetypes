@@ -4,13 +4,16 @@
     <inherits name='com.google.gwt.user.User' />
     <inherits name='com.google.gwt.inject.Inject' />
 
+    <!-- http://docs.sencha.com/gxt/3.1/getting_started/Getting_Started_31.html -->
+
     <!-- GXT -->
     <stylesheet src="reset.css" />
     <inherits name='com.sencha.gxt.ui.GXT' />
 
     <!-- GXT Theme -->
     <!-- <inherits name='com.sencha.gxt.theme.blue.Blue'/> -->
-    <inherits name='com.sencha.gxt.theme.gray.Gray' />
+    <!-- <inherits name='com.sencha.gxt.theme.gray.Gray' /> -->
+    <inherits name="com.sencha.gxt.theme.neptune.Theme" />
 
     <!-- GWTP -->
     <inherits name='com.gwtplatform.dispatch.rpc.DispatchRpc' />
@@ -20,5 +23,6 @@
     <source path='shared' />
 
     <!-- Default GIN Module -->
-    <set-configuration-property name="gin.ginjector.modules" value="com.arcbees.project.client.gin.ClientModule" />
+    <set-configuration-property name="gin.ginjector.modules" 
+                                value="com.arcbees.project.client.gin.ClientModule" />
 </module>
