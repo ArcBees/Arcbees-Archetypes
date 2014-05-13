@@ -5,8 +5,8 @@ This is a basic GWTP Archetype with the GXT library setup.
 ##GXT Guides
 * [GXT Home](http://www.sencha.com/products/gxt/)
 * [Examples and Demos](http://www.sencha.com/products/gxt/examples/)
-* [Guides](http://docs.sencha.com/gxt-guides/3/)
-* [LayoutContainers](http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html)
+* [Guides](http://docs.sencha.com/gxt/3.1/)
+* [LayoutContainers](http://docs.sencha.com/gxt/3.1/ui/layout/LayoutContainers.html)
 
 ##Highlights
 * [GXT Library GWT Module Configuration](src/main/java/com/arcbees/project/Project.gwt.xml)
