@@ -3,8 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.application;
 
+import javax.inject.Inject;
+
 import com.google.gwt.event.shared.GwtEvent.Type;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -18,7 +19,7 @@ public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView,
     }
 
     @ContentSlot
-    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<RevealContentHandler<?>>();
+    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<>();
 
     @ProxyStandard
     public interface MyProxy extends Proxy<ApplicationPresenter> {

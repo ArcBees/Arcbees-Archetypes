@@ -3,6 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.application.admin;
 
+import javax.inject.Inject;
+
 import ${package}.client.application.ApplicationPresenter;
 import ${package}.client.dispatch.AsyncCallbackImpl;
 import ${package}.client.place.NameTokens;
@@ -10,9 +12,8 @@ import ${package}.client.security.LoggedInGatekeeper;
 import ${package}.shared.dispatch.FetchAdminTaskCountAction;
 import ${package}.shared.dispatch.FetchAdminTaskCountResult;
 import com.google.gwt.user.client.Window;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;

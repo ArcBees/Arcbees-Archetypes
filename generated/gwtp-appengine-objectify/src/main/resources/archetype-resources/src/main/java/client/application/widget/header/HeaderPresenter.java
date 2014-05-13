@@ -3,9 +3,10 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.application.widget.header;
 
+import javax.inject.Inject;
+
 import ${package}.client.application.widget.login.LoginPresenter;
 import com.google.gwt.user.client.Window;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.HasUiHandlers;
 import com.gwtplatform.mvp.client.PresenterWidget;
@@ -15,7 +16,7 @@ public class HeaderPresenter extends PresenterWidget<HeaderPresenter.MyView> imp
     public interface MyView extends View, HasUiHandlers<HeaderUiHandlers> {
     }
 
-    public static final Object TYPE_LoginPresenter = new Object();
+    public static final Object SLOT_LoginPresenter = new Object();
 
     private final LoginPresenter loginPresenter;
 
@@ -34,7 +35,7 @@ public class HeaderPresenter extends PresenterWidget<HeaderPresenter.MyView> imp
     protected void onBind() {
         super.onBind();
 
-        setInSlot(TYPE_LoginPresenter, loginPresenter);
+        setInSlot(SLOT_LoginPresenter, loginPresenter);
     }
 
     @Override

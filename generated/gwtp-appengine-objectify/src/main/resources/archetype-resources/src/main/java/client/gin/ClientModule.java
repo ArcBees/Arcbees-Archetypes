@@ -6,7 +6,7 @@ package ${package}.client.gin;
 import ${package}.client.application.ApplicationModule;
 import ${package}.client.place.NameTokens;
 import ${package}.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.client.gin.DispatchAsyncModule;
+import com.gwtplatform.dispatch.rpc.client.gin.RpcDispatchAsyncModule;
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;
@@ -22,7 +22,7 @@ public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
         install(new DefaultModule(DefaultPlaceManager.class));
-        install(new DispatchAsyncModule.Builder().build());
+        install(new RpcDispatchAsyncModule());
         install(new ApplicationModule());
 
         // DefaultPlaceManager Places

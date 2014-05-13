@@ -7,7 +7,7 @@ import ${package}.server.dispatch.validators.AdminActionValidator;
 import ${package}.shared.dispatch.FetchAdminTaskCountAction;
 import ${package}.shared.dispatch.FetchCurrentUserAction;
 import ${package}.shared.dispatch.FetchTaskAction;
-import com.gwtplatform.dispatch.server.guice.HandlerModule;
+import com.gwtplatform.dispatch.rpc.server.guice.HandlerModule;
 
 public class DispatchHandlersModule extends HandlerModule {
     @Override
