@@ -30,7 +30,7 @@
 
             <!-- VerticalLayoutContainer child with layoutData -->
             <container:child layoutData="{layoutData}">
-                <g:Label text="Hellow world..." />
+                <g:Label text="Hello world..." />
             </container:child>
             <container:child layoutData="{layoutData}">
                 <g:HTML>Find more GXT guides here <a href='http://docs.sencha.com/gxt/3.1/'>GXT Guides</a></g:HTML>

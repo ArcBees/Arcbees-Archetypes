@@ -25,4 +25,9 @@
     <!-- Default GIN Module -->
     <set-configuration-property name="gin.ginjector.modules" 
                                 value="com.arcbees.project.client.gin.ClientModule" />
+                                
+
+    <!-- http://www.gwtproject.org/articles/superdevmode.html -->
+    <add-linker name="xsiframe" />
+    <set-configuration-property name="devModeRedirectEnabled" value="true"/>
 </module>
