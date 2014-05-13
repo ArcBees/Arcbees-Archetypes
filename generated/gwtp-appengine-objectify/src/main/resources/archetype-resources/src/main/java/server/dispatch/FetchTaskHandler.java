@@ -3,12 +3,13 @@
 #set( $symbol_escape = '\' )
 package ${package}.server.dispatch;
 
+import javax.inject.Inject;
+
 import ${package}.server.dao.TaskDao;
 import ${package}.shared.dispatch.FetchTaskAction;
 import ${package}.shared.dispatch.FetchTaskResult;
 import ${package}.shared.domain.Task;
-import com.google.inject.Inject;
-import com.gwtplatform.dispatch.server.ExecutionContext;
+import com.gwtplatform.dispatch.rpc.server.ExecutionContext;
 import com.gwtplatform.dispatch.shared.ActionException;
 
 public class FetchTaskHandler extends AbstractAction<FetchTaskAction, FetchTaskResult> {

@@ -3,8 +3,9 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.security;
 
+import javax.inject.Inject;
+
 import ${package}.shared.dto.CurrentUserDto;
-import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.gwtplatform.mvp.client.proxy.Gatekeeper;
 

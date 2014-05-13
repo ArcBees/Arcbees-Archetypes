@@ -11,7 +11,7 @@ public class NameTokens {
         return home;
     }
 
-    public static final String getAdmin() {
+    public static String getAdmin() {
         return admin;
     }
 }

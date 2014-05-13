@@ -5,8 +5,8 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container">
 
-    <!-- http://docs.sencha.com/gxt-guides/3 - GXT guides -->
-    <!-- http://docs.sencha.com/gxt-guides/3/ui/layout/LayoutContainers.html - About layout containers -->
+    <!-- http://docs.sencha.com/gxt/3.1/ - GXT guides -->
+    <!-- http://docs.sencha.com/gxt/3.1/ui/layout/LayoutContainers.html - About layout containers -->
     
     <ui:style>
         .widget {
@@ -33,10 +33,10 @@
 
             <!-- VerticalLayoutContainer child with layoutData -->
             <container:child layoutData="{layoutData}">
-                <g:Label text="Hellow world..." />
+                <g:Label text="Hello world..." />
             </container:child>
             <container:child layoutData="{layoutData}">
-                <g:HTML>Find more GXT guides here <a href='http://docs.sencha.com/gxt-guides/3'>GXT Guides</a></g:HTML>
+                <g:HTML>Find more GXT guides here <a href='http://docs.sencha.com/gxt/3.1/'>GXT Guides</a></g:HTML>
             </container:child>
 
         </container:VerticalLayoutContainer>

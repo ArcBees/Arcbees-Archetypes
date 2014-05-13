@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.shared.dispatch;
 
-import com.gwtplatform.dispatch.shared.Result;
+import com.gwtplatform.dispatch.rpc.shared.Result;
 
 public class FetchAdminTaskCountResult implements Result {
     private Integer totalTasks;

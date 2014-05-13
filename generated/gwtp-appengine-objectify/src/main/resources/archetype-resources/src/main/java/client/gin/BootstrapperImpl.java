@@ -9,7 +9,7 @@ import ${package}.client.dispatch.AsyncCallbackImpl;
 import ${package}.shared.dispatch.FetchCurrentUserAction;
 import ${package}.shared.dispatch.FetchCurrentUserResult;
 import ${package}.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Bootstrapper;
 import com.gwtplatform.mvp.client.proxy.PlaceManager;
 

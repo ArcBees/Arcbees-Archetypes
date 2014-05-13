@@ -3,7 +3,7 @@
 #set( $symbol_escape = '\' )
 package ${package}.shared.dispatch;
 
-import com.gwtplatform.dispatch.shared.UnsecuredActionImpl;
+import com.gwtplatform.dispatch.rpc.shared.UnsecuredActionImpl;
 
 public class FetchTaskAction extends UnsecuredActionImpl<FetchTaskResult> {
     private Long taskId;

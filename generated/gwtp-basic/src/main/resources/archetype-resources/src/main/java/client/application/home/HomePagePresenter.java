@@ -3,9 +3,10 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.application.home;
 
+import javax.inject.Inject;
+
 import ${package}.client.application.ApplicationPresenter;
 import ${package}.client.place.NameTokens;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -23,7 +24,9 @@ public class HomePagePresenter extends Presenter<HomePagePresenter.MyView, HomeP
     }
 
     @Inject
-    HomePagePresenter(EventBus eventBus, MyView view, MyProxy proxy) {
+    HomePagePresenter(EventBus eventBus,
+                      MyView view,
+                      MyProxy proxy) {
         super(eventBus, view, proxy, ApplicationPresenter.SLOT_SetMainContent);
     }
 }

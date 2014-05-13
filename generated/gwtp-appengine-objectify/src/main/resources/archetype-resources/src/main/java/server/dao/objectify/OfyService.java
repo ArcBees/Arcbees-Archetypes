@@ -9,9 +9,6 @@ import com.googlecode.objectify.Objectify;
 import com.googlecode.objectify.ObjectifyFactory;
 import com.googlecode.objectify.ObjectifyService;
 
-/**
- * For use of: import static com.sceneverse.shozon.server.dao.objectify.OfyService.ofy;
- */
 public class OfyService {
     static {
         factory().register(Task.class);

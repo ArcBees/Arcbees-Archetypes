@@ -3,15 +3,16 @@
 #set( $symbol_escape = '\' )
 package ${package}.client.application.home;
 
+import javax.inject.Inject;
+
 import ${package}.client.application.ApplicationPresenter;
 import ${package}.client.dispatch.AsyncCallbackImpl;
 import ${package}.client.place.NameTokens;
 import ${package}.shared.dispatch.FetchTaskAction;
 import ${package}.shared.dispatch.FetchTaskResult;
 import ${package}.shared.domain.Task;
-import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
-import com.gwtplatform.dispatch.shared.DispatchAsync;
+import com.gwtplatform.dispatch.rpc.shared.DispatchAsync;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
 import com.gwtplatform.mvp.client.annotations.NameToken;

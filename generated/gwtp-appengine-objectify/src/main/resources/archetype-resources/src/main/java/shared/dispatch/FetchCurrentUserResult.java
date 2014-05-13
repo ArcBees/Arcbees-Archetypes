@@ -4,7 +4,7 @@
 package ${package}.shared.dispatch;
 
 import ${package}.shared.dto.CurrentUserDto;
-import com.gwtplatform.dispatch.shared.Result;
+import com.gwtplatform.dispatch.rpc.shared.Result;
 
 public class FetchCurrentUserResult implements Result {
     private CurrentUserDto currentUser;
