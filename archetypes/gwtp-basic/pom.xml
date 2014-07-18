@@ -9,6 +9,12 @@
     <packaging>war</packaging>
     <name>GWTP Basic</name>
     <description>Basic GWTP application</description>
+    
+    <configuration>
+        <additionalProjectnatures>
+            <projectnature>com.arcbees.plugin.eclipse.nature.GWTPNature</projectnature>
+        </additionalProjectnatures>
+    </configuration>
 
     <properties>
         <!-- client -->
