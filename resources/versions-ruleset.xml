@@ -6,7 +6,7 @@
     <ignoreVersion type="regex">.*-alpha</ignoreVersion>
   </ignoreVersions>
   <rules>
-    <rule groupId="com.github.searls" artufactId="jasmine-maven-plugin" comparisonMethod="maven">
+    <rule groupId="com.github.searls" artifactId="jasmine-maven-plugin" comparisonMethod="maven">
       <ignoreVersions>
         <ignoreVersion type="regex">2\.0-alpha-01</ignoreVersion>   
       </ignoreVersions>
