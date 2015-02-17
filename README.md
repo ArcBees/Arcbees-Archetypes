@@ -1,4 +1,3 @@
-#Arcbees Tools
 #[Archetypes](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes) - Find the Archetypes here.
 
 ##Thanks to
