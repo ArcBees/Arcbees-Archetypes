@@ -1,0 +1,10 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+        xmlns:g='urn:import:com.google.gwt.user.client.ui'>
+
+    <g:HTMLPanel>
+        
+        <h1>GWTP Basic</h1>
+        <p>Hello world!</p>
+        
+    </g:HTMLPanel>
+</ui:UiBinder>
