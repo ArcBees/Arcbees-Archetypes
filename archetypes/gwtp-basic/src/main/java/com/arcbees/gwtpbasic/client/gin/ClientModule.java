@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,29 +14,28 @@
  * the License.
  */
 
-package com.arcbees.project.client.gin;
+package com.arcbees.gwtpbasic.client.gin;
 
-import com.arcbees.project.client.application.ApplicationModule;
-import com.arcbees.project.client.place.NameTokens;
+import com.arcbees.gwtpbasic.client.application.ApplicationModule;
+import com.arcbees.gwtpbasic.client.place.NameTokens;
+import com.arcbees.gwtpbasic.client.resources.ResourceLoader;
 import com.gwtplatform.mvp.client.annotations.DefaultPlace;
 import com.gwtplatform.mvp.client.annotations.ErrorPlace;
 import com.gwtplatform.mvp.client.annotations.UnauthorizedPlace;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 import com.gwtplatform.mvp.client.gin.DefaultModule;
 
-/**
- * See more on setting up the PlaceManager on <a
- * href="// See more on: https://github.com/ArcBees/GWTP/wiki/PlaceManager">DefaultModule's > DefaultPlaceManager</a>
- */
 public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new DefaultModule());
+        install(new DefaultModule.Builder().build());
         install(new ApplicationModule());
 
+        bind(ResourceLoader.class).asEagerSingleton();
+
         // DefaultPlaceManager Places
-        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.home);
-        bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.home);
-        bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.home);
+        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.HOME);
+        bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.HOME);
+        bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.HOME);
     }
 }

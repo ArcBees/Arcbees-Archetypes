@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,12 +14,21 @@
  * the License.
  */
 
-package com.arcbees.project.server.guice;
+package com.arcbees.gwtpbasic.client.resources;
 
-import com.gwtplatform.dispatch.rpc.server.guice.HandlerModule;
+import com.google.gwt.resources.client.ClientBundle;
+import com.google.gwt.resources.client.CssResource;
 
-public class ServerModule extends HandlerModule {
-    @Override
-    protected void configureHandlers() {
+public interface AppResources extends ClientBundle {
+    interface Normalize extends CssResource {
     }
+
+    interface Style extends CssResource {
+    }
+
+    @Source("css/normalize.gss")
+    Normalize normalize();
+
+    @Source("css/style.gss")
+    Style style();
 }

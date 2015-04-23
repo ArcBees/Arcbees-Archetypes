@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,12 +14,15 @@
  * the License.
  */
 
-package com.arcbees.project.client.place;
+package com.arcbees.gwtpbasic.client.resources;
 
-public class NameTokens {
-    public static final String home = "!home";
+import javax.inject.Inject;
 
-    public static String getHome() {
-        return home;
+public class ResourceLoader {
+    @Inject
+    ResourceLoader(
+            AppResources appResources) {
+        appResources.normalize().ensureInjected();
+        appResources.style().ensureInjected();
     }
 }

@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,20 +14,8 @@
  * the License.
  */
 
-package com.arcbees.project.client.application.home;
+package com.arcbees.gwtpbasic.client.place;
 
-import javax.inject.Inject;
-
-import com.google.gwt.uibinder.client.UiBinder;
-import com.google.gwt.user.client.ui.Widget;
-import com.gwtplatform.mvp.client.ViewImpl;
-
-public class HomePageView extends ViewImpl implements HomePagePresenter.MyView {
-    public interface Binder extends UiBinder<Widget, HomePageView> {
-    }
-
-    @Inject
-    HomePageView(Binder uiBinder) {
-        initWidget(uiBinder.createAndBindUi(this));
-    }
+public class NameTokens {
+    public static final String HOME = "/";
 }
