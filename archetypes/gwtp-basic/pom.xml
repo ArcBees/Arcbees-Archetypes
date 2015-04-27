@@ -109,7 +109,7 @@
                     <logLevel>INFO</logLevel>
 
                     <runTarget>index.html</runTarget>
-                    <module>com.arcbees.gwtpbasic.example.GwtTheoExample</module>
+                    <module>com.arcbees.gwtpbasic.GwtpBasic</module>
                 </configuration>
                 <executions>
                     <execution>

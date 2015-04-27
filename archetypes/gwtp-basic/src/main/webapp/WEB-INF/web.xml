@@ -8,7 +8,7 @@
 
     <!-- Default page to serve -->
     <welcome-file-list>
-        <welcome-file>gwtpsamplepolymer.html</welcome-file>
+        <welcome-file>gwtpbasic.html</welcome-file>
     </welcome-file-list>
 
 </web-app>
