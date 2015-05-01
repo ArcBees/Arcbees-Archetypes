@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,17 +14,14 @@
  * the License.
  */
 
-package com.arcbees.project.client.application;
+package com.arcbees.gwtpbasic.client.application.home;
 
-import com.arcbees.project.client.application.home.HomeModule;
 import com.gwtplatform.mvp.client.gin.AbstractPresenterModule;
 
-public class ApplicationModule extends AbstractPresenterModule {
+public class HomeModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new HomeModule());
-
-        bindPresenter(ApplicationPresenter.class, ApplicationPresenter.MyView.class, ApplicationView.class,
-                ApplicationPresenter.MyProxy.class);
+        bindPresenter(HomePresenter.class, HomePresenter.MyView.class, HomeView.class,
+                HomePresenter.MyProxy.class);
     }
 }

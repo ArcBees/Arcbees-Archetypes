@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,11 +14,10 @@
  * the License.
  */
 
-package com.arcbees.project.client.application;
+package com.arcbees.gwtpbasic.client.application;
 
-import javax.inject.Inject;
-
-import com.google.gwt.event.shared.GwtEvent.Type;
+import com.google.gwt.event.shared.GwtEvent;
+import com.google.inject.Inject;
 import com.google.web.bindery.event.shared.EventBus;
 import com.gwtplatform.mvp.client.Presenter;
 import com.gwtplatform.mvp.client.View;
@@ -27,21 +26,23 @@ import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.Proxy;
 import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
 
-public class ApplicationPresenter extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
-    public interface MyView extends View {
+public class ApplicationPresenter
+        extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
+    interface MyView extends View {
+    }
+
+    @ProxyStandard
+    interface MyProxy extends Proxy<ApplicationPresenter> {
     }
 
     @ContentSlot
-    public static final Type<RevealContentHandler<?>> SLOT_SetMainContent = new Type<>();
-
-    @ProxyStandard
-    public interface MyProxy extends Proxy<ApplicationPresenter> {
-    }
+    public static final GwtEvent.Type<RevealContentHandler<?>> SLOT_MAIN = new GwtEvent.Type<>();
 
     @Inject
-    ApplicationPresenter(EventBus eventBus,
-                         MyView view,
-                         MyProxy proxy) {
+    ApplicationPresenter(
+            EventBus eventBus,
+            MyView view,
+            MyProxy proxy) {
         super(eventBus, view, proxy, RevealType.Root);
     }
 }

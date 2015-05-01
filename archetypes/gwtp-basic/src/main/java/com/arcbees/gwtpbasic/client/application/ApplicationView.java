@@ -1,5 +1,5 @@
 /**
- * Copyright 2012 ArcBees Inc.
+ * Copyright 2015 ArcBees Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -14,7 +14,7 @@
  * the License.
  */
 
-package com.arcbees.project.client.application;
+package com.arcbees.gwtpbasic.client.application;
 
 import javax.inject.Inject;
 
@@ -26,23 +26,22 @@ import com.google.gwt.user.client.ui.Widget;
 import com.gwtplatform.mvp.client.ViewImpl;
 
 public class ApplicationView extends ViewImpl implements ApplicationPresenter.MyView {
-    public interface Binder extends UiBinder<Widget, ApplicationView> {
+    interface Binder extends UiBinder<Widget, ApplicationView> {
     }
 
     @UiField
     SimplePanel main;
 
     @Inject
-    ApplicationView(Binder uiBinder) {
+    ApplicationView(
+            Binder uiBinder) {
         initWidget(uiBinder.createAndBindUi(this));
     }
 
     @Override
     public void setInSlot(Object slot, IsWidget content) {
-        if (slot == ApplicationPresenter.SLOT_SetMainContent) {
+        if (slot == ApplicationPresenter.SLOT_MAIN) {
             main.setWidget(content);
-        } else {
-            super.setInSlot(slot, content);
         }
     }
 }

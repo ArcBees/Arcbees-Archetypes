@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.sonatype.oss</groupId>
         <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <version>9</version>
     </parent>
 
     <groupId>com.arcbees.archetypes</groupId>
@@ -35,9 +35,9 @@
     </issueManagement>
 
     <scm>
-        <connection>scm:git:git://github.com/ArcBees/ArcBees-tools.git/</connection>
-        <developerConnection>scm:git:git@github.com:ArcBees/ArcBees-tools.git</developerConnection>
-        <url>https://github.com/ArcBees/ArcBees-tools.git</url>
+        <connection>scm:git:git@github.com:ArcBees/Arcbees-Archetypes.git</connection>
+        <developerConnection>scm:git:git@github.com:ArcBees/Arcbees-Archetypes.git</developerConnection>
+        <url>https://github.com/ArcBees/ArcBees-Archetypes.git</url>
     </scm>
 
     <developers>
