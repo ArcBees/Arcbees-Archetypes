@@ -18,12 +18,12 @@
         <gwt.style>OBF</gwt.style>
 
         <!-- maven -->
-        <maven.war.version>2.3</maven.war.version>
-        <maven.compiler.version>2.3.2</maven.compiler.version>
-        <maven-checkstyle-plugin.version>2.14</maven-checkstyle-plugin.version>
+        <maven-war-plugin.version>2.6</maven-war-plugin.version>
+        <maven-compiler-plugin.version>3.3</maven-compiler-plugin.version>
+        <maven-checkstyle-plugin.version>2.15</maven-checkstyle-plugin.version>
 
-        <checkstyle.version>6.3</checkstyle.version>
-        <arcbees-checkstyle.version>1.1</arcbees-checkstyle.version>
+        <checkstyle.version>6.6</checkstyle.version>
+        <arcbees-checkstyle.version>1.2</arcbees-checkstyle.version>
 
         <target.jdk>1.7</target.jdk>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,7 +44,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>${target.jdk}</source>
                     <target>${target.jdk}</target>
@@ -100,12 +100,8 @@
 
                     <testTimeOut>180</testTimeOut>
                     <mode>htmlunit</mode>
-                    <!-- Switch to a suite to run tests faster -->
-                    <!-- <includes>**/*GwtTestSuite.java</includes> -->
-                    <!-- <excludes>**/*GwtTest.java</excludes> -->
                     <includes>**/*GwtTest.java</includes>
 
-                    <extraJvmArgs>-Xss1024K -Xmx1g -XX:MaxPermSize=256M</extraJvmArgs>
                     <logLevel>INFO</logLevel>
 
                     <runTarget>index.html</runTarget>
@@ -123,28 +119,13 @@
         </plugins>
     </build>
 
-    <!-- GWT (BOM) -->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>com.google.gwt</groupId>
-                <artifactId>gwt</artifactId>
-                <version>${gwt.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <!-- GWT -->
         <dependency>
             <groupId>com.google.gwt</groupId>
             <artifactId>gwt-user</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.google.gwt</groupId>
-            <artifactId>gwt-codeserver</artifactId>
+            <version>${gwt.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- GWTP -->
@@ -153,17 +134,6 @@
             <artifactId>gwtp-mvp-client</artifactId>
             <version>${gwtp.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.gwtplatform</groupId>
-            <artifactId>gwtp-dispatch-rest</artifactId>
-            <version>${gwtp.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.gwtplatform</groupId>
-            <artifactId>gwtp-dispatch-rest-shared</artifactId>
-            <version>${gwtp.version}</version>
         </dependency>
 
         <!-- DI -->
