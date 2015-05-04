@@ -14,7 +14,7 @@
     <packaging>pom</packaging>
     <name>Archetypes Parent</name>
 
-    <url>https://github.com/ArcBees/ArcBees-tools.git</url>
+    <url>https://github.com/ArcBees/ArcBees-Archetypes.git</url>
     <inceptionYear>2013</inceptionYear>
 
     <organization>

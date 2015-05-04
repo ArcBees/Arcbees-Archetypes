@@ -15,9 +15,5 @@
         <module>gwtp-basic</module>
         <module>gwtp-appengine-basic</module>
         <module>gwtp-appengine-objectify</module>
-        <module>gwtp-servletcontainer-requestfactory-spring</module>
-        <module>gwtp-basic-gxt</module>
-        <module>gwtp-basic-cucumber-guice</module>
-        <module>gwtp-plugin2-basic</module>
     </modules>
 </project>
