@@ -6,9 +6,9 @@
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
-
     <packaging>war</packaging>
-    <name>GWTP Basic</name>
+
+    <name>GWTP AppEngine Guice</name>
 
     <properties>
         <!-- client -->
@@ -16,6 +16,16 @@
         <gwtp.version>1.4</gwtp.version>
         <gin.version>2.1.2</gin.version>
         <gwt.style>OBF</gwt.style>
+
+        <!-- server -->
+        <gae.version>1.9.20</gae.version>
+        <guice.version>3.0</guice.version>
+        <servlet-api.version>2.5</servlet-api.version>
+        <javax.validation.version>1.0.0.GA</javax.validation.version>
+
+        <!-- testing -->
+        <junit.version>4.12</junit.version>
+        <jukito.version>1.4.1</jukito.version>
 
         <!-- maven -->
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
@@ -25,6 +35,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+        <gae.home>
+            ${settings.localRepository}/com/google/appengine/appengine-java-sdk/${gae.version}/appengine-java-sdk-${gae.version}/appengine-java-sdk-${gae.version}
+        </gae.home>
     </properties>
 
     <build>
@@ -45,6 +58,7 @@
                     <source>${target.jdk}</source>
                     <target>${target.jdk}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
+                    <proc>none</proc>
                 </configuration>
             </plugin>
 
@@ -64,6 +78,10 @@
 
                     <runTarget>index.html</runTarget>
                     <module>${package}.${moduleName}</module>
+
+                    <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server>
+                    <appEngineVersion>${gae.version}</appEngineVersion>
+                    <appEngineHome>${gae.home}</appEngineHome>
                 </configuration>
                 <executions>
                     <execution>
@@ -94,12 +112,69 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Google App Engine API -->
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-1.0-sdk</artifactId>
+            <version>${gae.version}</version>
+        </dependency>
+
         <!-- DI -->
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>${guice.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-servlet</artifactId>
+            <version>${guice.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.google.gwt.inject</groupId>
             <artifactId>gin</artifactId>
             <version>${gin.version}</version>
             <scope>provided</scope>
+        </dependency>
+
+        <!-- Other -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Test -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jukito</groupId>
+            <artifactId>jukito</artifactId>
+            <version>${jukito.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-labs</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-api-stubs</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.appengine</groupId>
+            <artifactId>appengine-testing</artifactId>
+            <version>${gae.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 </project>
