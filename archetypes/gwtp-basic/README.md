@@ -3,9 +3,9 @@
 This is a basic GWTP Archetype.
 
 ##Highlights
-* [Client Server Directories](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic/src/main/java/com/arcbees/project)
-* [GWT Module](https://github.com/ArcBees/ArcBees-tools/blob/master/archetypes/gwtp-basic/src/main/java/com/arcbees/project/Project.gwt.xml)
-* [Tests](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-basic/src/test/java/com/arcbees/myproject/client)
+* [Client Server Directories](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic/src/main/java/com/arcbees/project)
+* [GWT Module](https://github.com/ArcBees/ArcBees-archetypes/blob/master/archetypes/gwtp-basic/src/main/java/com/arcbees/project/Project.gwt.xml)
+* [Tests](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic/src/test/java/com/arcbees/myproject/client)
 
 ##Maven Archetype Usage
 

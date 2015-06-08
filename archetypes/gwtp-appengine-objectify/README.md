@@ -3,13 +3,13 @@
 GWTP using AppEngine with Objectify, RPC dispatch and Google Login.
 
 ##Highlights
-* [Client Server Directories](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-objectify/src/main/java/com/arcbees/project)
-* [GWT Module](https://github.com/ArcBees/ArcBees-tools/blob/master/archetypes/gwtp-appengine-objectify/src/main/java/com/arcbees/project)
-* [Tests](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes/gwtp-appengine-objectify/src/test/java/com/arcbees/project/client)
+* [Client Server Directories](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-appengine-objectify/src/main/java/com/arcbees/project)
+* [GWT Module](https://github.com/ArcBees/ArcBees-archetypes/blob/master/archetypes/gwtp-appengine-objectify/src/main/java/com/arcbees/project)
+* [Tests](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-appengine-objectify/src/test/java/com/arcbees/project/client)
 
 ##Maven Archetype Usage
 
-Since this archetype isn't in maven central, there are [prerequisites before using it](https://github.com/ArcBees/ArcBees-tools/wiki/archetype).
+Since this archetype isn't in maven central, there are [prerequisites before using it](https://github.com/ArcBees/ArcBees-archetypes/wiki/archetype).
 
 1. Goto directory you want the project.
 2. Rename parameter below `com.projectname.project` to a package naming scheme you like.
