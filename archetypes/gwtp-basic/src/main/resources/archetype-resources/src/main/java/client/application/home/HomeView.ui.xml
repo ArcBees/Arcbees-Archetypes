@@ -3,7 +3,6 @@
 
     <g:HTMLPanel>
         
-        <h1>GWTP Basic</h1>
         <p>Hello world!</p>
         
     </g:HTMLPanel>
