@@ -3,18 +3,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.arcbees.archetypes</groupId>
+    <parent>
+        <groupId>com.arcbees.archetypes</groupId>
+        <artifactId>archetypes-parent</artifactId>
+        <version>1.5-SNAPSHOT</version>
+    </parent>
+
     <artifactId>gwtp-appengine-guice-archetype</artifactId>
-    <version>1.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>gwtp-appengine-guice-archetype</name>
     <description>GWTP Appengine Guice application</description>
-
-    <properties>
-        <archetype.version>2.3</archetype.version>
-        <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
-    </properties>
 
     <build>
         <extensions>
