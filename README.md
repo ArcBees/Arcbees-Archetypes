@@ -1,4 +1,4 @@
-#[Archetypes](https://github.com/ArcBees/ArcBees-tools/tree/master/archetypes) - Find the Archetypes here.
+#[Archetypes](https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes) - Find the Archetypes here.
 
 ##Thanks to
 [![Arcbees.com](http://i.imgur.com/HDf1qfq.png)](http://arcbees.com)
