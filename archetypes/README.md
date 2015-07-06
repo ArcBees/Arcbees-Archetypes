@@ -27,28 +27,8 @@ Create a project from a project template called an Archetype. Follow the links b
 		<td>Simple basic GWTP Archetype.</td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-appengine-basic">GWTP Basic AppEngine</a></td>
+		<td><a href="https://github.com/ArcBees/Arcbees-Archetypes/tree/master/archetypes/gwtp-appengine-guice">GWTP Basic AppEngine</a></td>
 		<td>Simple basic GWTP Archetype using App Engine.</td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-appengine-objectify">GWTP AppEngine & Objectify</a></td>
-		<td>GWTP Archetype with App Engine, Objectify and Google login.</td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-servletcontainer-requestfactory-spring">GWTP RequestFactory & Spring</a></td>
-		<td>GWTP using a servlet container using RequestFactory and Spring.</td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic-gxt">GWTP with GXT</a></td>
-		<td>GWT with the GXT library.</td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic-cucumber-guice">GWTP Basic Cucumber</a></td>
-		<td>Basic GWTP with Cucumber configuration.</td>
-	</tr>
-	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-plugin2-basic">GWTP Plugin2</a></td>
-		<td>GWTP with the new GWT plugin configuration - Alpha!</td>
 	</tr>
 </table>
 
