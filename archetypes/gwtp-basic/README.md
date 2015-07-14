@@ -24,7 +24,7 @@ mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
 -DarchetypeVersion=1.5-SNAPSHOT \
 -DgroupId=com.projectname.project \
 -DartifactId=new-project-name \
--Dmodule=Project
+-DmoduleName=Project
 ```
 
 ##Thanks to
