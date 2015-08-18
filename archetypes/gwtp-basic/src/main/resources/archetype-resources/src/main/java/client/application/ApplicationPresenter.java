@@ -9,6 +9,7 @@ import com.gwtplatform.mvp.client.annotations.ContentSlot;
 import com.gwtplatform.mvp.client.annotations.ProxyStandard;
 import com.gwtplatform.mvp.client.proxy.Proxy;
 import com.gwtplatform.mvp.client.proxy.RevealContentHandler;
+import com.gwtplatform.mvp.client.presenter.slots.NestedSlot;
 
 public class ApplicationPresenter
         extends Presenter<ApplicationPresenter.MyView, ApplicationPresenter.MyProxy> {
@@ -19,8 +20,7 @@ public class ApplicationPresenter
     interface MyProxy extends Proxy<ApplicationPresenter> {
     }
 
-    @ContentSlot
-    public static final GwtEvent.Type<RevealContentHandler<?>> SLOT_MAIN = new GwtEvent.Type<>();
+    public static final NestedSlot SLOT_MAIN = new NestedSlot();
 
     @Inject
     ApplicationPresenter(
