@@ -1,6 +1,6 @@
-#GWTP Basic
+#GWTP AppEngine Guice
 
-This is a basic GWTP Archetype.
+This is a GWTP Archetype using an AppEngine configuration.
 
 ##Maven Archetype Usage
 
@@ -15,7 +15,7 @@ This is a basic GWTP Archetype.
 ```
 mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
 -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/ \
--DarchetypeArtifactId=gwtp-basic-archetype \
+-DarchetypeArtifactId=gwtp-appengine-guice-archetype \
 -DarchetypeVersion=1.5 \
 -DgroupId=com.projectname.project \
 -DartifactId=new-project-name \

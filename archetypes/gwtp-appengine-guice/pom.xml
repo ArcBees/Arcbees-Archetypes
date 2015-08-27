@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.arcbees.archetypes</groupId>
         <artifactId>archetypes-parent</artifactId>
-        <version>1.5-SNAPSHOT</version>
+        <version>1.5</version>
     </parent>
 
     <artifactId>gwtp-appengine-guice-archetype</artifactId>
