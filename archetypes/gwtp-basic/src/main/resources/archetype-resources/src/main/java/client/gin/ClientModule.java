@@ -12,14 +12,14 @@ import com.gwtplatform.mvp.client.gin.DefaultModule;
 public class ClientModule extends AbstractPresenterModule {
     @Override
     protected void configure() {
-        install(new DefaultModule.Builder().build());
+        install(new DefaultModule
+                .Builder()
+                .defaultPlace(NameTokens.HOME)
+                .errorPlace(NameTokens.HOME)
+                .unauthorizedPlace(NameTokens.HOME)
+                .build());
         install(new ApplicationModule());
 
         bind(ResourceLoader.class).asEagerSingleton();
-
-        // DefaultPlaceManager Places
-        bindConstant().annotatedWith(DefaultPlace.class).to(NameTokens.HOME);
-        bindConstant().annotatedWith(ErrorPlace.class).to(NameTokens.HOME);
-        bindConstant().annotatedWith(UnauthorizedPlace.class).to(NameTokens.HOME);
     }
 }
