@@ -6,6 +6,9 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
         <requiredProperty key="moduleName"/>
+        <requiredProperty key="gwtp-version">
+            <defaultValue>${gwtp-default-version}</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
     <fileSets>

@@ -21,4 +21,5 @@ public class ApplicationView extends ViewImpl implements ApplicationPresenter.My
         initWidget(uiBinder.createAndBindUi(this));
 
         bindSlot(ApplicationPresenter.SLOT_MAIN, main);
+    }
 }
