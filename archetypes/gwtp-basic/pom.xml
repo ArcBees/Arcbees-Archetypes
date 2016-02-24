@@ -14,6 +14,10 @@
     <name>gwtp-basic-archetype</name>
     <description>Basic GWTP application</description>
 
+    <properties>
+        <gwtp-default-version>1.6-SNAPSHOT</gwtp-default-version>
+    </properties>
+
     <build>
         <extensions>
             <extension>

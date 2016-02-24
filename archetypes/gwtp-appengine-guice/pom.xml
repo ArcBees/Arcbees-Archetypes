@@ -14,6 +14,10 @@
     <name>gwtp-appengine-guice-archetype</name>
     <description>GWTP Appengine Guice application</description>
 
+    <properties>
+        <gwtp-default-version>1.6-SNAPSHOT</gwtp-default-version>
+    </properties>
+
     <build>
         <extensions>
             <extension>
