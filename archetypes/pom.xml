@@ -67,4 +67,23 @@
         <archetype.version>2.3</archetype.version>
         <maven-resources-plugin.version>2.7</maven-resources-plugin.version>
     </properties>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <excludes>
+                    <exclude>META-INF/*</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>META-INF/*</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
 </project>
