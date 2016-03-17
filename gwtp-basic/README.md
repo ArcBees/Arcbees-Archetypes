@@ -16,7 +16,7 @@ This is a basic GWTP Archetype.
 mvn archetype:generate -DarchetypeGroupId=com.arcbees.archetypes \
 -DarchetypeRepository=https://oss.sonatype.org/content/repositories/snapshots/ \
 -DarchetypeArtifactId=gwtp-basic-archetype \
--DarchetypeVersion=1.5-SNAPSHOT \
+-DarchetypeVersion=1.5.1 \
 -DgroupId=com.projectname.project \
 -DartifactId=new-project-name \
 -DmoduleName=Project
