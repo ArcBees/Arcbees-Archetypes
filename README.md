@@ -22,11 +22,11 @@ Create a project from a project template called an Archetype. Follow the links b
 		<th>Description</th>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/archetypes/gwtp-basic">GWTP Basic</a></td>
+		<td><a href="https://github.com/ArcBees/ArcBees-archetypes/tree/master/gwtp-basic">GWTP Basic</a></td>
 		<td>Simple basic GWTP Archetype.</td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/ArcBees/Arcbees-Archetypes/tree/master/archetypes/gwtp-appengine-guice">GWTP Basic AppEngine</a></td>
+		<td><a href="https://github.com/ArcBees/Arcbees-Archetypes/tree/master/gwtp-appengine-guice">GWTP Basic AppEngine</a></td>
 		<td>Simple basic GWTP Archetype using App Engine.</td>
 	</tr>
 </table>
